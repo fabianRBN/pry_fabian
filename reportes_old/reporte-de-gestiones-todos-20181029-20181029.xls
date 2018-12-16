@@ -1,0 +1,15 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+				xmlns:x="urn:schemas-microsoft-com:office:excel"
+				xmlns="http://www.w3.org/TR/REC-html40">
+				
+				<!DOCTYPE html>
+				<html>
+				<head>
+					<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+					<style id="Classeur1_16681_Styles"></style>
+				</head>
+				<body>
+				<table x:str border=0 cellpadding=0 cellspacing=0 width=100% style="border-collapse: collapse"><tr><th style='text-align:center; font-size:16px' colspan='6'>Reporte de Gestiones <br> <small style="color: #485770;">en un rango de fechas de 2018-10-29 a 2018-10-29</small></th></tr>
+<tr><th style='text-align: right; font-size:9px;' colspan='5'>29/10/2018 07:53:07</th></tr>
+<tr><th>Codigo</th><th>Estatus</th><th>Descripcion</th><th>Usuario</th><th>Cartera</th><th>Fecha</th></tr></table></body>
+</html>

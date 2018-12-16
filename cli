@@ -1,0 +1,16 @@
+#!/usr/bin/php -q
+<?php
+
+require 'Core/Command.php';
+
+
+foreach(glob("Commands/*.php") as $class) {
+    include_once $class;
+    $cls = str_replace("Commands/", '',$class);
+    $cls = str_replace(".php", '',$cls);
+    $command = new $cls;
+
+    if($command->name == $argv[1]){
+        $command->run();
+    }
+}

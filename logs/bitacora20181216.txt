@@ -1,0 +1,99 @@
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 05:23:27
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 05:23:28
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 05:23:28
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 05:23:28
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 05:23:28
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 05:23:28
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 05:23:28
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 05:23:29
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 05:33:32
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Neutra Display Titling';
+    src: url('NeutraDisp-Titling.eot');
+    src: url('NeutraDisp-Titling.eot?#iefix') format('embedded-opentype'),
+        url('NeutraDisp-Titling.woff2') format('woff2'),
+        url('NeutraDisp-Titling.woff') format('woff'),
+        url('NeutraDisp-Titling.svg#NeutraDisp-Titling') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
