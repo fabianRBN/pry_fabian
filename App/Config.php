@@ -34,7 +34,7 @@ class Config
      * Dominio
      * @var string
      */
-    const Domain = 'https://smart2.cntcloud.com/';
+    const Domain = 'https://smart.cntcloud2.com/';
 
     /**
      * Folder

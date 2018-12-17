@@ -1,5 +1,5 @@
 var SivozConfig = {
-    domain: 'https://smart2.cntcloud.com/',
+    domain: 'https://smart.cntcloud2.com/',
     client: 'Innovasys',
     getRoute: function(route){
         return this.domain + route

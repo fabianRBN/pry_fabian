@@ -16,5 +16,5 @@ RewriteRule ^(.*)$ %{HTTP_REFERER} [L]
     Header always append X-Frame-Options SAMEORIGIN
     Header edit Set-Cookie ^(SMCC8120.*)$ $1;SameSite=Strict
 
-    Header set Access-Control-Allow-Origin "https//smart2.cntcloud.com"
+    Header set Access-Control-Allow-Origin "https//smart.cntcloud2.com"
 </IfModule>

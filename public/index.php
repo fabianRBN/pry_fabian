@@ -3,7 +3,7 @@
   * D.R. (c) Sivoz México 2018. Conforme al Artículo 17 de la LFDA
 */
 ini_set('display_errors',1);
-header('Access-Control-Allow-Origin: https://smart2.cntcloud.com'); 
+header('Access-Control-Allow-Origin: https://smart.cntcloud2.com'); 
 header('Access-Control-Allow-Credentials: true');
 
 
