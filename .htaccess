@@ -15,6 +15,5 @@ RewriteRule ^(.*)$ %{HTTP_REFERER} [L]
     Header set X-XSS-Protection "1; mode=block"
     Header always append X-Frame-Options SAMEORIGIN
     Header edit Set-Cookie ^(SMCC8120.*)$ $1;SameSite=Strict
-
     Header set Access-Control-Allow-Origin "https//smart.cntcloud2.com"
 </IfModule>
