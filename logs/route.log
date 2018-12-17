@@ -1,1 +1,1 @@
-{"controller":"App\\Controllers\\Usuario","action":"addToCart","route":"App\/Controllers\/Usuario.php"}
+{"controller":"App\\Controllers\\Website","action":"home","route":"App\/Controllers\/Website.php"}

@@ -21078,3 +21078,3397 @@ Content-Type: text/html; charset=UTF-8
 -- RUTA -- App\/Controllers\/Mantenimiento.php
 -- PDO ERROR -- FALSE
 ----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:27
+-- SQL -- SELECT * FROM innovasys_car100.tb_carrito_opciones  WHERE id_opcion=593
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:31
+-- SQL -- SELECT * FROM innovasys_car100.tb_carrito_opciones  WHERE id_opcion=594
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:33
+-- SQL -- SELECT * FROM innovasys_car100.tb_carrito_opciones  WHERE id_opcion=595
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:35
+-- SQL -- SELECT * FROM innovasys_car100.tb_carrito_opciones  WHERE id_opcion=596
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:36
+-- SQL -- SELECT * FROM innovasys_car100.tb_carrito_opciones  WHERE id_opcion=597
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:37
+-- SQL -- SELECT * FROM innovasys_car100.tb_clientes WHERE id=120
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:39
+-- SQL -- SELECT * FROM innovasys_car100.tb_carrito WHERE id_cliente=120
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_tipo_cliente WHERE id=2
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:42
+-- SQL -- SELECT * FROM innovasys_car100.cat_sectores WHERE id=1
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:43
+-- SQL -- SELECT * FROM innovasys_general.cat_estatus WHERE id=2
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:44
+-- SQL -- INSERT INTO innovasys_car100.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('fabianRBN_95@hotmail.com','test@hostinger-tutorials.com','<!DOCTYPE html>
+            <html>
+            <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            </head>
+            <body style="background-color: #fafafa; padding-bottom: 40px;  padding-top: 40px;">
+
+                
+                <div style=" width: 100%; " >
+                    <div style="
+                   
+                    background-color: #FFFF;
+                    width: 70%;
+                    height: 100px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border: 2px solid;
+                    border-bottom-color: rgb(218, 218, 218);
+                    border-top-color: #FFFF;
+                    border-left-color: #FFFF;
+                    border-right-color: #FFFF;
+                    ">
+                    <div style="
+                    width: 20%;
+                    height: 80px;
+                    margin: 20px;
+                    text-align: right;
+                  float: left;">      <img src="https://smart.cntcloud.com/public/assets/img/cnt-logo.png" alt=""></div>
+                  <div style="
+                    width: 60%;
+                    height: 80px;
+                    margin: 20px;
+                    text-align: right;
+                  float: left;"> <h2 style="font-family: Arial, Helvetica, sans-serif;">Corporación Nacional de Telecomunicaciones</h2></div>       
+                </div>
+                  </div>
+                  
+                <div style=" width: 100%;">
+                    <div style=" background-color: #FFFF;
+                    width: 70%;
+                    height: 500px;
+                    margin: 0 auto; 
+                    text-align: left;
+                    ">
+                    <br>
+                    <div style="padding:5%"> 
+                         
+                         <p><strong>Producto: </strong>VDC PLATA </p>
+                         <p><strong>Fecha de compra: </strong>2018-12-16 22:17:43 </p>
+                         <p><strong>Cliente: </strong>&lt;script&gt;alert(‘XSS’)&lt;/script&gt; </p>
+                         <p><strong>Correo: </strong>fabian1995toapanta@gmail.com </p>
+                         <p><strong>Estatus: </strong>NUEVO </p>
+                         <p><strong>Titulo: </strong>Nuevo </p>
+                         <p><strong>Comentario: </strong>Nuevo </p>
+    					</div>
+                    </div>
+                </div>
+
+            </body>
+            </html>','From:test@hostinger-tutorials.com CC: email@cntclopud.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+')
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- POST
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:45
+-- SQL -- INSERT INTO innovasys_car100.tb_alertas (id_usuario,titulo,comentario,url,asesor,identificador,tipo) VALUES (11,'Nuevo','Nuevo','operacion/carrito?id=372',120,372,'carrito')
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:48
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:49
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=0
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:53
+-- SQL -- SELECT * FROM innovasys_car100.tb_carrito WHERE id_cliente=120
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:18:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE id=61
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:02
+-- SQL -- SELECT * FROM innovasys_car100.tb_clientes WHERE id=120
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:06
+-- SQL -- SELECT o.id,p.nombre,p.tipo,o.value,o.precio FROM innovasys_car100.tb_carrito_opciones as o INNER JOIN innovasys_car100.cat_opciones as p ON p.id=o.id_opcion WHERE id_carrito=372
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:07
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_cliente=120 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:09
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_cliente=120 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:10
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_cliente=120 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:12
+-- SQL -- SELECT * FROM innovasys_general.cat_grupos ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:13
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:15
+-- SQL -- SELECT * FROM innovasys_general.cat_estatus WHERE tipo='carrito' AND codigo=0
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:16
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- SISTEM ERROR -- session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)
+-- USER IP -- 127.0.0.1
+----------------------------------
+NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- ERROR -- Uncaught exception: 'ErrorException' with message 'session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'session_regener...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\cnt\public\index.php(49): session_regenerate_id(true)
+#2 {main}
+Thrown in 'C:\xampp\htdocs\cnt\public\index.php' on line 49
+-- ID-USUARIO -- 120
+-------------
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:17
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:19:19
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=0
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:22:46
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:23
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers//Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers//Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers//Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:26
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers//Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:26
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers//Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:27
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers//Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:28
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers//Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:29
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers//Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:42
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\auth
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:42
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\auth
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\auth
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\auth
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\auth
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\auth
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\auth
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:27:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\auth
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:28:03
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\aut
+-- FUNCION -- auths
+-- RUTA -- App\/Controllers\/Mantenimisento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:28:03
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\aut
+-- FUNCION -- auths
+-- RUTA -- App\/Controllers\/Mantenimisento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:28:03
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\aut
+-- FUNCION -- auths
+-- RUTA -- App\/Controllers\/Mantenimisento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:28:03
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\aut
+-- FUNCION -- auths
+-- RUTA -- App\/Controllers\/Mantenimisento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:28:03
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\aut
+-- FUNCION -- auths
+-- RUTA -- App\/Controllers\/Mantenimisento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:28:03
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\aut
+-- FUNCION -- auths
+-- RUTA -- App\/Controllers\/Mantenimisento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:28:03
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\aut
+-- FUNCION -- auths
+-- RUTA -- App\/Controllers\/Mantenimisento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:28:03
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\aut
+-- FUNCION -- auths
+-- RUTA -- App\/Controllers\/Mantenimisento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 120
+-- NOMBRE-USUARIO -- &lt;script&gt;alert(‘XSS’)&lt;/script&gt; &lt;script&gt;alert(‘XSSA’)&lt;/script&gt;
+-- PERMISO-USUARIO -- 7
+-- NUEVA CONSULTA -- 2018-12-16 09:29:20
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App\/Controllers\/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- SISTEM ERROR -- Trying to get property 'cartera' of non-object
+----------------------------------
+-- ERROR -- Uncaught exception: 'ErrorException' with message 'Trying to get property 'cartera' of non-object'
+Stack trace: #0 C:\xampp\htdocs\cnt\App\Controllers\Mantenimiento.php(145): Core\Error::errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 145, Array)
+#1 C:\xampp\htdocs\cnt\Core\Router.php(130): App\Controllers\Mantenimiento->auth()
+#2 C:\xampp\htdocs\cnt\public\index.php(101): Core\Router->dispatch('mantenimiento/a...')
+#3 {main}
+Thrown in 'C:\xampp\htdocs\cnt\App\Controllers\Mantenimiento.php' on line 145
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:35
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App/Controllers/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:36
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:36
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:37
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:38
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:39
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:51
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:52
+-- SQL -- SELECT * FROM innovasys_general.tb_usuarios WHERE correo=:email 
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:52
+-- SQL -- INSERT INTO innovasys_general.tb_firmados (posicion,cartera,cliente,usuario) VALUES (:posicion,:cartera,:cliente,:usuario)
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:29:52
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE posicion='demo_supervisor@virtualit.com.ec'
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:52
+-- SQL -- INSERT INTO innovasys_car100.tb_gestiones (codigo,estatus,descripcion,usuario,cartera) VALUES (?,?,?,?,?)
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:52
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:52
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:52
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:52
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:53
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:53
+-- SQL -- SELECT * FROM innovasys_general.cat_grupos ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:53
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:53
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- SISTEM ERROR -- session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)
+-- USER IP -- 127.0.0.1
+----------------------------------
+NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- ERROR -- Uncaught exception: 'ErrorException' with message 'session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'session_regener...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\cnt\public\index.php(49): session_regenerate_id(true)
+#2 {main}
+Thrown in 'C:\xampp\htdocs\cnt\public\index.php' on line 49
+-- ID-USUARIO -- 3
+---------------
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:53
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:53
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:54
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:54
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:55
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:55
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:55
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro)
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:55
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:55
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:55
+-- SQL -- SELECT nombre FROM innovasys_car100.cat_productos
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:55
+-- SQL -- SELECT COUNT(c.id) as total,p.nombre as producto FROM innovasys_car100.tb_carrito as c INNER JOIN innovasys_car100.cat_productos as p ON p.id=c.id_producto GROUP BY p.nombre
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:56
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:56
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:56
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_clientes as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro)
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:56
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:29:56
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:16
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:17
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:17
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:17
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:17
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:17
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:17
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:17
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:17
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:20
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:20
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:20
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:20
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:20
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:20
+-- SQL -- SELECT * FROM innovasys_general.cat_grupos ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:20
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:20
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- SISTEM ERROR -- session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)
+----------------------------------
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+on object destruction failed.  ID: files (path: C:\xampp\tmp)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'session_regener...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\cnt\public\index.php(49): session_regenerate_id(true)
+#2 {main}
+Thrown in 'C:\xampp\htdocs\cnt\public\index.php' on line 49
+----------------------------------
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:20
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:21
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:21
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:21
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:21
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro)
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:21
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:21
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:21
+-- SQL -- SELECT nombre FROM innovasys_car100.cat_productos
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:21
+-- SQL -- SELECT COUNT(c.id) as total,p.nombre as producto FROM innovasys_car100.tb_carrito as c INNER JOIN innovasys_car100.cat_productos as p ON p.id=c.id_producto GROUP BY p.nombre
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:22
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:22
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:22
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_clientes as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro)
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:22
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:22
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:22
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:22
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:22
+-- SQL -- DELETE FROM innovasys_general.tb_firmados WHERE posicion='demo_supervisor@virtualit.com.ec'
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- logout
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:23
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- logout
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:55
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:55
+-- SQL -- SELECT * FROM innovasys_general.tb_usuarios WHERE correo=:email 
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:55
+-- SQL -- INSERT INTO innovasys_general.tb_firmados (posicion,cartera,cliente,usuario) VALUES (:posicion,:cartera,:cliente,:usuario)
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-16 09:30:55
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE posicion='demo_supervisor@virtualit.com.ec'
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- POST
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:56
+-- SQL -- INSERT INTO innovasys_car100.tb_gestiones (codigo,estatus,descripcion,usuario,cartera) VALUES (?,?,?,?,?)
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:56
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:56
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Auth
+-- FUNCION -- loginPost
+-- RUTA -- App/Controllers/Auth.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:56
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:56
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:56
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:56
+-- SQL -- SELECT * FROM innovasys_general.cat_grupos ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:56
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:57
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- SISTEM ERROR -- session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)
+----------------------------------
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+on object destruction failed.  ID: files (path: C:\xampp\tmp)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'session_regener...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\cnt\public\index.php(49): session_regenerate_id(true)
+#2 {main}
+Thrown in 'C:\xampp\htdocs\cnt\public\index.php' on line 49
+----------------------------------
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:57
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:57
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:57
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:57
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:57
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro)
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:57
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:58
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:58
+-- SQL -- SELECT nombre FROM innovasys_car100.cat_productos
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:58
+-- SQL -- SELECT COUNT(c.id) as total,p.nombre as producto FROM innovasys_car100.tb_carrito as c INNER JOIN innovasys_car100.cat_productos as p ON p.id=c.id_producto GROUP BY p.nombre
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:58
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:58
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:58
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_clientes as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro)
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:58
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:30:58
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:07
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:07
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:07
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:07
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:07
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:07
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:07
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:07
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:07
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:14
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:15
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:15
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:15
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:15
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:15
+-- SQL -- SELECT * FROM innovasys_general.cat_grupos ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:15
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:15
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- SISTEM ERROR -- session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- ERROR -- Uncaught exception: 'ErrorException' with message 'session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'session_regener...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\cnt\public\index.php(49): session_regenerate_id(true)
+#2 {main}
+Thrown in 'C:\xampp\htdocs\cnt\public\index.php' on line 49
+-- METHOD -- GET
+-----------------
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:16
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:16
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:16
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:16
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- dashboard
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:16
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro)
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:16
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:16
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:16
+-- SQL -- SELECT nombre FROM innovasys_car100.cat_productos
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:17
+-- SQL -- SELECT COUNT(c.id) as total,p.nombre as producto FROM innovasys_car100.tb_carrito as c INNER JOIN innovasys_car100.cat_productos as p ON p.id=c.id_producto GROUP BY p.nombre
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:17
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:17
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:17
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_clientes as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro)
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:17
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=10
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:17
+-- SQL -- SELECT COUNT(t.id) as total,MONTH(t.fecha_registro) as mes FROM innovasys_car100.tb_carrito as t WHERE t.fecha_registro BETWEEN '2018-08-16' AND '2018-12-17' GROUP BY MONTH(t.fecha_registro) AND estatus=2
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:23
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:23
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Direccion
+-- FUNCION -- stats
+-- RUTA -- App/Controllers/Direccion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=9
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:23
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=23
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=24
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=25
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=29
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=32
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=33
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=34
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=35
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=36
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:24
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=38
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=54
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=55
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=56
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=57
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=58
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=59
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=60
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:25
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:26
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:26
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:26
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:26
+-- SQL -- SELECT * FROM innovasys_car100.tb_alertas WHERE id_usuario=3 AND leido=0 ORDER BY fecha_creacion DESC
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:26
+-- SQL -- SELECT * FROM innovasys_general.cat_grupos ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:26
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:26
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:26
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:26
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:27
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT c.id,c.nombre,(SELECT COUNT(id) FROM innovasys_car100.cat_productos WHERE categoria=c.id) productos FROM innovasys_car100.cat_categorias as c WHERE id='1'
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:28
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- SISTEM ERROR -- session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)
+----------------------------------
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- ERROR -- Uncaught exception: 'ErrorException' with message 'session_regenerate_id(): Session object destruction failed.  ID: files (path: C:\xampp\tmp)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'session_regener...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\cnt\public\index.php(49): session_regenerate_id(true)
+#2 {main}
+Thrown in 'C:\xampp\htdocs\cnt\public\index.php' on line 49
+-- METHOD -- GET
+-----------------
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:29
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:29
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:29
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:29
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:35
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:35
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=3
+-- CONTROLADOR -- App\Controllers\Catalogos
+-- FUNCION -- productos
+-- RUTA -- App/Controllers/Catalogos.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:35
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:35
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:35
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:35
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:35
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:35
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 127.0.0.1
+-- BROWSER -- Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+-- METHOD -- GET
+-- ID-USUARIO -- 3
+-- NOMBRE-USUARIO -- DEMO  SUPERVISOR
+-- PERMISO-USUARIO -- 2
+-- NUEVA CONSULTA -- 2018-12-16 09:31:35
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------

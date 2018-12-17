@@ -81,11 +81,11 @@ class Binnacle
 
     public static function getRoute($attr)
     {
-        $file = dirname(__DIR__) . "/logs/route.log";
+    $file = dirname(__DIR__) . "/logs/route.log";
+    // $array = array("controller"=>"App\\Controllers\\Mantenimiento","action"=>"auth","route"=>"App\/Controllers\/Mantenimiento.php");
+    $array = (array) json_decode(file_get_contents($file));
 
-        $array = array("controller"=>"App\\Controllers\\Mantenimiento","action"=>"auth","route"=>"App\/Controllers\/Mantenimiento.php");
-
-        return $array[$attr];
+    return $array[$attr];
     }
 
 }
