@@ -35,7 +35,9 @@ class Asignacion extends \Core\Model
         if($sql){
 
         }else{
-            return static::queryOneTime("INSERT INTO {general}.{model} (cartera,usuario) VALUES ($cartera,$id)");
+            $cartera = htmlspecialchars($cartera, ENT_QUOTES, "UTF-8");
+            $id= htmlspecialchars($id, ENT_QUOTES, "UTF-8");
+            return static::queryOneTime("INSERT INTO {general}.{model} (cartera,usuario) VALUES ( $cartera,$id)");
         }
     }
 

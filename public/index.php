@@ -39,6 +39,16 @@ $routes = Core\Routes::get();
 
 $session = Core\Session::get('sivoz_auth');
 
+if (!isset($_SESSION['CREATED'])) {
+    $_SESSION['CREATED'] = time();
+} else if (time() - $_SESSION['CREATED'] > 360) {
+    session_unset();     // unset $_SESSION variable for the run-time 
+    session_destroy();   // destroy session data in storage
+}else if (isset($_SESSION['CREATED'])) {
+    $_SESSION['CREATED'] = time();
+    session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
+}
+
 if(Core\Session::get('sivoz_firma') !== false){
     $data = [
         'cartera' => Core\Session::get('sivoz_firma')->cartera,

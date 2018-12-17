@@ -72,23 +72,7 @@ header('Access-Control-Allow-Origin: *');
 									<?php $ruta= 'administracion'; if( $_SESSION['sivoz_auth']->permiso == '10' ){$ruta= 'catalogos/productos';	}else{$ruta= 'administracion';} ?>
 									<a href="<?php \Core\Router::url($ruta) ?>">
 								<i class="icofont icofont-user-alt-3">
-								<?php  																
-									if (!isset($_SESSION['CREATED'])) {
-										$_SESSION['CREATED'] = time();
-									} else if (time() - $_SESSION['CREATED'] > 1800) {
-										session_unset();     // unset $_SESSION variable for the run-time 
-										session_destroy();   // destroy session data in storage
-									}
-									if (!isset($_SESSION['CREATED'])) {
-										$_SESSION['CREATED'] = time();
-									} else if (time() - $_SESSION['CREATED'] > 120) {
-										// session started more than 30 minutes ago
-										session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
-										$_SESSION['CREATED'] = time();  // update creation time
-									}
-
-
-								?>
+						
 								</i>Administrador</a>
 								</li>
 
@@ -101,7 +85,7 @@ header('Access-Control-Allow-Origin: *');
     						<form action="<?php \Core\Router::url('login') ?>" method="post">
     							<div class="closeBtn"><i class="icofont icofont-close"></i></div>
     							<div class="h5">Conectate</div>
-    							<div class="userName"><input name="email" placeholder="Correo electrónico" type="text"></div>
+    							<div class="userName"><input name="email" type="email" placeholder="Correo electrónico" type="text"></div>
     							<div class="password"><input name="password" autocomplete="off" placeholder="Contraseña" id="password" type="password"></div>
 								<input type="checkbox" onclick="showpass()" style="    margin: 15px;"><label> Mostrar Contraseña </label>
 
@@ -116,7 +100,7 @@ header('Access-Control-Allow-Origin: *');
 											$fecha= $_SESSION['intentosfecha'];
 											$hoy = getdate();
 											if($fecha['hours']< $hoy['hours'] || $fecha['minutes']< $hoy['minutes'] ||  ($hoy['minutes'] -$fecha['minutes'] )> 30 ){
-												$_SESSION['intentos']= 0;
+												$_SESSION['intentos']= 1;
 												$_SESSION['intentosfecha']=getdate();
 											}
 										}

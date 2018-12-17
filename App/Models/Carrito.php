@@ -38,13 +38,26 @@ class Carrito extends \Core\Model
             $ticket = 1;
         }
 
-        static::queryOneTime("INSERT INTO {cartera}.{model} (id_cliente,id_producto,total,subtotal,fecha_pago,estatus,ticket) VALUES (". $carrito['id_cliente'] .",". $carrito['id_producto'] .",". $carrito['total'] .",". $carrito['subtotal'] .",'". $carrito['fecha_pago'] ."',". $carrito['estatus'] .",". $ticket .")");
+        
+
+     
+        // static::queryOneTime("INSERT INTO {cartera}.{model} (id_cliente,id_producto,total,subtotal,fecha_pago,estatus,ticket) VALUES (".  $carrito['id_cliente'] .",". $carrito['id_producto'] .",". $carrito['total'] .",". $carrito['subtotal'] .",'". $carrito['fecha_pago'] ."',". $carrito['estatus'] .",". $ticket .")");
+
+        // $last = self::query("SELECT * FROM {cartera}.{model} ORDER BY fecha_registro DESC LIMIT 1 ",[],self::FETCH_ONE);
+        // $c = self::query("SELECT * FROM {cartera}.{model} WHERE ticket=" . $last->ticket,[],self::FETCH_ONE);
+
+        // foreach($carrito['opciones'] as $opcion){
+        //     static::queryOneTime("INSERT INTO {cartera}.tb_carrito_opciones (id_carrito,id_opcion,value,precio) VALUES (". $c->id .",". $opcion['opcion'] .",'". $opcion['value'] ."',". $opcion['precio'] .")");
+        // }
+
+        // XSS atack 
+        static::queryOneTime("INSERT INTO {cartera}.{model} (id_cliente,id_producto,total,subtotal,fecha_pago,estatus,ticket) VALUES (". htmlspecialchars($carrito['id_cliente'], ENT_QUOTES, "UTF-8")  .",". htmlspecialchars($carrito['id_producto'], ENT_QUOTES, "UTF-8")  .",". htmlspecialchars($carrito['total'], ENT_QUOTES, "UTF-8")  .",".htmlspecialchars($carrito['subtotal'], ENT_QUOTES, "UTF-8")  .",'". htmlspecialchars($carrito['fecha_pago'], ENT_QUOTES, "UTF-8")  ."',".htmlspecialchars($carrito['estatus'], ENT_QUOTES, "UTF-8")  .",". htmlspecialchars($ticket, ENT_QUOTES, "UTF-8")  .")");
 
         $last = self::query("SELECT * FROM {cartera}.{model} ORDER BY fecha_registro DESC LIMIT 1 ",[],self::FETCH_ONE);
         $c = self::query("SELECT * FROM {cartera}.{model} WHERE ticket=" . $last->ticket,[],self::FETCH_ONE);
 
         foreach($carrito['opciones'] as $opcion){
-            static::queryOneTime("INSERT INTO {cartera}.tb_carrito_opciones (id_carrito,id_opcion,value,precio) VALUES (". $c->id .",". $opcion['opcion'] .",'". $opcion['value'] ."',". $opcion['precio'] .")");
+            static::queryOneTime("INSERT INTO {cartera}.tb_carrito_opciones (id_carrito,id_opcion,value,precio) VALUES (". $c->id .",".htmlspecialchars($opcion['opcion'], ENT_QUOTES, "UTF-8")   .",'". htmlspecialchars($opcion['value'], ENT_QUOTES, "UTF-8") ."',".htmlspecialchars($opcion['precio'], ENT_QUOTES, "UTF-8")   .")");
         }
 
         Notificacion::send('operacion/carrito?id=' . $last->id,$carrito['estatus'],'carrito',$last->id,'carrito');

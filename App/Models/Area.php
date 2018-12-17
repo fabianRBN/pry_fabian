@@ -38,7 +38,7 @@ class Area extends \Core\Model
 
     public static function create($data, $cb)
     {
-        self::queryOneTime("INSERT INTO {general}.{model} (nombre) VALUES ('". strtoupper($data['nombre']) ."')");
+        self::queryOneTime("INSERT INTO {general}.{model} (nombre) VALUES ('". htmlentities(strtoupper($data['nombre'])) ."')");
 
         $cb(true);
     }
