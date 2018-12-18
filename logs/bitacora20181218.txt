@@ -1,0 +1,670 @@
+-- ERROR -- Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+'
+Stack trace: #0 C:\xampp\htdocs\cnt\Core\Model.php(30): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\cnt\Core\Model.php(41): Core\Model::getDB()
+#2 C:\xampp\htdocs\cnt\App\Models\Menu.php(29): Core\Model::query('SELECT * FROM {...')
+#3 C:\xampp\htdocs\cnt\Core\Routes.php(31): App\Models\Menu::login()
+#4 C:\xampp\htdocs\cnt\public\index.php(38): Core\Routes::get()
+#5 {main}
+Thrown in 'C:\xampp\htdocs\cnt\Core\Model.php' on line 30
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=65 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=66 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:40
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=65 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=66 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:43
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=65 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=66 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:44
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=65 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=66 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:46
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=65 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=66 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:47
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo=7 OR grupo=11
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_productos WHERE activo=1 and venta=1 and tipoWeb='VDC' ORDER BY orden
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=61 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=65 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=62 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=66 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=63 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=64 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_opciones WHERE id_producto=16 AND tipo != 2
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+-- METHOD -- GET
+-- USUARIO -- EXTERNO
+-- NUEVA CONSULTA -- 2018-12-18 07:34:58
+-- SQL -- SELECT * FROM innovasys_car100.cat_servicios
+-- CONTROLADOR -- App\Controllers\Website
+-- FUNCION -- home
+-- RUTA -- App/Controllers/Website.php
+-- PDO ERROR -- FALSE
+----------------------------------

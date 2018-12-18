@@ -69,7 +69,7 @@ class Session
     public static function set($name,$value)
     {
         $_SESSION[$name] = $value;
-      //  setcookie(strval($name), strval($value), 0, '/; samesite=strict',"smart2.cntcloud.com",1,1);
+      //  setcookie(strval($name), strval($value), 0, '/; samesite=strict',"smart.cntcloud2.com",1,1);
 
 
     }
