@@ -63,7 +63,7 @@ class Cliente extends \Core\Model
         $token = self::token(50);
 
         //Enviar Mail Aqui.
-        $from = "smart.cntcloud2.com";
+        $from = "smart2.cntcloud.com";
             $to = $user->correo;
             //$subject = "CNT - ".$titulo;
             $subject = "CNT - Alerta al usuario Notificado";
@@ -118,7 +118,7 @@ class Cliente extends \Core\Model
                     ">
                     <br>
                     <div style="padding:5%"> 
-                        <p><strong>Recuperacion de Contraseña </strong><a href= "https://smart.cntcloud2.com/reset?token='.$token.'">Click Aqui.</a></p>
+                        <p><strong>Recuperacion de Contraseña </strong><a href= "https://smart2.cntcloud.com/reset?token='.$token.'">Click Aqui.</a></p>
                         
                     </div>
                     </div>

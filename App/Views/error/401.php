@@ -30,7 +30,7 @@
 		window.location.hash="/";
 		window.location.hash="#/"
 		window.onhashchange=function(){window.location.hash="/";}
-		//location.href="https://smart.cntcloud2.com";
+		//location.href="https://smart2.cntcloud.com";
 		}
 	</script>
 
