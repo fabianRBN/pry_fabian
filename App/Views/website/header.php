@@ -105,7 +105,7 @@ header('Access-Control-Allow-Origin: *');
 											}
 										}
 									?>
-									<?php if($_SESSION['intentos'] > 3): ?>
+									<?php if($_SESSION['intentos'] > 2): ?>
 									<button type="button" class="btn btn-primary btn-lg btn-block"  onclick='location.reload(true);'>Espera un momento </button>
 									<br>
 									<div class="h5" style="    color: #f7d16e; align-items: center; align-content: center; text-align: center;">Intentos de login alcanzados</div>

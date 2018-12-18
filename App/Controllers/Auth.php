@@ -63,7 +63,7 @@ class Auth extends \Core\Controller
 
                     $validation = User::validate(['email','password'], $_POST);
                     if(isset($_SESSION['intentos'])){
-                        if($_SESSION['intentos']>3){
+                        if($_SESSION['intentos']>2){
                             Router::redirect('/connect');
                         }
                         $_SESSION['intentosfecha'] = getdate();

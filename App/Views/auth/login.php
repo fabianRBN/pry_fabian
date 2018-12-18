@@ -67,7 +67,7 @@
 											}
 										}
 									?>
-									<?php if($_SESSION['intentos'] > 3): ?>
+									<?php if($_SESSION['intentos'] > 2): ?>
 									<button type="button" class="btn btn-primary btn-lg btn-block"  onclick='location.reload(true);'>Espera un momento </button>
 									<?php echo '<h4>Intentos de login alcanzados! </h4>' ?>
 								<?php else:?>
