@@ -5,6 +5,7 @@ var SivozConfig = {
         return this.domain + route
     }
 }
+var tiempoSession = 3600; // El tiempo esta dado en segundos
 moment.locale('es')
 Number.prototype.formatMoney = function(c, d, t){
     var n = this, 

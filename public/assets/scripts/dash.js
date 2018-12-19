@@ -57,7 +57,7 @@ $.get(SivozConfig.domain + '/stats').done(function(data){
         $('.chart-' + (i + 1) + '  h4').html(e.title);
         $('.chart-' + (i + 1) + '  img').hide()
 
-        console.log(dataset)
+        //console.log(dataset)
 
         charts.push(new Chart(document.getElementById("chart-" + (i + 1)).getContext('2d'), dataset));      
     })

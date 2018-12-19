@@ -4,6 +4,7 @@
 			<div class="container-fluid">
 				<p class="copyright">&copy; <?php echo date('Y') ?> <a href="<?php echo \App\Config::Domain ?>" target="_blank"><?php echo \App\Config::ClientName ?></a>. Todos los derechos reservados.</p>
 			</div>
+			<div id="number"></div>
 		</footer>
 	</div>
 	<!-- END WRAPPER -->
@@ -11,7 +12,7 @@
 	<script src="<?php \Core\Router::assets('assets/vendor/jquery/jquery.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/vendor/bootstrap/js/bootstrap.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js') ?>"></script>
-	<script src="<?php \Core\Router::assets('assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.jss') ?>"></script>
+	<script src="<?php \Core\Router::assets('assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/vendor/chartist/js/chartist.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/jquery.nestable.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/klorofil-common.js') ?>"></script>
@@ -22,6 +23,8 @@
 	<script src="<?php \Core\Router::assets('assets/scripts/editor/trumbowyg.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/jquery-ui.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/jquery.expander.js') ?>"></script>
+
+    <script src="<?php \Core\Router::assets('assets/scripts/time-session.js') ?>"></script>
 
 	<script src="<?php \Core\Router::assets('assets/scripts/jquery.panzoom.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/jquery.mousewheel.min.js') ?>"></script>

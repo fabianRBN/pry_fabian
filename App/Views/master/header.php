@@ -15,7 +15,7 @@
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/css/main.css') ?>">
 	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/css/jquery.flowchart.min.css') ?>">
-	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/js/flujo/jquery.flowchart.min.css') ?>">
+	<link  href="<?php \Core\Router::assets('assets/js/flujo/jquery.flowchart.min.css') ?>">
 	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
 	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/css/demo.css') ?>">
 	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/scripts/editor/ui/trumbowyg.min.css') ?>">
@@ -53,8 +53,12 @@
 	<!-- WRAPPER -->
 	<div id="wrapper">
 		<!-- NAVBAR -->
-		
-		<nav class="navbar navbar-default navbar-fixed-top">
+		<?php if(isset($_SESSION['CREATED'])): ?>
+		<input type="hidden" id="timevalue" name="timevalue" value=<?php  echo json_encode($_SESSION['CREATED']) ?> >
+		<?php else:?>
+		<input type="hidden" id="timevalue" name="timevalue" value="0" >
+		<?php endif?>
+			<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
 				<a href="/"><img height="50px" src="<?php \Core\Router::assets('assets/img/logo-dark.png') ?>"></a>
 			</div>

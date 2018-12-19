@@ -45,7 +45,14 @@ class Auth extends \Core\Controller
     public function logout()
     {
         User::logout();
+        if(isset($_SESSION['CREATED'])){
+            unset($_SESSION['CREATED']);
+        }
         Router::redirect('/');
+        echo "<script>console.log( 'Actualizacion de ID:');</script>";
+
+
+
     }
 
     public function loginPost()

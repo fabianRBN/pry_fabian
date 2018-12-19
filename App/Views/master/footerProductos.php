@@ -11,7 +11,7 @@
 	<script src="<?php \Core\Router::assets('assets/vendor/jquery/jquery.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/vendor/bootstrap/js/bootstrap.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js') ?>"></script>
-	<script src="<?php \Core\Router::assets('assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.jss') ?>"></script>
+	<script src="<?php \Core\Router::assets('assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/vendor/chartist/js/chartist.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/jquery.nestable.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/klorofil-common.js') ?>"></script>
@@ -28,6 +28,7 @@
 	<script src="<?php \Core\Router::assets('assets/scripts/flujo/jquery.flowchart.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/inputs.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/config.js') ?>"></script>
+    <script src="<?php \Core\Router::assets('assets/scripts/time-session.js') ?>"></script>
 
 	<?php if(isset($scripts)): ?>
 	<?php foreach($scripts as $script): ?>

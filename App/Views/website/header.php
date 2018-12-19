@@ -38,6 +38,11 @@ header('Access-Control-Allow-Origin: *');
     <![endif]-->
     </head>
     <body class="home">
+	<?php if(isset($_SESSION['CREATED'])): ?>
+	<input type="hidden" id="timevalue" name="timevalue" value=<?php  echo json_encode($_SESSION['CREATED']) ?> >
+	<?php else:?>
+	<input type="hidden" id="timevalue" name="timevalue" value="0" >
+	<?php endif?>
 
 	<div class="preloader">
 		<div class="sk-cube-grid">

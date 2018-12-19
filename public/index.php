@@ -39,15 +39,28 @@ $routes = Core\Routes::get();
 
 $session = Core\Session::get('sivoz_auth');
 
-if (!isset($_SESSION['CREATED'])) {
-    $_SESSION['CREATED'] = time();
-} else if (time() - $_SESSION['CREATED'] > 360) {
-    session_unset();     // unset $_SESSION variable for the run-time 
-    session_destroy();   // destroy session data in storage
-}else if (isset($_SESSION['CREATED'])) {
-    $_SESSION['CREATED'] = time();
-    session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
+if(isset($_SESSION['sivoz_auth'])){ // Verificamos la existencia de una session activa
+    //echo "<script>console.log( 'Session' );</script>";
+
+    if (!isset($_SESSION['CREATED'])) {
+        $_SESSION['CREATED'] = time();
+        //echo "<script>console.log( 'Inicio' );</script>";
+    
+    } else if (time() - $_SESSION['CREATED'] > 3600) { // Tiempo de la Session
+        Core\Router::redirect('/logout');
+
+        //session_unset();     // unset $_SESSION variable for the run-time 
+        //session_destroy();   // destroy session data in storage
+        //echo "<script>console.log( 'Destroy' );</script>";
+    
+    }else if (isset($_SESSION['CREATED'])) {
+        
+       //session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
+       $_SESSION['CREATED'] = time();
+    }
 }
+
+
 
 if(Core\Session::get('sivoz_firma') !== false){
     $data = [
