@@ -74,7 +74,7 @@ header('Access-Control-Allow-Origin: *');
     						<li class="email"><a href="mailto:support@spark.com"><i class="icofont icofont-ui-v-card"></i>soporte@cnt.gob.ec</a></li>
 							<?php if(\Core\Session::has('sivoz_auth')): ?>
                             	<li class="call">
-									<?php $ruta= 'administracion'; if( $_SESSION['sivoz_auth']->permiso == '10' ){$ruta= 'catalogos/productos';	}else{$ruta= 'administracion';} ?>
+									<?php $ruta= 'administracion';  ?>
 									<a href="<?php \Core\Router::url($ruta) ?>">
 								<i class="icofont icofont-user-alt-3">
 						

@@ -12,6 +12,7 @@ use \App\Models\Producto;
 use \App\Models\Suscripcion;
 use \App\Models\Servicio;
 use \App\Models\Visita;
+use \App\Models\Categoria;
 use \App\Models\Cliente;
 use \App\Models\Alert;
 
@@ -27,6 +28,14 @@ class Direccion extends \Core\Controller
     {
         if(Session::canSee([1,2]) == true){
             View::render('direccion.supervicion.dashboard');
+        }elseif(Session::canSee([10]) == true){
+            $productos = Producto::withCategories();
+		
+        
+            $categorias = Categoria::all();
+
+             View::render('catalogos.productos', ['productos' => $productos, 'categorias' => $categorias]);
+            //View::render('catalogos.productos');
         }elseif(Session::canSee([7]) == true){
             $servicio = Cliente::servicio();
 

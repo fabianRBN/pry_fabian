@@ -287,7 +287,7 @@ class Usuario extends \Core\Controller
     {
 
         if(Session::verificarToken($_POST['token'])){
-            Carrito::changeEstatus($_POST['id'],$_POST['comentario'],9,false,"NA",function($pass){
+            Carrito::changeEstatus($_POST['id'],$_POST['comentario'],9,false,false,"NA",function($pass){
                 if($pass == true){
                     echo json_encode(['error' => false]);
                 }else{
