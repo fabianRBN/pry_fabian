@@ -51,8 +51,11 @@ class Binnacle
 
     public static function addRoute($string)
     {
-        //$file = dirname(__DIR__) . "/logs/route.log";
+        // Implementacion de cookie remplazando router.log
         $_SESSION['rootlog']=$string;
+
+
+        //$file = dirname(__DIR__) . "/logs/route.log";
        // file_put_contents($file, $string);
     }
 
@@ -82,24 +85,21 @@ class Binnacle
     public static function getRoute($attr)
     {
     //$file = dirname(__DIR__) . "/logs/route.log";
+      
+    // $array = json_encode(file_get_contents($file));
+        
     // $array = array("controller"=>"App\\Controllers\\Mantenimiento","action"=>"auth","route"=>"App\/Controllers\/Mantenimiento.php");
         
     
+        if(!isset( $_SESSION['rootlog'])){
 
-    $array = (array) json_decode( $_SESSION['rootlog'] ); 
+            $array = array("controller"=>"App\\Controllers\\Website","action"=>"home","route"=>"App\/Controllers\/Website.php");
 
+        }else{
+            $array = (array) json_decode( $_SESSION['rootlog'] ); 
 
+        }
 
-    
-  
-    /*    $val = json_encode(file_get_contents($file));
-       if($val === false || is_null($val)){
-           $array = (array) $val;
-       }else{
-      
-             $array = array("controller"=>"App\\Controllers\\Mantenimiento","action"=>"auth","route"=>"App\/Controllers\/Mantenimiento.php");
-   
-       } */
 
     return $array[$attr];
     }
