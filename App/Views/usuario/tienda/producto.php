@@ -95,7 +95,7 @@
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Confirmación de compra</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel">Confirmación de solicitud</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -104,7 +104,7 @@
                                                     
                                                     <div class="">
                                                     <div class="panel-heading">
-                                                        <div class="panel-title">Desea confirmar la compra de <?php echo $producto->nombre ?></div>
+                                                        <div class="panel-title">Desea confirmar la solicitud de <?php echo $producto->nombre ?></div>
                                                     </div>
                                                     <div class="panel-body">
                                                     <h4>Caracteristicas</h4>

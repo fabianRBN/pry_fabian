@@ -147,7 +147,7 @@ class Alert extends \Core\Model
                     <div style="padding:5%"> 
                          
                          <p><strong>Producto: </strong>'. $producto->nombre.' </p>
-                         <p><strong>Fecha de compra: </strong>'. $carrito->fecha_compra.' </p>
+                         <p><strong>Fecha de solicitud: </strong>'. $carrito->fecha_compra.' </p>
                          <p><strong>Cliente: </strong>'. $cliente->nombre.' </p>
                          <p><strong>Correo: </strong>'. $cliente->correo.' </p>
                          <p><strong>Estatus: </strong>'. $estatus->nombre.' </p>
@@ -261,7 +261,7 @@ class Alert extends \Core\Model
                     <br>
                     <div style="padding:5%"> 
                         <p><strong>Producto: </strong>'. $producto->nombre.' </p>
-                        <p><strong>Fecha de compra: </strong>'. $carrito->fecha_compra.' </p>
+                        <p><strong>Fecha de solicitud: </strong>'. $carrito->fecha_compra.' </p>
                         <p><strong>Cliente: </strong>'. $cliente->nombre.' </p>
                         <p><strong>Correo: </strong>'. $cliente->correo.' </p>
                         <p><strong>Nombre de usuario notificado: </strong>'. $usuario->nombre.' </p>

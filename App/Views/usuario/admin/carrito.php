@@ -93,7 +93,7 @@
                                 <div class="panel-footer">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <button data-toggle="modal" data-target="#myModal" class="btn btn-danger">Cancelar compra de producto</button>
+                                            <button data-toggle="modal" data-target="#myModal" class="btn btn-danger">Cancelar solicitud de producto</button>
                                         </div>
                                     </div>
                                 </div>
