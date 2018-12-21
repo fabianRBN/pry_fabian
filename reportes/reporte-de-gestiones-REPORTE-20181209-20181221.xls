@@ -1,0 +1,24 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+				xmlns:x="urn:schemas-microsoft-com:office:excel"
+				xmlns="http://www.w3.org/TR/REC-html40">
+				
+				<!DOCTYPE html>
+				<html>
+				<head>
+					<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+					<style id="Classeur1_16681_Styles"></style>
+				</head>
+				<body>
+				<table x:str border=0 cellpadding=0 cellspacing=0 width=100% style="border-collapse: collapse"><tr><th style='text-align:center; font-size:16px' colspan='9'>Reporte de Gestiones <br> <small style="color: #485770;">en un rango de fechas de 2018-12-09 a 2018-12-21</small></th></tr>
+<tr><th style='text-align: right; font-size:9px;' colspan='5'>21/12/2018 11:26:02</th></tr>
+<tr><th>Cliente</th><th>No. cliente</th><th>Producto</th><th>Total</th><th>No. Ticket</th><th>Fecha</th><th>Fecha Pago</th><th>Fecha Aprovisionamiento</th><th>Fecha Compra</th></tr><tr><td style='text-align: center;'>Fabian Toapanta</td>
+<td style='text-align: center;'>0000000000</td>
+<td style='text-align: center;'>VDC PLATA</td>
+<td style='text-align: center;'>88.64</td>
+<td style='text-align: center;'>0000000361</td>
+<td style='text-align: center;'>2018-12-14 12:19:12</td>
+<td style='text-align: center;'>2019-01-14 00:00:00</td>
+<td style='text-align: center;'>0000-00-00 00:00:00</td>
+<td style='text-align: center;'>2018-12-14 12:19:12</td>
+</tr></table></body>
+</html>

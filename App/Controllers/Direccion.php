@@ -26,12 +26,11 @@ class Direccion extends \Core\Controller
      */
     public function dashboard()
     {
-        if(Session::canSee([1,2]) == true){
+        if(Session::canSee([1,2,11]) == true){
             View::render('direccion.supervicion.dashboard');
         }elseif(Session::canSee([10]) == true){
             $productos = Producto::withCategories();
-		
-        
+
             $categorias = Categoria::all();
 
              View::render('catalogos.productos', ['productos' => $productos, 'categorias' => $categorias]);
