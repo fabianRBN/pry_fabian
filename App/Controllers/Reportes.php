@@ -19,9 +19,10 @@ class Reportes extends \Core\Controller
     {
         $codigos = Codigo::all();
 
-     
-        
+
         if(Input::has('codigo') == false || Input::has('fecha_inicio') == false || Input::has('fecha_fin') == false){
+
+
             $gestiones = Gestion::today();
             if(Input::get('tipo') == 'exportacion'){
                 if(Input::has('fecha_inicio')  == true || Input::has('fecha_fin') == true){
@@ -47,10 +48,13 @@ class Reportes extends \Core\Controller
                 'fecha' => 'Fecha'
             ]]);
         }else{
+
             $gestiones = Gestion::generate(Input::all());
 
             if(Input::get('tipo') == 'exportacion'){
                 if(Input::has('fecha_inicio')  == true || Input::has('fecha_fin') == true){
+
+
                     View::export($gestiones['data'], $gestiones['names'], 'Reporte de Gestiones <br> <small style="color: #485770;">en un rango de fechas de ' .Input::get('fecha_inicio') . ' a ' . Input::get('fecha_fin') . '</small>', View::slugify('Reporte de Gestiones') . '-' . Input::get('codigo') .'-' . str_replace('-', '', Input::get('fecha_inicio')) . '-' . str_replace('-', '', Input::get('fecha_fin')));
     
                     Router::redirect('reportes/generados');

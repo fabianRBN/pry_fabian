@@ -12,34 +12,34 @@
 							<div class="col-sm-3">
 								<label for="">Codigo de gestión</label>
 								<select name="codigo" class="form-control">
-									<option value="todos">Todos</option>
+									<option value="todos" <?php if(isset($_GET['codigo'])){  if ($_GET['codigo'] == 'todos') echo ' selected="selected"'; }  ?> >Todos</option>
 									<?php foreach($codigos as $codigo): ?>
-									<option value="<?php echo $codigo->nombre ?>"><?php echo $codigo->nombre ?></option>
+									<option value="<?php echo $codigo->nombre ?>" <?php if(isset($_GET['codigo'])){  if ($_GET['codigo'] == $codigo->nombre) echo ' selected="selected"'; }  ?> ><?php echo $codigo->nombre ?></option>
 									<?php endforeach ?>
 								</select>
 							</div>
 							<div class="col-sm-3">
 								<label for="">Tipo de reporte</label>
 								<select name="reporte" class="form-control">
-									<option value="todos">Todos</option>
-									<option value="1">Clientes por producto</option>
-									<option value="2">Clientes por estado</option>
-									<option value="3">Solicitudes rechazadas</option>
-									<option value="4">Venta por fecha</option>
+									<option value="todos" <?php if(isset($_GET['reporte'])){  if ($_GET['reporte'] == 'todos') echo ' selected="selected"'; }  ?> >Todos</option>
+									<option value="1" <?php if(isset($_GET['reporte'])){  if ($_GET['reporte'] == '1') echo ' selected="selected"'; }  ?> >Clientes por producto</option>
+									<option value="2" <?php if(isset($_GET['reporte'])){  if ($_GET['reporte'] == '2') echo ' selected="selected"'; }  ?> >Clientes por estado</option>
+									<option value="3" <?php if(isset($_GET['reporte'])){  if ($_GET['reporte'] == '3') echo ' selected="selected"'; }  ?> >Solicitudes rechazadas</option>
+									<option value="4" <?php if(isset($_GET['reporte'])){  if ($_GET['reporte'] == '4') echo ' selected="selected"'; }  ?> >Venta por fecha</option>
 								</select>
 							</div>
 							<div class="col-sm-3">
 								<label for="">Fecha inicio</label>
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-									<input name="fecha_inicio" value="<?php echo date('Y-m-d') ?>" class="form-control" placeholder="Fecha inicio" type="date">
+									<input name="fecha_inicio" value="<?php if(isset($_GET['fecha_inicio'])){ echo $_GET['fecha_inicio']; }else{ echo date('Y-m-d');} ?>" class="form-control" placeholder="Fecha inicio" type="date">
 								</div>
 							</div>
 							<div class="col-sm-3">
 								<label for="">Fecha fin</label>
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-									<input name="fecha_fin" value="<?php echo date('Y-m-d') ?>" class="form-control" placeholder="Fecha fin" type="date">
+									<input name="fecha_fin" value="<?php if(isset($_GET['fecha_fin'])){ echo $_GET['fecha_fin']; }else{ echo date('Y-m-d');} ?>" class="form-control" placeholder="Fecha fin" type="date">
 								</div>
 							</div>
 							<div class="col-sm-3">

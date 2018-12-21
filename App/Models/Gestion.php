@@ -29,6 +29,7 @@ class Gestion extends \Core\Model
     }
     public static function generate($input)
     {
+
         $data = [];
         $names = [];
         if($input->codigo == 'todos'){

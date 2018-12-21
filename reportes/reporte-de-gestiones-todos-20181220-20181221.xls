@@ -1,0 +1,39 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+				xmlns:x="urn:schemas-microsoft-com:office:excel"
+				xmlns="http://www.w3.org/TR/REC-html40">
+				
+				<!DOCTYPE html>
+				<html>
+				<head>
+					<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+					<style id="Classeur1_16681_Styles"></style>
+				</head>
+				<body>
+				<table x:str border=0 cellpadding=0 cellspacing=0 width=100% style="border-collapse: collapse"><tr><th style='text-align:center; font-size:16px' colspan='6'>Reporte de Gestiones <br> <small style="color: #485770;">en un rango de fechas de 2018-12-20 a 2018-12-21</small></th></tr>
+<tr><th style='text-align: right; font-size:9px;' colspan='5'>21/12/2018 09:37:20</th></tr>
+<tr><th>Codigo</th><th>Estatus</th><th>Descripcion</th><th>Usuario</th><th>Cartera</th><th>Fecha</th></tr><tr><td style='text-align: center;'>ACCESO</td>
+<td style='text-align: center;'>INICIO DE SESION</td>
+<td style='text-align: center;'>INICIO DE SESION DEL USUARIO CON EL ID 3</td>
+<td style='text-align: center;'>DEMO  SUPERVISOR</td>
+<td style='text-align: center;'>100</td>
+<td style='text-align: center;'>2018-12-20 09:30:15</td>
+</tr><tr><td style='text-align: center;'>ACCESO</td>
+<td style='text-align: center;'>INICIO DE SESION</td>
+<td style='text-align: center;'>INICIO DE SESION DEL USUARIO CON EL ID 3</td>
+<td style='text-align: center;'>DEMO  SUPERVISOR</td>
+<td style='text-align: center;'>100</td>
+<td style='text-align: center;'>2018-12-20 11:26:36</td>
+</tr><tr><td style='text-align: center;'>ACCESO</td>
+<td style='text-align: center;'>INICIO DE SESION</td>
+<td style='text-align: center;'>INICIO DE SESION DEL USUARIO CON EL ID 3</td>
+<td style='text-align: center;'>DEMO  SUPERVISOR</td>
+<td style='text-align: center;'>100</td>
+<td style='text-align: center;'>2018-12-20 11:28:03</td>
+</tr><tr><td style='text-align: center;'>ACCESO</td>
+<td style='text-align: center;'>INICIO DE SESION</td>
+<td style='text-align: center;'>INICIO DE SESION DEL USUARIO CON EL ID 1</td>
+<td style='text-align: center;'>DEP SISTEMAS</td>
+<td style='text-align: center;'>100</td>
+<td style='text-align: center;'>2018-12-20 17:11:24</td>
+</tr></table></body>
+</html>

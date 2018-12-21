@@ -15,12 +15,33 @@ class Input
         return false;
     }
 
+    public static function hasGet()
+    {
+        if(count($_GET) > 0){
+            
+            return true;
+        }
+
+        return false;
+    }
+    public static function hasPost()
+    {
+        if(count($_POST) > 0){
+            
+            return true;
+        }
+
+        return false;
+    }
+
     public static function all()
     {
         if(count($_GET) > 0){
+            
             return (object) $_GET;
         }
         if(count($_POST) > 0){
+
             return (object) $_POST;
         }
 
