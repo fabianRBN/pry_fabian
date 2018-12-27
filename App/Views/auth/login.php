@@ -46,13 +46,15 @@
 								</div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">Contraseña</label>
-									<input type="password" autocomplete="off" name="password" class="form-control" id="signin-password" value="" placeholder="Password">
+									<input type="password"  autocomplete="off" name="password" class="form-control" id="signin-password" value="" placeholder="Password">
 									<input  type="hidden" name="tokenCSRF" value="<?php echo strval(\Core\Session::createToken() )?>" >
 
 									<p  class="text-danger">
 										<?php echo Core\Session::flash('password_error') ?>
 									</p>
 								</div>
+								<input type="checkbox" onclick="showpass()" style="    margin: 15px;">
+								<label> Mostrar Contraseña </label>
 								<?php  if(isset($_SESSION['intentos'])): ?>
 									<?php   
 										
@@ -99,5 +101,15 @@
 	</div>
 	<!-- END WRAPPER -->
 </body>
+<script>
+	function showpass() {
+		var x = document.getElementById("signin-password");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+</script>
 
 </html>

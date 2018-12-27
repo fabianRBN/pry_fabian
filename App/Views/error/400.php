@@ -62,6 +62,15 @@
 							<p>Pagina no encontrada</p>
 						</div>
 					</div>
+					<br>
+						<br>
+						<br>
+						<br>
+						<div class="logo text-center">
+						<a href="<?php echo App\Config::Domain ?>">
+						<img width="50px" src="<?php \Core\Router::assets('assets/img/Home.png') ?>" title="Pagina principal" alt="<?php echo App\Config::ClientName ?> Logo">
+						</a>
+						</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>
