@@ -70,12 +70,12 @@ class Direccion extends \Core\Controller
     public function stats()
     {
         $datasets = [
-            Carrito::ventasUltimosMeses(4),
-            Carrito::comparativaSG(4),
+            Carrito::ventasUltimosMeses(5),
+            Carrito::comparativaSG(5),
             Producto::graph(),
-            Carrito::comparativaSV(4),
-            Cliente::ventasUltimosMeses(4),
-            Carrito::retiros(4),
+            Carrito::comparativaSV(5),
+            Cliente::ventasUltimosMeses(5),
+            Carrito::retiros(5),
         ];
         
         $data = [

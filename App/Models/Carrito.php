@@ -79,8 +79,15 @@ class Carrito extends \Core\Model
 
 
         for($i = $firstMonht; $i <= date('m'); $i++){
-            $labels[] = $months[$i - 1];
-            $data[] = ['mes' => $i, 'total' => 0, 'nombre' => $months[$i - 1]];
+            if($i < 0){
+                $labels[] = $months[$i + 12];
+                $data[] = ['mes' => $i+12, 'total' => 0, 'nombre' => $months[$i + 12]];
+            }else if($i > 0){
+                $labels[] = $months[$i - 1];
+                $data[] = ['mes' => $i, 'total' => 0, 'nombre' => $months[$i - 1]];
+            }
+
+     
         }
 
         $date = date("Y-m-d", strtotime("-$m months"));
@@ -132,8 +139,14 @@ class Carrito extends \Core\Model
 
 
         for($i = $firstMonht; $i <= date('m'); $i++){
-            $labels[] = $months[$i - 1];
-            $data[] = ['mes' => $i, 'total' => 0, 'nombre' => $months[$i - 1]];
+            
+            if($i < 0){
+                $labels[] = $months[$i + 12];
+                $data[] = ['mes' => $i+12, 'total' => 0, 'nombre' => $months[$i + 12]];
+            }else if($i > 0){
+                $labels[] = $months[$i - 1];
+                $data[] = ['mes' => $i, 'total' => 0, 'nombre' => $months[$i - 1]];
+            }
         }
 
         $date = date("Y-m-d", strtotime("-$m months"));
@@ -185,8 +198,14 @@ class Carrito extends \Core\Model
 
 
         for($i = $firstMonht; $i <= date('m'); $i++){
-            $labels[] = $months[$i - 1];
-            $data[] = ['mes' => $i, 'total' => 0, 'nombre' => $months[$i - 1]];
+            
+            if($i < 0){
+                $labels[] = $months[$i + 12];
+                $data[] = ['mes' => $i+12, 'total' => 0, 'nombre' => $months[$i + 12]];
+            }else if($i > 0){
+                $labels[] = $months[$i - 1];
+                $data[] = ['mes' => $i, 'total' => 0, 'nombre' => $months[$i - 1]];
+            }
         }
 
         $date = date("Y-m-d", strtotime("-$m months"));
@@ -234,8 +253,13 @@ class Carrito extends \Core\Model
 
 
         for($i = $firstMonht; $i <= date('m'); $i++){
-            $labels[] = $months[$i - 1];
-            $data[] = ['mes' => $i, 'total' => 0, 'nombre' => $months[$i - 1]];
+            if($i < 0){
+                $labels[] = $months[$i + 12];
+                $data[] = ['mes' => $i+12, 'total' => 0, 'nombre' => $months[$i + 12]];
+            }else if($i > 0){
+                $labels[] = $months[$i - 1];
+                $data[] = ['mes' => $i, 'total' => 0, 'nombre' => $months[$i - 1]];
+            }
         }
 
         $date = date("Y-m-d", strtotime("-$m months"));
