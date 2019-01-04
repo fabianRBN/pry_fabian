@@ -81,8 +81,8 @@ class Alert extends \Core\Model
       if($data->email_smtp==1){
 
 
-            $from = "test@hostinger-tutorials.com";
-            $to = "fabianRBN_95@hotmail.com";
+            $from = "smartcloud@cntcloud.com";
+            $to = $cliente->correo;
             //$subject = "CNT - ".$data->titulo;
 
             $subject = "CNT - Alerta usuarios configurados";
@@ -95,7 +95,7 @@ class Alert extends \Core\Model
 
 
             $headers = "From:" . $from;
-            $headers .= " CC: email@cntclopud.com\r\n";
+            $headers .= " CC: smartcloud@cntcloud.com\r\n";
             $headers .= "MIME-Version: 1.0\r\n";
             $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
             $message = '<!DOCTYPE html>
@@ -201,8 +201,8 @@ class Alert extends \Core\Model
     {
         
         if($id != null){
-            $from = "test@hostinger-tutorials.com";
-            $to = "fabianRBN_95@hotmail.com";
+            $from = Config::SENDER;
+            
             //$subject = "CNT - ".$titulo;
             $subject = "CNT - Alerta al usuario Notificado";
 
@@ -212,8 +212,10 @@ class Alert extends \Core\Model
             $producto = Producto::findById($carrito->id_producto);
             $cliente = Cliente::findByID($carrito->id_cliente);
 
+            $to = $cliente->correo;
+            
             $headers = "From:" . $from;
-            $headers .= " CC: email@cntclopud.com\r\n";
+            $headers .= " CC: ".Config::SENDER."\r\n";
             $headers .= "MIME-Version: 1.0\r\n";
             $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
             $message = '<!DOCTYPE html>
@@ -273,11 +275,12 @@ class Alert extends \Core\Model
             </body>
             </html>';
            // mail($to,$subject,$message, $headers);
-    
+           
+           static::query("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
+
         }
        
 
-        static::query("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
         return static::queryOneTime("INSERT INTO {cartera}.{model} (id_usuario,titulo,comentario,url,asesor,identificador,tipo) VALUES (". $id .",'". $titulo ."','". $comment ."','". $url ."',". Session::get('sivoz_auth')->id .",". $identificador .",'". $tipoID ."')");
     }
 

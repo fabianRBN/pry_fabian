@@ -63,15 +63,13 @@ class Cliente extends \Core\Model
         $token = self::token(50);
 
         //Enviar Mail Aqui.
-        $from = "smart.cntcloud2.com";
+        $from = Config::SENDER;
             $to = $user->correo;
             //$subject = "CNT - ".$titulo;
             $subject = "CNT - Alerta al usuario Notificado";
 
-
-
             $headers = "From:" . $from;
-            $headers .= " CC: email@cntclopud.com\r\n";
+            $headers .= " CC: ".Config::SENDER."\r\n";
             $headers .= "MIME-Version: 1.0\r\n";
             $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
             $message = '<!DOCTYPE html>
@@ -118,7 +116,7 @@ class Cliente extends \Core\Model
                     ">
                     <br>
                     <div style="padding:5%"> 
-                        <p><strong>Recuperacion de Contraseña </strong><a href= "https://smart.cntcloud2.com/reset?token='.$token.'">Click Aqui.</a></p>
+                        <p><strong>Recuperacion de Contraseña </strong><a href= "'.Config::Domain.'reset?token='.$token.'">Click Aqui.</a></p>
                         
                     </div>
                     </div>
@@ -126,7 +124,11 @@ class Cliente extends \Core\Model
     
             </body>
             </html>';
-            mail($to,$subject,$message, $headers);
+
+            //mail($to,$subject,$message, $headers);
+
+            static::query("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
+
 
         self::queryOneTime("UPDATE {cartera}.{model} SET token_recuperacion='$token' WHERE correo='$user->correo'");
 

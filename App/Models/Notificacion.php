@@ -27,13 +27,15 @@ class Notificacion extends \Core\Model
     public static function send($url, $e, $tipo, $identificador, $tipoID, $id = null)
     {
 
-        $from = "email@cntcloud.com";
+        $from = Config::SENDER;
       
-        $to = "fabianRBN_95@hotmail.com";
+        
         $carrito = Carrito::getById($identificador)[0];
         $producto = Producto::findById($carrito->id_producto);
         $cliente = Cliente::findByID($carrito->id_cliente);
         $estatus=  Estatus::findByIDElemento($e,$tipo);
+
+        $to = $cliente->correo;
 
         $message = '<!DOCTYPE html>
             <html>
@@ -95,23 +97,15 @@ class Notificacion extends \Core\Model
 
             </body>
         </html>';
-       //$subject = "CNT -".$producto->nombre;
-       $subject = "CNT - Notificacion al cliente";
+        $subject = "CNT -".$producto->nombre;
+        //$subject = "CNT - Notificacion al cliente";
         $headers = "From:" . $from;
-        $headers .= " CC: email@cntclopud.com\r\n";
+        $headers .= " CC: ".Config::SENDER."\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-        /* 
-        $message = '<p><strong>Producto:</strong>'. $producto->nombre.' </p>';
-        $message .= '<p><strong>Fecha de compra:</strong>'. $carrito->fecha_compra.' </p>';
-        $message .= '<p><strong>Estado:</strong>'. $estatus->nombre.' </p>';
-        $message .= '<p><strong>Cliente:</strong>'. $cliente->nombre.' </p>';
-        $message .= '<p><strong>Cliente:</strong>'. $cliente->correo.' </p>';
-         */
-        //$to =  $cliente->correo;
 
-       // mail($to,$subject,$message, $headers);
-
+        //mail($to,$subject,$message, $headers);
+        
         static::query("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
 
         

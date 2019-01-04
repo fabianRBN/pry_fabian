@@ -37,6 +37,12 @@ class Config
     const Domain = 'https://smart.cntcloud2.com/';
 
     /**
+     * Dominio for tomcat
+     * @var string
+     */
+    const DomainTomcat = 'https://smart.cntcloud2.com:8443/';
+
+    /**
      * Folder
      * @var string
      */
@@ -91,6 +97,12 @@ class Config
     const SHA_TOKEN = 'SivozMexico2018Innovasys';
 
     /**
+     * Sender for smtp
+     * @var string
+     */
+    const SENDER = 'smartcloud@cntcloud.com';
+
+    /**
      * Database password
      * @var string
      */
@@ -101,4 +113,6 @@ class Config
      * @var boolean
      */
     const SHOW_ERRORS = false;
+
+  
 }
