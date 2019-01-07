@@ -11,7 +11,7 @@ if(start != 0){
         }
 
         if( ( n - start)> tiempoSession){
-            location.href=SivozConfig.domain +"/logout";
+            location.href=SivozConfig.domain +"logout";
         }
         n++;
        

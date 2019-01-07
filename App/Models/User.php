@@ -7,6 +7,7 @@ use \App\Models\Firma;
 use \App\Models\Gestion;
 use \App\Config;
 use \Core\Session;
+use \Core\Correo;
 
 
 class User extends \Core\Model
@@ -246,61 +247,11 @@ class User extends \Core\Model
          $headers .= " CC: ".Config::SENDER."\r\n";
          $headers .= "MIME-Version: 1.0\r\n";
          $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-         $message = '<!DOCTYPE html>
-         <html>
-         <head>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-         </head>
-         <body style="background-color: #fafafa; padding-bottom: 40px;  padding-top: 40px;">
-             <div style=" width: 100%; " >
-                 <div style="
-                 background-color: #FFFF;
-                 width: 70%;
-                 height: 100px;
-                 margin-left: auto;
-                 margin-right: auto;
-                 border: 2px solid;
-                 border-bottom-color: rgb(218, 218, 218);
-                 border-top-color: #FFFF;
-                 border-left-color: #FFFF;
-                 border-right-color: #FFFF;
-                 ">
-                 <div style="
-                 width: 20%;
-                 height: 80px;
-                 margin: 20px;
-                 text-align: right;
-               float: left;">      <img src="https://smart.cntcloud.com/public/assets/img/cnt-logo.png" alt=""></div>
-               <div style="
-                 width: 60%;
-                 height: 80px;
-                 margin: 20px;
-                 text-align: right;
-               float: left;"> <h2 style="font-family: Arial, Helvetica, sans-serif;">Corporación Nacional de Telecomunicaciones</h2></div>       
-             </div>
-               </div>
-               
-             <div style=" width: 100%;">
-                 <div style=" background-color: #FFFF;
-                 width: 70%;
-                 height: 500px;
-                 margin: 0 auto; 
-                 text-align: left;
-                 ">
-                 <br>
-                 <div style="padding:5%"> 
-                     <p><strong>Recuperacion de Contraseña </strong><a href= "'.Config::Domain.'reset?token='.$token.'">Click Aqui.</a></p>
-                     
-                 </div>
-                 </div>
-             </div>
- 
-         </body>
-         </html>';
+         $message =  Correo::buildEmail();
+         $content = '<p><strong>Recuperación de Contraseña </strong><a href= "'.Config::Domain.'reset?token='.$token.'">Click Aqui.</a></p>';
+         $message = str_replace("%body%", $content, $message);
+         mail($to,$subject,$message, $headers);
          
-         //mail($to,$subject,$message, $headers);
-
          static::query("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
 
 
