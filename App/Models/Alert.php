@@ -81,7 +81,9 @@ class Alert extends \Core\Model
       if($data->email_smtp==1){
 
 
-            $from = "smartcloud@cntcloud.com";
+            $from = Config::SENDER;
+
+
             $to = $cliente->correo;
             //$subject = "CNT - ".$data->titulo;
 

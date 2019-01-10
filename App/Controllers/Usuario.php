@@ -71,7 +71,14 @@ class Usuario extends \Core\Controller
             View::render('usuario.tienda.servicios', ['servicios' => Servicio::all()]);
         }else{
             if(Suscripcion::active()){
-                View::render('usuario.admin.carrito', ['producto' => Carrito::findByID($_GET['id']), 'alerts' => Alert::getUser($_GET['id'],'carrito')]);
+                $carrito =  Carrito::findByID($_GET['id']);
+                $cliente = Session::get('sivoz_auth');
+                if($carrito->id_cliente == $cliente->id){
+                    View::render('usuario.admin.carrito', ['producto' =>$carrito, 'alerts' => Alert::getUser($_GET['id'],'carrito')]);
+                }else{
+                    View::render('error.500'); 
+                }
+
             }else{
                 $id = Suscripcion::mine()->id;
 
