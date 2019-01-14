@@ -70,7 +70,13 @@
                                     <?php endif ?>
                                 </div>
                                 <div class="panel-footer">
-                                    <h5><?php echo $producto->producto->nombre ?></h5>
+                                    <div style=" display: flex; justify-content: space-between;" >
+                                        <h5><?php echo $producto->producto->nombre ?></h5>
+
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                                Editar
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="panel">
@@ -131,7 +137,156 @@
         </div>
         </div>
         <div carrito data-id="<?php echo $producto->id ?>"></div>
+
+
+       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+            <div class="modal-header" style="display: flex;">
+                <h5 class="modal-title" id="exampleModalLongTitle" style=" width: 90%;">Editar producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 10%;">
+                <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" style="height: 500px;" >
+                <div class="col-sm-12" style=" display: flex; justify-content: space-around;" > 
+                    <div class="panel col-sm-5 ">
+                        <div class="panel-heading">
+                            <div class="panel-title">Configuración actual</div>
+                        </div>
+                        <div class="panel-body">
+                            <?php foreach($producto->opciones as $opcion): ?>
+                            <div style=" margin-bottom: 2%;" >
+                                <span><?php echo $opcion->nombre." " ?></span>: 
+                                <br> 
+                                <span  class="label label-default" id="<?php echo \Core\Helper::slugify($opcion->nombre) ?>">
+                                <?php echo $opcion->value ?>
+                                </span>
+                            </div>
+                            <?php endforeach ?>
+                        </div>
+                    
+                    </div>
+                    <div class="panel col-sm-6">
+                        <div class="panel-heading">
+                            <div class="panel-title">Nueva configuracion</div>
+                        </div>
+                        <div class="panel-body">
+                        <?php if($product->configurable == 1){?>
+                        <div class="col-sm-12">
+                        
+                                <form id="options-form">
+                                <?php foreach($product->opciones as $opcion): ?>
+                                <?php if($opcion->tipo == 1): ?>
+                                <div class="from-group" >
+                                    <br>
+                                    
+                                    <label for=""><?php echo $opcion->nombre ?> </label>
+                                    <?php if($product->mostrar_label == 1): ?>
+                                    - <div class="badge badge-info"><?php echo '$' . number_format($opcion->precio,2) ?></div>
+                                    <?php endif ?>                                    <div class="range-div " style="   margin-top: 1%;">
+                                    <div class="col-5" style="    width: 50%;">
+                                        <input data-precio="<?php echo $opcion->precio  ?>"   data-type="<?php echo $opcion->tipo ?>" data-id="<?php echo $opcion->id ?>" data-change="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" name="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" data-valor="<?php echo $opcion->valor  ?>"  value="<?php echo $opcion->valor  ?>"type="range" class="custom-range"  min="<?php echo $opcion->min ?>" max="<?php echo $opcion->max ?>" class="form-control range-input">
+                                    </div>
+                                    <div class="col-5" style="    width: 15%;">
+                                        <input data-precio="<?php echo $opcion->precio  ?>"   data-type="<?php echo $opcion->tipo ?>" data-id="<?php echo $opcion->id ?>" data-change="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" name="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" data-valor="<?php echo $opcion->valor  ?>"  value="<?php echo $opcion->valor  ?>"type="number"  min="<?php echo $opcion->min ?>" max="<?php echo $opcion->max ?>" class="form-control custom-input">
+                                    </div>
+                                    <div class="col-2" style="    width: 15%;">
+                                    <div class="badge badge-info col-2" style="   margin-top: 1%;"><span class="range-slider__value "><?php echo $opcion->valor  ?></span></div>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                                <?php endif ?>
+                                <?php if($opcion->tipo == 2): ?>
+                                <div class="from-group">
+                                    <br>
+                                    <label for=""><?php echo $opcion->nombre ?></label>
+                                    <?php if(intval($product->mostrar_label) > 0): ?>
+                                    - <div class="badge badge-info"><?php echo '$' . number_format($opcion->precio,2) ?></div>
+                                    <?php endif ?>
+                                    <input data-precio="<?php echo $opcion->precio ?>" data-type="<?php echo $opcion->tipo ?>" data-id="<?php echo $opcion->id ?>" data-change="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" name="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" value="<?php echo $opcion->valor ?>" type="text" class="form-control">
+                                </div>
+                                <?php endif ?>
+                                <?php if($opcion->tipo == 4): ?>
+                                <div class="from-group">
+                                    <br>
+                                    <label for=""><?php echo $opcion->nombre ?></label>
+                                    <?php if(intval($product->mostrar_label) > 0): ?>
+                                    - <div class="badge badge-info"><?php echo '$' . number_format($opcion->precio,2) ?></div>
+                                    <?php endif ?>
+                                    <label class="fancy-checkbox">
+                                        <input data-precio="<?php echo $opcion->precio ?>" data-type="<?php echo $opcion->tipo ?>" data-id="<?php echo $opcion->id ?>" data-change="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" name="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" type="checkbox">
+                                        <span><?php echo $opcion->nombre ?> 
+                                            
+                                        </span>
+                                    </label>
+                                </div>
+                                <?php endif ?>
+                                <?php if($opcion->tipo == 5): ?>
+                                <div class="form-group">
+                                    <label for=""><?php echo $opcion->nombre ?></label>
+                                    <?php if(intval($product->mostrar_label) > 0): ?>
+                                    - <div class="badge badge-info"><?php echo '$' . number_format($opcion->precio,2) ?></div>
+                                    <?php endif ?>
+                                    <?php $count = 0; ?>
+                                    <?php if($opcion->opciones_precio !== ''){ $ops = explode(',',$opcion->opciones_precio); }else{ $ops = [];} ?>
+                                    <?php foreach(explode(',',$opcion->opciones) as $o): ?>
+                                    <label class="fancy-radio">
+                                        <?php
+                                            if(isset($ops[$count])){
+                                                $cop = $ops[$count];
+                                            }else{
+                                                $cop = 0;
+                                            }
+                                        ?>
+                                        <?php if($count == 0): ?>
+                                        <input checked data-precio="<?php echo $cop ?>" data-type="<?php echo $opcion->tipo ?>" data-id="<?php echo $opcion->id ?>" data-change="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" name="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" value="<?php echo $o ?>" data-cop="<?php echo \Core\Helper::slugify($opcion->nombre) .'-'. $count ?>" type="radio">
+                                        <span><i></i><?php echo $o ?> </span>
+                                        <?php else: ?>
+                                        <input data-precio="<?php echo $cop ?>" data-type="<?php echo $opcion->tipo ?>" data-id="<?php echo $opcion->id ?>" data-change="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" name="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" value="<?php echo $o ?>" type="radio" data-cop="<?php echo \Core\Helper::slugify($opcion->nombre) .'-'. $count ?>">
+                                        <span><i></i><?php echo $o ?> </span>
+                                        <?php endif ?>
+                                    </label>
+                                    <?php $count++; ?>
+                                    <?php endforeach ?>
+                                </div>
+                                <?php endif ?>
+                                <?php endforeach ?>
+                                </form>
+                                </div>
+                           
+                        </div>
+                        <?php }?>
+                        </div>
+                    
+                   
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <div style="display: flex;     justify-content: space-between;"> 
+                
+                <div>
+                   <?php     echo "<script>console.log( ". json_encode($product->precio)." );</script>" ?>
+                    <h4>Nuevo recio : <span data-tipo-pago="3" data-precio-global="<?php echo  $product->precio  ?>" class="label label-info">/mes</span>
+                    </h4>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+
+                </div>
+
+                
+            </div>
+            </div>
+        </div>
+        </div>
+
 <?php \Core\View::render('master.footer',['scripts' => [
-	'assets/scripts/carrito-user.js'
+	'assets/scripts/carrito-user.js','assets/scripts/producto.js'
 ]]) ?>
 		

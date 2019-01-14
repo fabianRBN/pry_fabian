@@ -74,7 +74,10 @@ class Usuario extends \Core\Controller
                 $carrito =  Carrito::findByID($_GET['id']);
                 $cliente = Session::get('sivoz_auth');
                 if($carrito->id_cliente == $cliente->id){
-                    View::render('usuario.admin.carrito', ['producto' =>$carrito, 'alerts' => Alert::getUser($_GET['id'],'carrito')]);
+
+                    $producto = Producto::findById($carrito->id_producto);
+
+                    View::render('usuario.admin.carrito', ['producto' =>$carrito, 'alerts' => Alert::getUser($_GET['id'],'carrito'), 'product'=> $producto ]);
                 }else{
                     View::render('error.500'); 
                 }
