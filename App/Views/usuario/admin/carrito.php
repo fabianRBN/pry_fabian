@@ -265,12 +265,25 @@
                 </div>
                 
             </div>
-            <div class="modal-footer">
-                <div style="display: flex;     justify-content: space-between;"> 
+            <div class="modal-footer" style="display: flex;  justify-content: space-between;">
+                <div style="display: flex;     justify-content: space-between; width: 100%;"> 
                 
                 <div>
-                   <?php     echo "<script>console.log( ". json_encode($product->precio)." );</script>" ?>
-                    <h4>Nuevo recio : <span data-tipo-pago="3" data-precio-global="<?php echo  $product->precio  ?>" class="label label-info">/mes</span>
+                   <h4>
+                        Nuevo precio: <span data-tipo-pago="<?php echo $product->tipo_pago ?>" data-precio-global="<?php echo $product->precio ?>" class="label label-info"><?php echo '$' . number_format($product->precio, 2) ?>
+                                        <?php if($product->tipo_pago == 0): ?>
+                                        /dia
+                                        <?php elseif($product->tipo_pago == 1): ?>
+                                        /semana
+                                        <?php elseif($product->tipo_pago == 2): ?>
+                                        /quincena
+                                        <?php elseif($product->tipo_pago == 3): ?>
+                                        /mes
+                                        <?php elseif($product->tipo_pago == 4): ?>
+                                        /año
+                                        <?php endif ?>
+                                        </span>
+
                     </h4>
                 </div>
                 <div>
