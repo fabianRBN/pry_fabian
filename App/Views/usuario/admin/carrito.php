@@ -1,7 +1,8 @@
 <?php \Core\View::render('master.header', ['title' => $producto->producto->nombre]) ?>
 		<div class="main" style="    padding-top: 60px !important;">
 			<!-- MAIN CONTENT -->
-           
+            <input id="idCarrito"  type="hidden" name="tokenCSRF" value="<?php echo $producto->id ?>" >
+
 			<div class="main-content">
 
 
@@ -165,7 +166,26 @@
                                 </span>
                             </div>
                             <?php endforeach ?>
+                        <br><br>
+                        <div >
+                        
+                            Precio actual:<span class="label label-info"><?php echo '$' . number_format($producto->total, 2) ?>
+                            <?php if($producto->producto->tipo_pago == 0): ?>
+                            /dia
+                            <?php elseif($producto->producto->tipo_pago == 1): ?>
+                            /semana
+                            <?php elseif($producto->producto->tipo_pago == 2): ?>
+                            /quincena
+                            <?php elseif($producto->producto->tipo_pago == 3): ?>
+                            /mes
+                            <?php elseif($producto->producto->tipo_pago == 4): ?>
+                            /año
+                            <?php endif ?>
+                            </span>
                         </div>
+                    
+                        </div>
+                        
                     
                     </div>
                     <div class="panel col-sm-6">
@@ -188,8 +208,10 @@
                                     <?php endif ?>                                    <div class="range-div " style="   margin-top: 1%;">
                                     <div class="col-5" style="    width: 50%;">
                                         <input data-precio="<?php echo $opcion->precio  ?>"   data-type="<?php echo $opcion->tipo ?>" data-id="<?php echo $opcion->id ?>" data-change="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" name="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" data-valor="<?php echo $opcion->valor  ?>"  value="<?php echo $opcion->valor  ?>"type="range" class="custom-range"  min="<?php echo $opcion->min ?>" max="<?php echo $opcion->max ?>" class="form-control range-input">
+
                                     </div>
                                     <div class="col-5" style="    width: 15%;">
+                                        
                                         <input data-precio="<?php echo $opcion->precio  ?>"   data-type="<?php echo $opcion->tipo ?>" data-id="<?php echo $opcion->id ?>" data-change="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" name="<?php echo \Core\Helper::slugify($opcion->nombre) ?>" data-valor="<?php echo $opcion->valor  ?>"  value="<?php echo $opcion->valor  ?>"type="number"  min="<?php echo $opcion->min ?>" max="<?php echo $opcion->max ?>" class="form-control custom-input">
                                     </div>
                                     <div class="col-2" style="    width: 15%;">
@@ -288,7 +310,7 @@
                 </div>
                 <div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                    <button id="edit-to-cart" type="button" class="btn btn-primary">Guardar Cambios</button>
                 </div>
 
                 </div>

@@ -6,6 +6,7 @@ namespace App\Models;
 
 use PDO;
 use \App\Models\Firma;
+use \App\Models\User;
 use \App\Config;
 use \Core\Session;
 use \Core\Correo;
@@ -84,7 +85,6 @@ class Alert extends \Core\Model
             $from = Config::SENDER;
 
 
-            $to = $cliente->correo;
             //$subject = "CNT - ".$data->titulo;
 
             $subject = "CNT - Alerta usuarios configurados";
@@ -95,6 +95,8 @@ class Alert extends \Core\Model
             $cliente = Cliente::findByID($carrito->id_cliente);
             $estatus = Estatus::findByIDs($data->id_estatus); 
 
+
+            $to = $cliente->correo;
 
             $headers = "From:" . $from;
             $headers .= " CC: smartcloud@cntcloud.com\r\n";
@@ -112,7 +114,19 @@ class Alert extends \Core\Model
             
             $message =  Correo::buildEmail();
             $message = str_replace("%body%", $content, $message);
-            mail($to,$subject,$message, $headers);
+
+            if($data->id_usuario != 0){
+                $usuarios = explode(',', $data->id_usuario);
+
+                foreach ($usuarios as $usser) {
+                    $usuarionotificado = User::findById($usser);
+                    mail($usuarionotificado->correo ,$subject,$message, $headers);
+                }
+
+
+               
+            } 
+           
 
             //static::queryOneTime("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
 
@@ -165,7 +179,7 @@ class Alert extends \Core\Model
             $producto = Producto::findById($carrito->id_producto);
             $cliente = Cliente::findByID($carrito->id_cliente);
 
-            $to = $cliente->correo;
+            $to = $usuario->correo;
             
             $headers = "From:" . $from;
             $headers .= " CC: ".Config::SENDER."\r\n";

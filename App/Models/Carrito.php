@@ -57,10 +57,33 @@ class Carrito extends \Core\Model
         $c = self::query("SELECT * FROM {cartera}.{model} WHERE ticket=" . $last->ticket,[],self::FETCH_ONE);
 
         foreach($carrito['opciones'] as $opcion){
+
+
             static::queryOneTime("INSERT INTO {cartera}.tb_carrito_opciones (id_carrito,id_opcion,value,precio) VALUES (". $c->id .",".htmlspecialchars($opcion['opcion'], ENT_QUOTES, "UTF-8")   .",'". htmlspecialchars($opcion['value'], ENT_QUOTES, "UTF-8") ."',".htmlspecialchars($opcion['precio'], ENT_QUOTES, "UTF-8")   .")");
         }
 
         Notificacion::send('operacion/carrito?id=' . $last->id,$carrito['estatus'],'carrito',$last->id,'carrito');
+        
+        $cb(true);
+    }
+
+
+    public static function updatecarrito($carrito, $cb)
+    {
+
+
+        // XSS atack 
+        static::queryOneTime("UPDATE  {cartera}.{model} SET total = ".htmlspecialchars($carrito['total'], ENT_QUOTES, "UTF-8")." ,subtotal =". htmlspecialchars($carrito['subtotal'], ENT_QUOTES, "UTF-8"). " WHERE id = ". htmlspecialchars($carrito['id_carrito'], ENT_QUOTES, "UTF-8") );
+
+         foreach($carrito['opciones'] as $opcion){
+
+            static::queryOneTime("UPDATE {cartera}.tb_carrito_opciones SET value = :value , precio = :precio WHERE id_carrito = :idcarrito AND  id_opcion = :id",
+            array(':value'=> $opcion['value'], ':precio'=> $opcion['precio'], ':idcarrito'=> $carrito['id_carrito'], ':id'=>  $opcion['opcion']  ),"all");
+         }
+
+        //Notificacion::send('operacion/carrito?id=' . $last->id,$carrito['estatus'],'carrito',$last->id,'carrito');
+        //             static::queryOneTime("UPDATE {cartera}.tb_carrito_opciones SET value = '".$opcion['value']."' , precio = ".$opcion['precio']." WHERE id_carrito = ".$carrito['id_carrito']." AND  id_opcion = ". $opcion['opcion']);
+
         
         $cb(true);
     }

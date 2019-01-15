@@ -28,42 +28,49 @@ class Notificacion extends \Core\Model
 
     public static function send($url, $e, $tipo, $identificador, $tipoID, $id = null)
     {
-
-        $from = Config::SENDER;
-      
-        
         $carrito = Carrito::getById($identificador)[0];
         $producto = Producto::findById($carrito->id_producto);
         $cliente = Cliente::findByID($carrito->id_cliente);
-        $estatus=  Estatus::findByIDElemento($e,$tipo);
+        $estat=  Estatus::findByIDElemento($e,$tipo);
 
-        $to = $cliente->correo;
-
-        $content = '         
-            <p><strong>Producto: </strong>'. $producto->nombre.' </p>
-            <p><strong>Fecha de compra: </strong>'. $carrito->fecha_compra.' </p>
-            <p><strong>Cliente: </strong>'. $cliente->nombre.' </p>
-            <p><strong>Correo: </strong>'. $cliente->correo.' </p>
-            <p><strong>Estatus: </strong>'. $estatus->nombre.' </p>
-        ';
-        $subject = "CNT -".$producto->nombre;
-        //$subject = "CNT - Notificacion al cliente";
-        $headers = "From:" . $from;
-        $headers .= " CC: ".Config::SENDER."\r\n";
-        $headers .= "MIME-Version: 1.0\r\n";
-        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
-        $message =  Correo::buildEmail();
-        $message = str_replace("%body%", $content, $message);
-        mail($to,$subject,$message, $headers);
-        
-        //static::query("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
-
-        
         $notificaciones = self::allAlert();
         $estatus = Estatus::findByID($e,$tipo);
         foreach($notificaciones as $notificacion){
             if($notificacion->id_estatus == $estatus){
+
+                if($notificacion->email_smtp == 1){
+                    $from = Config::SENDER;
+                
+                    
+                    
+
+                    $to = $cliente->correo;
+
+                    $content = '         
+                        <p><strong>Producto: </strong>'. $producto->nombre.' </p>
+                        <p><strong>Fecha de compra: </strong>'. $carrito->fecha_compra.' </p>
+                        <p><strong>Cliente: </strong>'. $cliente->nombre.' </p>
+                        <p><strong>Correo: </strong>'. $cliente->correo.' </p>
+                        <p><strong>Estatus: </strong>'. $estat->nombre.' </p>
+                    ';
+                    $subject = "CNT -".$producto->nombre;
+                    //$subject = "CNT - Notificacion al cliente";
+                    $headers = "From:" . $from;
+                    $headers .= " CC: ".Config::SENDER."\r\n";
+                    $headers .= "MIME-Version: 1.0\r\n";
+                    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+                    $message =  Correo::buildEmail();
+                    $message = str_replace("%body%", $content, $message);
+                    mail($to,$subject,$message, $headers);
+                    
+                    //static::query("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
+
+                
+                }
+
+
+
                 if($notificacion->id_usuario == '0'){
                     Alert::crear($notificacion, $url, $identificador, $tipoID, $id);
                 }else{

@@ -293,6 +293,24 @@ class Usuario extends \Core\Controller
         
     }
 
+    public function editToCart()
+    {
+        if(Session::verificarToken($_POST['token'])){
+
+            Carrito::updatecarrito($_POST, function($pass){
+                if($pass == true){
+                    echo json_encode(['error' => false]);
+                }else{
+                    echo json_encode(['error' => true]);
+                }
+            });
+        }else{
+            echo json_encode(['error' => true]);
+        } 
+
+        
+    }
+
     public function regresion()
     {
 

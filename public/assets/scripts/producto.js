@@ -231,3 +231,71 @@ $('#add-to-cart').on('click', function(e){
 
     })
 })
+
+
+
+$('#edit-to-cart').on('click', function(e){
+    e.preventDefault();
+
+    var form = $('#options-form').serializeArray();
+    var carrito = {
+        id_carrito: $('#idCarrito').val(),
+        id_producto: $('[info]').data('producto'),
+        total: t,
+        subtotal: t,
+        fecha_pago: calculatePaymentDate(tipoPago),
+        estatus: 0,
+        opciones: []
+    }
+    $('[data-change]').each(function(i,e){
+        var name = $(this).data('change');
+        var id = $(this).data('id')
+        
+        var precio = $(this).data('precio');
+    
+        var datoprecio = $(this);
+
+       
+        form.forEach(function(ee,ii){
+
+         
+
+            if(ee.name == name){
+                
+                var found = false;
+                
+                carrito.opciones.forEach(function(eee,iii){
+                    if(eee.opcion == id){
+                        found = true;
+                    }
+                })
+                
+                if(!found){
+                    
+                    console.log(precio)
+                    carrito.opciones.push({
+                        opcion: id,
+                        value: ee.value,
+                        precio: precio
+                    })
+
+                    
+                }
+            }
+        })
+    })
+    carrito.token = $('#tokenCSRF').val();
+    toastr.info('Por favor espere..','Editando las caracteristicas de su producto ');
+    // waitingDialog.show();
+    console.log(carrito)
+     $.post(SivozConfig.domain + 'tienda/edit-carrito', carrito).done(function(data){
+         toastr.success('Estamos redireccionado, por favor espere..','Carrito actualizado correctamente')
+         setTimeout(function(){
+         //window.location.href=SivozConfig.domain+'administracion/detalle?id='+$('#idCarrito').val();
+         },1500);
+     }).error(function(){
+         toastr.error('No pudimos guardar tu carrito, por favor intenta de nuevo','Whoops');
+         waitingDialog.hide();
+
+     })
+})
