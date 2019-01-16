@@ -195,7 +195,14 @@ $('#add-to-cart').on('click', function(e){
     $('[data-change]').each(function(i,e){
         var name = $(this).data('change');
         var id = $(this).data('id')
-        var precio = $(this).data('precio');
+        var tipo = $(this).attr('type');;
+        
+        if(tipo == 'radio'){
+            var precio = $("input:radio[name='"+ name+"']:checked").data('precio');
+        }else{
+            var precio = $(this).data('precio');
+        }
+
 
         form.forEach(function(ee,ii){
             if(ee.name == name){
@@ -249,11 +256,14 @@ $('#edit-to-cart').on('click', function(e){
     }
     $('[data-change]').each(function(i,e){
         var name = $(this).data('change');
+        var tipo = $(this).attr('type');;
         var id = $(this).data('id')
         
-        var precio = $(this).data('precio');
-    
-        var datoprecio = $(this);
+        if(tipo == 'radio'){
+            var precio = $("input:radio[name='"+ name+"']:checked").data('precio');
+        }else{
+            var precio = $(this).data('precio');
+        }
 
        
         form.forEach(function(ee,ii){
@@ -291,7 +301,7 @@ $('#edit-to-cart').on('click', function(e){
      $.post(SivozConfig.domain + 'tienda/edit-carrito', carrito).done(function(data){
          toastr.success('Estamos redireccionado, por favor espere..','Carrito actualizado correctamente')
          setTimeout(function(){
-         //window.location.href=SivozConfig.domain+'administracion/detalle?id='+$('#idCarrito').val();
+         window.location.href=SivozConfig.domain+'administracion/detalle?id='+$('#idCarrito').val();
          },1500);
      }).error(function(){
          toastr.error('No pudimos guardar tu carrito, por favor intenta de nuevo','Whoops');

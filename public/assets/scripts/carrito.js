@@ -1,5 +1,6 @@
 var id = $('[carrito]').data('id')
 var total = $('[carrito-total]').data('total')
+
 var json = $('[data-json]').data('json');
 var estatus = json[0].codigo;
 var fecha = null;
@@ -26,9 +27,9 @@ $('.open-modal').on('click', function(){
             }
             if(json[i].id == 4){
                 $('[name="precio_aprovisionamiento"]').fadeIn();
-                $('[name="precio_aprovisionamiento"]').val(total);
+                $('[name="precio_aprovisionamiento"]').val(total.toString().replace(",", ""));
                 $('[name="precio_aprovisionamiento"]').attr('disabled', false);
-                precio = total;
+                precio =  total;
             }else{
                 $('[name="precio_aprovisionamiento"]').fadeOut();
                 $('[name="precio_aprovisionamiento"]').attr('disabled', true);
