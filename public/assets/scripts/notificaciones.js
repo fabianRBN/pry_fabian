@@ -27,6 +27,7 @@ $('#notificacion-form').on('submit', function(e){
     var id =  $(this).attr('data-id-form');
     var url = $('#url').data('url')
     data.email_smtp =  +$('#email_smtp').is( ':checked' );
+    data.email_smtp_cliente =  +$('#email_smtp_cliente').is( ':checked' );
 
 
     console.log(data)
@@ -270,6 +271,12 @@ $('.notificaciones').on('click', function(){
             $('[notificacion-name="email_smtp"]').prop('checked',true );
         }else{
             $('[notificacion-name="email_smtp"]').prop('checked',false );
+        }
+
+        if(JSON.parse(data).email_smtp_cliente == '1'){
+            $('[notificacion-name="email_smtp_cliente"]').prop('checked',true );
+        }else{
+            $('[notificacion-name="email_smtp_cliente"]').prop('checked',false );
         }
     })
     return false;

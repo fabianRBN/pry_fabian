@@ -38,7 +38,7 @@ class Notificacion extends \Core\Model
         foreach($notificaciones as $notificacion){
             if($notificacion->id_estatus == $estatus){
 
-                if($notificacion->email_smtp == 1){
+                if($notificacion->email_smtp_cliente == 1){
                     $from = Config::SENDER;
                 
                     
@@ -95,14 +95,14 @@ class Notificacion extends \Core\Model
 
     public static function crear($data, $cb)
     {
-        static::queryOneTime("INSERT INTO {cartera}.{model} (id_permiso,id_estatus,id_usuario,comentario,titulo,email_smtp) VALUES (". $data['id_permiso'] .",". $data['id_estatus'] .",'". $data['id_usuario'] ."','". $data['comentario'] ."','". $data['titulo'] ."','".$data['email_smtp']."')");
+        static::queryOneTime("INSERT INTO {cartera}.{model} (id_permiso,id_estatus,id_usuario,comentario,titulo,email_smtp,email_smtp_cliente) VALUES (". $data['id_permiso'] .",". $data['id_estatus'] .",'". $data['id_usuario'] ."','". $data['comentario'] ."','". $data['titulo'] ."','".$data['email_smtp']."','".$data['email_smtp_cliente']."')");
 
         $cb(true);
     }
     
     public static function edit($data, $cb)
     {
-        static::queryOneTime("UPDATE {cartera}.{model} SET id_permiso=". $data['id_permiso'] .",id_estatus=". $data['id_estatus'] .",id_usuario='". $data['id_usuario'] ."',titulo='". $data['titulo'] ."',comentario='". $data['comentario'] ."',email_smtp=". $data['email_smtp'] ." WHERE id=" . $data['id']);
+        static::queryOneTime("UPDATE {cartera}.{model} SET id_permiso=". $data['id_permiso'] .",id_estatus=". $data['id_estatus'] .",id_usuario='". $data['id_usuario'] ."',titulo='". $data['titulo'] ."',comentario='". $data['comentario'] ."',email_smtp=". $data['email_smtp'] .",email_smtp_cliente=".$data['email_smtp_cliente']." WHERE id=" . $data['id']);
 
         $cb(true);
     }

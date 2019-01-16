@@ -324,6 +324,27 @@ class Carrito extends \Core\Model
 		$es = Estatus::processFind($carrito->id_producto,$carrito->estatus_data->id, 'carrito');
 		
         $carrito->consecutivos = self::query("SELECT * FROM {general}.cat_estatus WHERE tipo = 'carrito' AND id IN(".$es.")");
+
+        foreach($carrito->consecutivos as $consecutivo){
+            foreach( (self::query("SELECT email_smtp, email_smtp_cliente FROM {cartera}.tb_notificaciones WHERE  id_estatus =".$consecutivo->id )) as $smtpcliente){
+                
+                if($smtpcliente->email_smtp_cliente){
+                    $consecutivo->email_smtp_cliente = 1 ;
+                }else{
+                    $consecutivo->email_smtp_cliente = 0 ;
+
+                }
+                if($smtpcliente->email_smtp){
+                    $consecutivo->email_smtp = 1 ;
+                }else{
+                    $consecutivo->email_smtp = 0 ;
+
+                }
+                
+            }
+            
+        }
+
         $carrito->producto = self::query("SELECT * FROM {cartera}.cat_productos WHERE id=" . $carrito->id_producto,[],self::FETCH_ONE);
         $carrito->cliente = self::query("SELECT * FROM {cartera}.tb_clientes WHERE id=" . $carrito->id_cliente,[],self::FETCH_ONE);
         $carrito->opciones = self::query("SELECT o.id,p.nombre,p.tipo,o.value,o.precio FROM {cartera}.tb_carrito_opciones as o INNER JOIN {cartera}.cat_opciones as p ON p.id=o.id_opcion WHERE id_carrito=" . $carrito->id);

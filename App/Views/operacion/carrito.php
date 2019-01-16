@@ -169,9 +169,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" id="cancel-regresion" class="btn btn-default" data-dismiss="modal">cancelar</button>
-                    <button type="button" id="enviar-regresion" class="btn btn-success">Enviar</button>
+                <div class="modal-footer" style="display: flex;  justify-content: space-between;">
+                    <div style="display: flex;     justify-content: space-between; width: 100%;">
+                        <div style="    margin-top: 10px; margin-left: 5px;">
+                            <span  id="usericon" class="lnr lnr-user" title="Notificación a usuarios"></span>
+                            
+                            <span style = "margin-left: 5px;" id="clienticon"  title="Notificación a clientes" class="lnr lnr-bubble"></span>
+                        </div>
+                        <div>
+                            <button type="button" id="cancel-regresion" class="btn btn-default" data-dismiss="modal">cancelar</button>
+                            <button type="button" id="enviar-regresion" class="btn btn-success">Enviar</button>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

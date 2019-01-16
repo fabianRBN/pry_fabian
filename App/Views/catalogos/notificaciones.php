@@ -46,17 +46,28 @@
 									</select>
 									<br>
 								</div>
-								<div class="col-sm-6">
+								<div class="col-sm-6" style="  padding-bottom: 1%;">
                                     <div class="form-group">
-                                        <label for="" class="col-sm-5">
-											Envio de Mensaje SMTP
+                                        <label for="" class="col-sm-6">
+										Envio de correos SMTP
                                         </label>
-                                        <label class="fancy-radio col-sm-7">
+                                        <label class="fancy-radio col-sm-6">
                                             <input  data-required="false" notificacion-name="email_smtp" name="email_smtp" id="email_smtp" type="checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
                                         </label>
                                     </div>
                                 </div>
-                                
+                               
+								<div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-6">
+											Envio de correos SMTP a clientes
+                                        </label>
+                                        <label class="fancy-radio col-sm-6">
+                                            <input  data-required="false" notificacion-name="email_smtp_cliente" name="email_smtp_cliente" id="email_smtp_cliente" type="checkbox" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                        </label>
+                                    </div>
+                                </div>
+
 								<div class="col-sm-12">
 									<button id="button-send" class="btn btn-primary btn-block">Guardar</button>
 									<br>

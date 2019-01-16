@@ -13,6 +13,20 @@ $('.open-modal').on('click', function(){
 
     for(var i = 0; i < json.length; i++){
         if(json[i].codigo == estatus){
+            console.log(json[i].email_smtp);
+            if(json[i].email_smtp == 1){
+                $('#usericon').show();
+            }else{
+                $('#usericon').hide();
+            }
+           
+            if(json[i].email_smtp_cliente == 1){
+                $('#clienticon').show();
+            }else{
+                $('#clienticon').hide();
+            }
+            
+
             $('#myModalLabel').html(json[i].titulo)
             $('[name="regresion"]').val(json[i].mensaje)
 
