@@ -107,12 +107,12 @@
                                                         <div class="panel-title">Desea confirmar la solicitud de <?php echo $producto->nombre ?></div>
                                                     </div>
                                                     <div class="panel-body">
-                                                    <h4>Caracteristicas</h4>
+                                                        <h4>Caracteristicas</h4>
                                                         <?php foreach($producto->opciones as $opcion): ?>
                                                         <div>
                                                             <span><?php echo $opcion->nombre ?></span>: 
                                                             <br> 
-                                                            <span class="label label-default" id="<?php echo \Core\Helper::slugify($opcion->nombre) ?>">
+                                                            <span class="label label-default" id="<?php echo (\Core\Helper::slugify($opcion->nombre))."2" ?>">
                                                             <?php if($opcion->tipo == 4): ?>
                                                             No
                                                             <?php elseif($opcion->tipo == 5): ?>

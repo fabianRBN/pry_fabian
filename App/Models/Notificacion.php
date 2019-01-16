@@ -88,6 +88,10 @@ class Notificacion extends \Core\Model
     {
         return static::query("SELECT * FROM {cartera}.{model} WHERE id=$id", [], self::FETCH_ONE);
     }
+    public static function findByIDestatus($id)
+    {
+        return static::query("SELECT * FROM {cartera}.{model} WHERE id_estatus=$id", [], self::FETCH_ONE);
+    }
 
     public static function crear($data, $cb)
     {

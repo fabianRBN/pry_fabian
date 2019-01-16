@@ -96,7 +96,7 @@ class Alert extends \Core\Model
             $estatus = Estatus::findByIDs($data->id_estatus); 
 
 
-            $to = $cliente->correo;
+            //$to = $cliente->correo;
 
             $headers = "From:" . $from;
             $headers .= " CC: smartcloud@cntcloud.com\r\n";

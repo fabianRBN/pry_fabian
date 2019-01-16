@@ -116,6 +116,7 @@ $('[data-change]').on('change', function(){
     var val = $(this).val();
     var type = $(this).data('type');
     var id = '#' + $(this).data('change');
+    var id2 = '#' + $(this).data('change')+'2';
     var precio = $(this).data('precio');
 
     var cop = $(this).data('cop')
@@ -149,7 +150,8 @@ $('[data-change]').on('change', function(){
     })
     
     $('[data-precio-global]').html('$'+t.formatMoney(2, '.', ',') + ' ' + tpago)
-    $(id).html(val)
+    $(id).html(val);
+    $(id2).html(val)
 })
 
 var calculatePaymentDate =  function(p){
