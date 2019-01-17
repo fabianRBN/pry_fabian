@@ -209,7 +209,7 @@ class Producto extends \Core\Model
     {
         echo 'Se inicia la actualizacion';
         echo strval($data->imagenPath);
-        self::queryOneTime("UPDATE {cartera}.cat_productos SET categoria='". $data->categoria ."',nombre='". $data->nombre ."',precio=". str_replace('$','',str_replace(',','',$data->precio)) .",descripcion='". $data->descripcion ."',tipo_pago=". $data->tipo_pago .",venta=". $data->venta .",proximamente=". $data->proximamente .",demo=". $data->demo .",activo=". $data->activo .",configurable=". $data->configurable. ",mostrar_label=". $data->mostrar_label .",venta_precio_real=". $data->venta_precio_real.",imagenPath='".$data->imagenPath ."',tipoWeb ='".$data->tipo_Web."',orden =".$data->orden." WHERE id=" . $data->id);
+        self::queryOneTime("UPDATE {cartera}.cat_productos SET categoria='". $data->categoria ."',nombre='". $data->nombre ."',precio=". str_replace('$','',str_replace(',','',$data->precio)) .",descripcion='". $data->descripcion ."',tipo_pago=". $data->tipo_pago .",venta=". $data->venta .",proximamente=". $data->proximamente .",demo=". $data->demo .",activo=". $data->activo .",configurable=". $data->configurable. ",mostrar_label=". $data->mostrar_label .",venta_precio_real=". $data->venta_precio_real.",imagenPath='".$data->imagenPath ."',tipoWeb ='".$data->tipo_Web."',orden =".$data->orden." , generacion=".$data->generacion." WHERE id=" . $data->id);
         echo 'Se actualizo Correctamente';
 		//self::queryOneTime("DELETE FROM {cartera}.cat_opciones WHERE id_producto=" . $data->id);
 
@@ -294,7 +294,7 @@ class Producto extends \Core\Model
 
     public static function create($data, $cb)
     {
-        self::queryOneTime("INSERT INTO {cartera}.{model} (nombre,precio,descripcion,tipo_pago,venta,proximamente,demo,activo,configurable,venta_precio_real,imagenPath,orden, tipoWeb,mostrar_label) VALUES ('". $data->nombre ."',". str_replace('$','',str_replace(',','',$data->precio)) .",'". $data->descripcion ."',". $data->tipo_pago .",". $data->venta .",". $data->proximamente .",". $data->demo .",". $data->activo .",". $data->configurable .",". $data->venta_precio_real .",'". $data->imagenPath ."',". $data->orden.",'". $data->tipo_Web."',".$data->mostrar_label. ")");
+        self::queryOneTime("INSERT INTO {cartera}.{model} (nombre,precio,descripcion,tipo_pago,venta,proximamente,demo,activo,configurable,venta_precio_real,imagenPath,orden, tipoWeb,mostrar_label,generacion) VALUES ('". $data->nombre ."',". str_replace('$','',str_replace(',','',$data->precio)) .",'". $data->descripcion ."',". $data->tipo_pago .",". $data->venta .",". $data->proximamente .",". $data->demo .",". $data->activo .",". $data->configurable .",". $data->venta_precio_real .",'". $data->imagenPath ."',". $data->orden.",'". $data->tipo_Web."',".$data->mostrar_label. ", ".$data->generacion." )");
 		
         $producto = self::query("SELECT * FROM {cartera}.{model} WHERE nombre='". $data->nombre ."' AND precio=" . str_replace('$','',str_replace(',','',$data->precio)), [], self::FETCH_ONE);
 

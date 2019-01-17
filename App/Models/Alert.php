@@ -120,7 +120,7 @@ class Alert extends \Core\Model
 
                 foreach ($usuarios as $usser) {
                     $usuarionotificado = User::findById($usser);
-                    mail($usuarionotificado->correo ,$subject,$message, $headers);
+                    //mail($usuarionotificado->correo ,$subject,$message, $headers);
                 }
 
 
@@ -196,7 +196,7 @@ class Alert extends \Core\Model
 
             $message =  Correo::buildEmail();
             $message = str_replace("%body%", $content, $message);
-            mail($to,$subject,$message, $headers);
+            //mail($to,$subject,$message, $headers);
 
            //static::query("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
 

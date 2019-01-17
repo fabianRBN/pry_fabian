@@ -45,6 +45,8 @@ app.controller('Products', function($scope,$http){
             $scope.product.activo = ($scope.product.activo == 1) ? true : false
             $scope.product.venta_precio_real = ($scope.product.venta_precio_real == 1) ? true : false
             $scope.product.configurable = ($scope.product.configurable == 1) ? true : false
+            $scope.product.generacion = ($scope.product.generacion == 1) ? true : false
+            $scope.product.mostrar_label = ($scope.product.mostrar_label == 1) ? true : false
             $scope.product.orden =Number($scope.product.orden);
             $scope.product.opciones.forEach(function(e,i){
                 e.precio = Number(e.precio)
@@ -104,6 +106,10 @@ app.controller('Products', function($scope,$http){
         $scope.product.activo = ($scope.product.activo == true) ? 1 : 0
         $scope.product.venta_precio_real = ($scope.product.venta_precio_real == true) ? 1 : 0
         $scope.product.configurable = ($scope.product.configurable == true) ? 1 : 0
+        $scope.product.generacion = ($scope.product.generacion == true) ? 1 : 0
+        $scope.product.mostrar_label = ($scope.product.mostrar_label == true) ? 1 : 0
+
+
         $scope.product.imagen = $scope.stepsModel;
         $scope.product.opcionesrm = $scope.opcionesrm;
         $scope.product.orden = Number($scope.product.orden);

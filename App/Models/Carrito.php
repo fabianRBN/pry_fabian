@@ -368,6 +368,20 @@ class Carrito extends \Core\Model
     }
 
 
+    public static function pendientes(){
+
+        $carritos = self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus, p.generacion, p.nombre as producto, CONCAT(c.empresa,' ') as cliente , c.nombre as nombre , c.apellidos as apellido   FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8");
+      
+        foreach($carritos as $carrito){
+            $carrito->opciones = self::query("SELECT o.id,p.nombre,p.tipo,o.value,o.precio FROM {cartera}.tb_carrito_opciones as o INNER JOIN {cartera}.cat_opciones as p ON p.id=o.id_opcion WHERE id_carrito=" . $carrito->id);
+        }
+
+
+        return $carritos;
+
+    }
+
+
     public static function vdc()
     {
         if($_SESSION['sivoz_auth']->permiso ==  9){

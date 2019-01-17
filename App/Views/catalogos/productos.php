@@ -8,19 +8,20 @@
 							<h3 class="panel-title">Registra un producto</h3>
 						</div>
 						<div class="panel-body no-padding">
-								<div class="col-sm-6">
+                        <div class="col-sm-12">
+								<div class="col-sm-4">
                                 <label for="">Nombre</label>
 									<div class="form-group">
 										<input class="form-control" data-required="true" name="nombre" ng-model="product.nombre" producto-name="nombre" type="text" placeholder="Nombre">
 									</div>
 								</div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                 <label for="">Precio</label>
 									<div class="form-group">
 										<input class="form-control" data-required="true" name="precio" ng-model="product.precio"  producto-name="precio" id="price" type="text" placeholder="Precio del producto">
 									</div>
 								</div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                 <label for="">Tipo de pago</label>
                                     <select ng-model="product.tipo_pago" name="tipo_pago" id="tipo_pago" class="form-control">
                                         <option>Tipo de pago</option>
@@ -31,7 +32,9 @@
                                         <option ng-value="4" >Anual</option>
                                     </select>
                                 </div>
-                                <div class="col-sm-6">
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="col-sm-4">
                                 <label for="">Categoría</label>
                                     <select ng-model="product.categoria" name="categoria" id="categoria" class="form-control">
                                         <?php foreach($categorias as $categoria): ?>
@@ -39,66 +42,19 @@
                                         <?php endforeach ?>
                                     </select>
                                 </div>
-                                <div class="col-sm-12">
-                                <br></div>
-                                <!--<div class="col-sm-12">
-                                    <label for="">Lista de opciones </label>
-                                    <input name="tags" class="form-control input-tags" id="tags" value="foo,bar,baz" />
-                                </div>
-                                <div class="col-sm-12">
-                                    <br>
-                                </div>-->
-                                <div class="col-sm-12">
+
+
                                 <div class="col-sm-4">
                                     <div class="form-group">
                                         <label for="">
-                                            Venta
+                                            Orden
                                         </label>
-                                        <label class="fancy-radio">
-                                            <input ng-model="product.venta" name="venta" type="checkbox">
-                                        </label>
+                                        <!-- <input type="file" ng-model="product.imagen"  accept="image/*" onchange="angular.element(this).scope().uploadFile()"/>
+                                         -->
+										<input class="form-control" data-required="true" name="orden" ng-model="product.orden"  producto-name="orden" id="orden" type="number"   placeholder="Orden del producto">
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label for="">
-                                            Próximamente
-                                        </label>
-                                        <label class="fancy-radio">
-                                            <input ng-model="product.proximamente" name="proximamente" type="checkbox">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label for="">
-                                            Demo
-                                        </label>
-                                        <label class="fancy-radio">
-                                            <input ng-model="product.demo" name="demo" type="checkbox">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label for="">
-                                            Activo
-                                        </label>
-                                        <label class="fancy-radio">
-                                            <input ng-model="product.activo" name="activo" type="checkbox">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label for="">
-                                            Configurable
-                                        </label>
-                                        <label class="fancy-radio">
-                                            <input ng-model="product.configurable" name="configurable" type="checkbox">
-                                        </label>
-                                    </div>
-                                </div>
+
                                 <div class="col-sm-4">
                                     <div class="form-group">
                                         <label for="">
@@ -115,8 +71,82 @@
                                         
                                     </div>
                                 </div>
+                            </div>
+                                <div class="col-sm-12">
+                                <br>
+                                </div>
+                                <!--<div class="col-sm-12">
+                                    <label for="">Lista de opciones </label>
+                                    <input name="tags" class="form-control input-tags" id="tags" value="foo,bar,baz" />
+                                </div>
+                                <div class="col-sm-12">
+                                    <br>
+                                </div>-->
+                                <div class="col-sm-12">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="">
+                                            Venta
+                                        </label>
+                                        <label class="fancy-radio">
+                                            <input ng-model="product.venta" name="venta" type="checkbox">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="">
+                                            Próximamente
+                                        </label>
+                                        <label class="fancy-radio">
+                                            <input ng-model="product.proximamente" name="proximamente" type="checkbox">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="">
+                                            Demo
+                                        </label>
+                                        <label class="fancy-radio">
+                                            <input ng-model="product.demo" name="demo" type="checkbox">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="">
+                                            Activo
+                                        </label>
+                                        <label class="fancy-radio">
+                                            <input ng-model="product.activo" name="activo" type="checkbox">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="">
+                                            Configurable
+                                        </label>
+                                        <label class="fancy-radio">
+                                            <input ng-model="product.configurable" name="configurable" type="checkbox">
+                                        </label>
+                                    </div>
+                                </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="">
+                                        Generacion Automatica
+
+                                        </label>
+                                        <label class="fancy-radio">
+                                            <input ng-model="product.generacion" name="generacion" type="checkbox">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
                                     <div class="form-group">
                                         <label for="">
                                         Mostrar Labels
@@ -128,7 +158,9 @@
                                     </div>
                                 </div>
 
-								<div class="col-sm-4">
+                                
+
+								<div class="col-sm-3">
                                     <div class="form-group">
                                         <label for="">
                                             Venta de precio real
@@ -139,20 +171,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label for="">
-                                            Orden
-                                        </label>
-                                        <!-- <input type="file" ng-model="product.imagen"  accept="image/*" onchange="angular.element(this).scope().uploadFile()"/>
-                                         -->
-										<input class="form-control" data-required="true" name="orden" ng-model="product.orden"  producto-name="orden" id="orden" type="number"   placeholder="Orden del producto">
-                                    </div>
-                                </div>
+                         
 
-                                </br>
+                                <br>
 								
-                                <div class="col-sm-12">
+                                <div class="col-sm-12" style="margin-top: 2%;">
                                     <div class="form-group">
                                         <label for="">
                                             Cargar Imagen
@@ -300,6 +323,9 @@
 					</div>
 				</div>
 			</div>
+            <!-- Modals -->
+
+
 			<!-- END MAIN CONTENT -->
 		</div>
 		<div id="url" data-url='<?php echo \App\Config::Domain ?>'></div>

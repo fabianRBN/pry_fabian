@@ -31,6 +31,12 @@ date_default_timezone_set(App\Config::Timezone);
 /**
  * Routing
  */
+
+// $content = "some text here";
+// $fp = fopen(dirname(__DIR__) . "/word/myText.txt","wb");
+// fwrite($fp,$content);
+// fclose($fp);
+
 $router = new Core\Router();
 
 // Add the routes

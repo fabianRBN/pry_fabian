@@ -36,7 +36,7 @@ class Operacion extends \Core\Controller
     {
        //return Router::redirectJava('http://192.168.10.65:8080/InterfazGCnt/pendiente.xhtml');
 	    //View::render('operacion.pendientes', ['pendientes' => Carrito::allAdmin()]);
-		View::render('operacion.pendientes');
+		View::render('operacion.pendientes',['carritos' => Carrito::pendientes()]);
 	   
     }
     
