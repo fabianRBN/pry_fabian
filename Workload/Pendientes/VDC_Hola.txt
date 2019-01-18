@@ -1,0 +1,9 @@
+28
+AGENCIA DE ASEGURAM
+Nombre Apellido
+VDC_Hola
+hola
+104.4
+64
+1024
+0.25

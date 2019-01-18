@@ -9,6 +9,9 @@ namespace Core;
  *
  * PHP version 7.0
  */
+
+
+
 class Binnacle
 {
     /**
@@ -104,6 +107,39 @@ class Binnacle
     return $array[$attr];
     }
 
+
+    public static function createDoc($data,$cb){
+        
+        $filename = str_replace(" ","_", $data['tipoWeb']);
+
+        $filename = $filename."_".$data['siglas'];
+
+        $file = dirname(__DIR__) . "/Workload/Pendientes/".$filename.".txt";
+
+        file_put_contents($file,  $data['id']. PHP_EOL , FILE_APPEND);
+
+        file_put_contents($file,  $data['cliente'].PHP_EOL, FILE_APPEND);
+
+        file_put_contents($file,  $data['nombre']." ".$data['apellido'].PHP_EOL, FILE_APPEND);
+
+        file_put_contents($file,  $filename .PHP_EOL, FILE_APPEND);
+
+        file_put_contents($file,  $data['url'].PHP_EOL, FILE_APPEND);
+
+        foreach($data['opciones'] as $opcion){
+            
+            file_put_contents($file,  $opcion['value'].PHP_EOL, FILE_APPEND);
+
+        }
+
+        file_put_contents($file, $data['velocidad'],FILE_APPEND);
+
+        //$carrito = self::query("SELECT o.id,p.nombre,p.tipo,o.value,o.precio FROM {cartera}.tb_carrito_opciones as o INNER JOIN {cartera}.cat_opciones as p ON p.id=o.id_opcion WHERE id_carrito=" . $carrito->id);
+
+        
+
+        $cb(true);
+    }
 }
 
 

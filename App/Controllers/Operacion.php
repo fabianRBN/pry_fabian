@@ -7,6 +7,7 @@ namespace App\Controllers;
 use \Core\View;
 use \Core\Router;
 use \Core\Session;
+use \Core\Binnacle;
 use \App\Models\Gestion;
 use \App\Models\Cliente;
 use \App\Models\Carrito;
@@ -14,6 +15,7 @@ use \App\Models\Suscripcion;
 use \App\Models\User;
 use \App\Models\Alert;
 use \App\Models\Producto;
+
 class Operacion extends \Core\Controller
 {
 
@@ -38,6 +40,22 @@ class Operacion extends \Core\Controller
 	    //View::render('operacion.pendientes', ['pendientes' => Carrito::allAdmin()]);
 		View::render('operacion.pendientes',['carritos' => Carrito::pendientes()]);
 	   
+    }
+
+    public function aprovisionarDoc(){
+
+   
+        //$carrito = Carrito::opciones($data['id']);
+
+        Binnacle::createDoc($_POST,function($error){
+            if($error == true){
+                echo json_encode(['error' => false]);
+            }else{
+                echo json_encode(['error' => true]);
+            }
+        });
+        
+        
     }
     
     public function vdc()

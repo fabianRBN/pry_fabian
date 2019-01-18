@@ -93,15 +93,7 @@
 
                         </div>
 
-                        <div class="form-group row" style=" margin-top: 2%;">
-
-                            <div class="col-sm-5">
-                            <label for="staticEmail" class=" col-form-label">Siglas de Organización:</label>
-                            </div>
-                            <div class="col-sm-7">
-                            <label id="siglaslabel" for="staticEmail" class=" col-form-label" style="    font-weight: 10 !important;"></label>
-                            </div>
-                        </div>
+                     
 
                         <div class="form-group row" style=" margin-top: 2%;"  id="divurl">
                             <label for="staticEmail" class="col-sm-3 col-form-label">URL VDC:</label>
@@ -114,7 +106,7 @@
                         </div>
 
                         <div class="form-group row" style=" margin-top: 2%;" id="divorg">
-                            <label for="staticEmail" class="col-sm-3 col-form-label">Organización:</label>
+                            <label for="staticEmail" class="col-sm-3 col-form-label">Siglas de Organización:</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" id="orginput" placeholder="Organizacion">
                         </div>
@@ -142,7 +134,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Aprovicionar</button>
+                    <button type="button" class="btn btn-primary" onclick="aprovisionar();" >Aprovicionar</button>
                 </div>
                 </div>
             </div>
@@ -150,7 +142,9 @@
 
         <!-- end main -->
     </div>
+
 <?php \Core\View::render('master.footer',
 ['scripts' => [
-	'assets/scripts/pendiente.js'
+    'assets/scripts/pendiente.js',
+    'assets/scripts/jspdf.min.js'
 ]]) ?>
