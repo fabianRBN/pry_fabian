@@ -92,6 +92,11 @@ class Operacion extends \Core\Controller
         View::render('operacion.ventas', ['carritos' => Carrito::allAdmin()]);
     }
 
+    public function configuracion()
+    {
+        View::render('operacion.configuracion', ['carritos' =>'']);
+    }
+
     public function carrito()
     {
 		//echo 'Funcion Carrito';

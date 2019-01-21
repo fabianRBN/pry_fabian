@@ -2,6 +2,9 @@
 var json = null;
 
     $('#Modal').on('show.bs.modal', function (event) {
+
+        
+
         var button = $(event.relatedTarget) // Button that triggered the modal
     
         var modal = $(this)
@@ -83,11 +86,110 @@ var json = null;
                 }
             }else if(json.generacion == 0 ){
 
+                var doc = new jsPDF('p', 'pt','a4',true)
+                
 
-                var doc = new jsPDF()
+                cargarDatos(json);
+                
+                var table1 = 
+                    tableToJson($('#table1').get(0)),
+                    cellWidth = 180,
+                    rowCount = 0,
+                    cellContents,
+                    leftMargin = 130,
+                    topMargin = 300,
+                    topMarginTable = 55,
+                    headerRowHeight = 20,
+                    rowHeight = 30,
+            
+                 l = {
+                    orientation: 'l',
+                    unit: 'mm',
+                    format: 'a4',
+                    compress: true,
+                    fontSize: 12,
+                    lineHeight: 1,
+                    autoSize: false,
+                    printHeaders: true
+                };
 
-                doc.text(json.nombre, 10, 10)
-                doc.save(json.producto+'_'+json.cliente+'.pdf')
+                doc.setProperties({
+                    title: 'Test PDF Document',
+                    subject: 'This is the subject',
+                    author: 'author',
+                    keywords: 'generated, javascript, web 2.0, ajax',
+                    creator: 'author'
+                });
+
+                doc.cellInitialize();
+
+                    $.each(table1, function (i, row)
+                    {
+
+                        rowCount++;
+
+                        $.each(row, function (j, cellContent) {
+
+                            if (rowCount == 1) {
+                                doc.margins = 1;
+                                doc.setFont("times ");
+                                doc.setFontType("italic");  // or for normal font type use ------ doc.setFontType("normal");
+                                doc.setFontSize(12);                    
+
+
+                                doc.cell(leftMargin, topMargin, cellWidth, rowHeight, cellContent, i); 
+                            }
+                            else if (rowCount == 2) {
+                                doc.margins = 1;
+                                doc.setFont("times ");
+                                doc.setFontType("italic");  // or for normal font type use ------ doc.setFontType("normal");
+                                doc.setFontSize(12);                    
+
+                                doc.cell(leftMargin, topMargin, cellWidth, rowHeight, cellContent, i); 
+                            }
+                            else {
+
+                                doc.margins = 1;
+                                doc.setFont("times ");
+                                doc.setFontType("italic");
+                                doc.setFontSize(11);                    
+
+                                doc.cell(leftMargin, topMargin, cellWidth, rowHeight, cellContent, i);  // 1st=left margin    2nd parameter=top margin,     3rd=row cell width      4th=Row height
+                            }
+                        })
+                    })
+
+
+                function getBase64Image(img) {
+                    var canvas = document.createElement("canvas");
+                    canvas.width = img.width + 85;
+                    canvas.height = img.height + 30;
+                    var ctx = canvas.getContext("2d");
+                    ctx.drawImage(img, 0, 0);
+                    var dataURL = canvas.toDataURL("image/png");
+                    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+                  }
+                  
+                  var base64 = getBase64Image(document.getElementById("imageid"));
+
+                    doc.addImage(base64, 'JPEG',10, 10, 60, 30);
+                    doc.setFontSize(40)
+                    
+                    doc.setFontSize(20)
+                    doc.text(155, 200, 'DESCRIPCIÓN DEL PRODUCTO')
+                    doc.setFontSize(14)
+                    doc.text(170, 250, 'Producto pendiente - '+json.producto)
+                    doc.setFontSize(14)
+                    doc.text(150, 280, json.id+' - '+ json.cliente+' / '+ json.nombre +' '+json.apellido)
+                    doc.setFontSize(12)
+                    var height = 310;
+                    // json.opciones.forEach(element => {
+                    //     doc.text(180,  height, element.value +' - '+  element.nombre )
+                    //     height = height+30;
+                    // });
+                    doc.save(json.producto+'_'+json.cliente+'.pdf')
+                    $("#table1").empty();
+                    
 
             }else{
                 toastr.error('No se pudo aprovisionar', 'Error')
@@ -96,5 +198,52 @@ var json = null;
         }
         
     }
+
+
+
+function tableToJson(table) {
+    var data = [];
+    
+    // first row needs to be headers
+    var headers = [];
+    for (var i=0; i<table.rows[0].cells.length; i++) {
+        headers[i] = table.rows[0].cells[i].innerHTML.toLowerCase().replace(/ /gi,'');
+    }
+    
+    // go through cells
+    for (var i=1; i<table.rows.length; i++) {
+    
+        var tableRow = table.rows[i];
+        var rowData = {};
+    
+        for (var j=0; j<tableRow.cells.length; j++) {
+    
+            rowData[ headers[j] ] = tableRow.cells[j].innerHTML;
+    
+        }
+    
+        data.push(rowData);
+    }       
+    
+    return data; 
+}
+
+
+function cargarDatos(DatosJson){
+    
+  console.log(DatosJson)
+    $("#table1").append('<tr><td>Nombre</td>'+
+    '<td>Valor</td>');
+    for (i = 0; i < DatosJson.opciones.length; i++){
+
+        console.log(DatosJson.opciones[i].nombre)
+
+    $("#table1").append('<tr>' + 
+        '<td align="center" style="dislay: none;">' + DatosJson.opciones[i].nombre + '</td>'+
+        '<td align="center" style="dislay: none;">' + DatosJson.opciones[i].value + '</td>')
+    }
+}
+
+    
 
 

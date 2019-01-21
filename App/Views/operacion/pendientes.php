@@ -2,9 +2,9 @@
     <div class="main">
         <div class="main-content">
         <!--- Tu contenido -->
-            <div class="col-sm-12">
+            <!-- <div class="col-sm-12">
                     <iframe src= <?php echo \App\Config::DomainTomcat."InterfazGCnt/pendiente.xhtml" ?> frameborder="0" style="width: 100%; height: 800px;"></iframe>
-            </div>
+            </div> -->
 
             <div class="col-sm-12">
 					<div class="panel">
@@ -60,7 +60,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body" style="height: 600px;">
+                <div id="modalbody" class="modal-body" style="height: 600px;">
                     <div class="col-sm-12" >
                         <div class="form-group row" style=" margin-top: 2%;">
                             <div class="col-sm-5">
@@ -141,10 +141,17 @@
             </div>
 
         <!-- end main -->
+
+      <div>
+      <table id="table1" style="width:100%">
+  
+        </table>
+      </div>
     </div>
 
 <?php \Core\View::render('master.footer',
 ['scripts' => [
     'assets/scripts/pendiente.js',
-    'assets/scripts/jspdf.min.js'
+    'assets/scripts/jspdf.min.js',
+    'assets/scripts/jspdf.plugin.autotable.min.js'
 ]]) ?>

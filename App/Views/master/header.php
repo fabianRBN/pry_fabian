@@ -9,6 +9,8 @@
 	<!-- VENDOR CSS -->
 	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/fonts/stylesheet.css') ?>">
 	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/vendor/bootstrap/css/bootstrap.min.css') ?>">
+
+	
 	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/vendor/font-awesome/css/font-awesome.min.css') ?>">
 	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/vendor/linearicons/style.css') ?>">
 	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/vendor/chartist/css/chartist-custom.css') ?>">
@@ -23,6 +25,16 @@
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/vendor/bootstrap/css/bootstrap-select.css') ?>">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+
+
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="<?php \Core\Router::assets('assets/img/favicon.png')?>">
 	<link rel="icon" type="image/png" sizes="96x96" href="<?php \Core\Router::assets('assets/img/favicon.png')?>">
@@ -60,7 +72,7 @@
 		<?php endif?>
 			<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="/"><img height="50px" src="<?php \Core\Router::assets('assets/img/logo-dark.png') ?>"></a>
+				<a href="/"><img id="imageid" height="50px" src="<?php \Core\Router::assets('assets/img/logo-dark.png') ?>"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
