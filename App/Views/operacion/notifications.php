@@ -5,8 +5,10 @@
 				<div class="container-fluid">
 					<div class="row">
                         <div class="col-sm-12">
+                        
                             
                             <?php foreach($alerts as $alert): ?>
+                            <?php echo "<script>console.log(".json_encode($alert).")</script>" ?>
                             <div class="panel">
                                 <div class="panel-heading">
                                     <div class="panel-title"><a href="<?php \Core\Router::url($alert->url) ?>"><?php echo $alert->titulo ?></a></div>
@@ -18,6 +20,7 @@
                                     <b>Fecha: </b> <?php echo date('Y-m-d h:i:s',strtotime($alert->fecha_creacion)) ?> <br>
                                     <b>Comentario:</b> <br>
                                     <?php echo $alert->comentario ?>
+                                    
                                 </div>
                             </div>
                             <?php endforeach ?>

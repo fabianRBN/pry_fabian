@@ -6,14 +6,45 @@ var estatus = json[0].codigo;
 var fecha = null;
 var precio = null;
 
+
+
 $('.open-modal').on('click', function(){
     var json = $('[data-json]').data('json');
     estatus  = $('#estatus').val();
-    
-
     for(var i = 0; i < json.length; i++){
         if(json[i].codigo == estatus){
-            console.log(json[i].email_smtp);
+
+            $('#usuario_notificado').html('<option>Cargando..</option>')
+            var permisos = '';
+
+            
+            var usuarios = json[i].usuarios;
+            
+            $.get($('#url').data('url') + '/api/usuarios', function(data){
+                var p = JSON.parse(data);
+               
+               
+                    
+                    usuarios.forEach(function(user){
+                        var str = user.permiso;
+                        str = str.replace(" ","&nbsp;");
+                        permisos += '<optgroup label='+  str+'>';
+                        p.forEach(function(e){
+
+                            if(e.permiso == user.id_permiso ){
+                                permisos += '<option value="'+ e.id +'">'+ e.nombre +'</option>'
+                            }
+                        })
+                        permisos += '</optgroup>';
+
+                    });
+
+                   
+              
+                $('#usuario_notificado').html(permisos)
+            });
+        
+           
             if(json[i].email_smtp == 1){
                 $('#usericon').show();
             }else{
@@ -30,7 +61,7 @@ $('.open-modal').on('click', function(){
             $('#myModalLabel').html(json[i].titulo)
             $('[name="regresion"]').val(json[i].mensaje)
 
-            if(json[i].id == 10){
+            if(json[i].id == 20){
                 $('[name="fecha_aprovisionamiento"]').fadeIn();
                 $('[name="fecha_aprovisionamiento"]').attr('disabled', false);
                 fecha = true;

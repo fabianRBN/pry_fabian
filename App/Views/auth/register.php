@@ -38,6 +38,8 @@
 								<p class="lead">Registrate</p>
 							</div>
 							<form class="form-auth-large" method="post" action="<?php Core\Router::url('register_post') ?>">
+								
+								
 								<div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Nombre(s)</label>
 									<input required type="nombre" name="nombre" class="form-control" id="signin-nombre" value="<?php echo Core\Session::flash('nombre_value_input') ?>" placeholder="Nombre(s)">
@@ -52,6 +54,35 @@
 										<?php echo Core\Session::flash('apellidos_error') ?>
 									</p>
 								</div>
+
+								<div class="form-group">
+									<label for="signin-ruc" class="control-label sr-only">RUC</label>
+									<input required type="number"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="13" name="ruc" class="form-control" id="signin-ruc" value="<?php echo Core\Session::flash('ruc_value_input') ?>" placeholder="RUC">
+									<p class="text-danger">
+										<?php echo Core\Session::flash('ruc_error') ?>
+									</p>
+								</div>
+
+								<div class="form-group">
+									<label for="signin-email" class="control-label sr-only">Correo electrónico</label>
+									<input required type="correo" name="correo" class="form-control" id="signin-correo" value="<?php echo Core\Session::flash('correo_value_input') ?>" placeholder="Correo electrónico">
+									<p class="text-danger">
+										<?php echo Core\Session::flash('correo_error') ?>
+									</p>
+								</div>
+
+                                
+								<div class="form-group">
+									<label for="signin-password" class="control-label sr-only">Contraseña</label>
+									<input required type="password" id="password" autocomplete="off"  name="password" class="form-control" id="signin-password" value="" placeholder="Contraseña">
+									<div style="text-align: left; margin: 10px;">
+										<input type="checkbox" onclick="showpass()" style=" margin-right: 15px;"><label> Mostrar Contraseña </label>
+									</div>
+									<p  class="text-danger">
+										<?php echo Core\Session::flash('password_error') ?>
+									</p>
+								</div>
+
 								<div class="form-group">
 									<select required name="tipo" id="tipo" class="form-control">
 										<option value="">Tipo de cliente</option>
@@ -97,27 +128,7 @@
 									<input required type="hidden" name="ciudad">
 									<div id="ciudad"></div>
 								</div>
-                                <div class="form-group">
-									<label for="signin-email" class="control-label sr-only">Correo electrónico</label>
-									<input required type="correo" name="correo" class="form-control" id="signin-correo" value="<?php echo Core\Session::flash('correo_value_input') ?>" placeholder="Correo electrónico">
-									<p class="text-danger">
-										<?php echo Core\Session::flash('correo_error') ?>
-									</p>
-								</div>
                                 
-								<div class="form-group">
-									<label for="signin-password" class="control-label sr-only">Contraseña</label>
-									<input required type="password" id="password" autocomplete="off"  name="password" class="form-control" id="signin-password" value="" placeholder="Contraseña">
-									<div style="text-align: left; margin: 10px;">
-										<input type="checkbox" onclick="showpass()" style=" margin-right: 15px;"><label> Mostrar Contraseña </label>
-									</div>
-									<p  class="text-danger">
-										<?php echo Core\Session::flash('password_error') ?>
-									</p>
-
-
-								</div>
-
 
 								<input  type="hidden" name="tokenCSRF" value=" <?php echo strval(\Core\Session::createToken() )?>" >
 
@@ -140,10 +151,12 @@
 			</div>
 		</div>
 	</div>
+
 	<script src="<?php \Core\Router::assets('assets/vendor/jquery/jquery.min.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/config.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/autocomplete.js') ?>"></script>
 	<script src="<?php \Core\Router::assets('assets/scripts/register.js') ?>"></script>
+	
 	<!-- END WRAPPER -->
 </body>
 

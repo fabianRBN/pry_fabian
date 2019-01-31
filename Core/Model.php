@@ -174,6 +174,7 @@ abstract class Model
                 Session::set($ar . '_error','Este campo es requerido');
                 $pass = false;
             }else{
+                
                 if($data[$ar] == ''){
                     Session::set($ar . '_error','Este campo es requerido');
                     $pass = false;

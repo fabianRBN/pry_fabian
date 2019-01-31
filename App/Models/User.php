@@ -20,6 +20,11 @@ class User extends \Core\Model
         return static::query("SELECT * FROM {general}.{model}");
     }
 
+    public static function allapi()
+    {
+        return static::query("SELECT id,nombre,permiso, (SELECT nombre FROM {general}.cat_permisos WHERE id = permiso ) as nombrepermiso FROM {general}.{model} ORDER BY  nombrepermiso");
+    }
+
     public static function all()
     {
         return static::query("SELECT u.id,u.nombre,u.usuario,u.apellidos,u.correo,u.vigencia,u.estatus,u.notificacion,p.nombre as permiso,a.nombre as area FROM {general}.{model} as u INNER JOIN {general}.cat_permisos as p ON u.permiso=p.id INNER JOIN {general}.cat_areas as a ON a.id=p.area WHERE u.id != 1");
@@ -272,7 +277,7 @@ class User extends \Core\Model
 
     public static function create($data, $cb)
     {
-        self::queryOneTime("INSERT INTO {general}.{model} (nombre,apellidos,usuario,correo,area,permiso,estatus,contrasena,vigencia) VALUES ('". $data['nombre'] ."','". $data['apellidos'] ."','". $data['usuario'] ."','". $data['correo'] ."',". $data['area'] .",". $data['permiso'] .",". $data['estatus'] .",'". self::hash($data['password']) ."','". $data['vigencia'] ."')");
+        self::queryOneTime("INSERT INTO {general}.{model} (nombre,apellidos,usuario,correo,area,permiso,estatus,contrasena,vigencia,notificacion) VALUES ('". $data['nombre'] ."','". $data['apellidos'] ."','". $data['usuario'] ."','". $data['correo'] ."',". $data['area'] .",". $data['permiso'] .",". $data['estatus'] .",'". self::hash($data['password']) ."','". $data['vigencia'] ."', ". (($data['notificacion'] == 'on' ) ? 1 : 0) .")");
 
         $cb(true);
     }

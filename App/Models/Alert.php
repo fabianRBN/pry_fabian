@@ -65,10 +65,19 @@ class Alert extends \Core\Model
 
     }
 
-    public static function create($tipo,$id,$titulo,$comentario,$url,$identificador,$tipoID)
+    public static function create($tipo,$id,$titulo,$comentario,$url,$identificador,$tipoID,$id_estatus)
     {
        
         if($tipo == 'cliente'){
+
+            $carrito = Carrito::getById($identificador)[0];
+
+            $estatus = Estatus::findByIDs($id_estatus); 
+
+            $producto = Producto::findById($carrito->id_producto);
+
+            $comentario = "El producto ".$producto->nombre." se encuentra en estatus ". $estatus->nombre ;
+           
             return static::queryOneTime("INSERT INTO {cartera}.{model} (id_cliente,titulo,comentario,url,asesor,identificador,tipo) VALUES (". $id .",'". $titulo ."','". $comentario ."','". $url ."',". Session::get('sivoz_auth')->id .",". $identificador .",'". $tipoID ."')");
         }else{
             return static::queryOneTime("INSERT INTO {cartera}.{model} (id_usuario,titulo,comentario,url,asesor,identificador,tipo) VALUES (". $id .",'". $titulo ."','". $comentario ."','". $url ."',". Session::get('sivoz_auth')->id .",". $identificador .",'". $tipoID ."')");

@@ -8,6 +8,7 @@ use PDO;
 use \App\Models\Firma;
 use \App\Models\Alert;
 use \App\Models\Estatus;
+use \App\Models\Asignado;
 use \App\Config;
 use \Core\Session;
 use \Core\Binnacle;
@@ -316,6 +317,8 @@ class Carrito extends \Core\Model
             if($carrito->estatus == 0){
                 $carrito->estatus = 13; // se define el estado de recibido con el codigo 13 id 11
                 self::queryOneTime("UPDATE {cartera}.{model} SET estatus=13 WHERE id=$id");
+                Asignado::create($id, 13,Session::get('sivoz_auth')->id);
+
                 Notificacion::send('administracion/carrito?id=' . $carrito->id,13,'carrito',$carrito->id,'carrito',$carrito->id_cliente);
             }
         }
@@ -342,6 +345,8 @@ class Carrito extends \Core\Model
                 }
                 
             }
+
+            $consecutivo->usuarios = self::query("SELECT id, id_permiso, id_estatus,  (SELECT nombre FROM  {general}.cat_permisos WHERE id = id_permiso ) as permiso  FROM {general}.cat_areas_notificadas WHERE id_estatus=".$consecutivo->id);
             
         }
 
@@ -370,8 +375,29 @@ class Carrito extends \Core\Model
 
     public static function pendientes(){
 
-        $carritos = self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus, p.generacion, p.nombre as producto, p.tipoWeb , CONCAT(c.empresa,' ') as cliente , c.nombre as nombre , c.apellidos as apellido   FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8");
+        //$carritos = self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus, p.generacion, p.nombre as producto, p.tipoWeb , CONCAT(c.empresa,' ') as cliente , c.nombre as nombre , c.apellidos as apellido   FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 12");
       
+        $carritos = self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.generacion, p.tipoWeb , p.nombre as producto,CONCAT(c.empresa,' ') as cliente , c.nombre as nombre , c.apellidos as apellido  
+        FROM {general}.cat_asignacion as a 
+        INNER JOIN  {cartera}.{model} as v ON v.id = a.id_carrito
+        INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente
+        INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto
+        where (p.tipoWeb='Maquina Virtual'  or p.tipoWeb ='Servidores Virtuales') AND a.id_usuario = ".$_SESSION['sivoz_auth']->id." AND v.estatus = 12 GROUP BY v.id 
+        ");
+        foreach($carritos as $carrito){
+            $carrito->opciones = self::query("SELECT o.id,p.nombre,p.tipo,o.value,o.precio FROM {cartera}.tb_carrito_opciones as o INNER JOIN {cartera}.cat_opciones as p ON p.id=o.id_opcion WHERE id_carrito=" . $carrito->id);
+        }
+
+
+        return $carritos;
+
+    }
+
+    public static function pendientesall(){
+
+        $carritos = self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus, p.generacion, p.nombre as producto, p.tipoWeb , CONCAT(c.empresa,' ') as cliente , c.nombre as nombre , c.apellidos as apellido   FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 12");
+      
+        
         foreach($carritos as $carrito){
             $carrito->opciones = self::query("SELECT o.id,p.nombre,p.tipo,o.value,o.precio FROM {cartera}.tb_carrito_opciones as o INNER JOIN {cartera}.cat_opciones as p ON p.id=o.id_opcion WHERE id_carrito=" . $carrito->id);
         }
@@ -407,70 +433,153 @@ class Carrito extends \Core\Model
 
     public static function vdc()
     {
-        if($_SESSION['sivoz_auth']->permiso ==  9){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND p.tipoWeb='VDC'");
-        }else if($_SESSION['sivoz_auth']->permiso ==  6){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND p.tipoWeb='VDC'");
-        }else if($_SESSION['sivoz_auth']->permiso ==  3){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND p.tipoWeb='VDC'");
-        }else{
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='VDC'");
-        }
+        //  if($_SESSION['sivoz_auth']->permiso ==  9){
+        //      return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto  WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND p.tipoWeb='VDC'");
+        //  }else if($_SESSION['sivoz_auth']->permiso ==  6){
+        //      return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND p.tipoWeb='VDC'");
+        //  }else if($_SESSION['sivoz_auth']->permiso ==  3){
+        //      return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND p.tipoWeb='VDC'");
+        //  }else{
+        //      return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='VDC'");
+        //  }
 
+
+        if($_SESSION['sivoz_auth']->permiso == 11){
+            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='VDC'");        
+        }else{
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente 
+            FROM {general}.cat_asignacion as a 
+            INNER JOIN  {cartera}.{model} as v ON v.id = a.id_carrito
+            INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente
+            INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto
+            where p.tipoWeb='VDC'AND a.id_usuario = ".$_SESSION['sivoz_auth']->id." GROUP BY v.id
+            ");
+        }
+    }
+
+    public static function vdcall(){
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='VDC'");
     }
 
     public static function maquinas()
     {
-        if($_SESSION['sivoz_auth']->permiso ==  9){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND (p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales')");
-        }else if($_SESSION['sivoz_auth']->permiso ==  6){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND (p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales')");
-        }else if($_SESSION['sivoz_auth']->permiso ==  3){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND (p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales')");
+        // if($_SESSION['sivoz_auth']->permiso ==  9){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND (p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales')");
+        // }else if($_SESSION['sivoz_auth']->permiso ==  6){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND (p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales')");
+        // }else if($_SESSION['sivoz_auth']->permiso ==  3){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND (p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales')");
+        // }else{
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales'");
+        // }
+
+
+        if($_SESSION['sivoz_auth']->permiso == 11){
+            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales'");        
         }else{
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales'");
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente 
+            FROM {general}.cat_asignacion as a 
+            INNER JOIN  {cartera}.{model} as v ON v.id = a.id_carrito
+            INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente
+            INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto
+            where (p.tipoWeb='Maquina Virtual'  or p.tipoWeb ='Servidores Virtuales') AND a.id_usuario = ".$_SESSION['sivoz_auth']->id." GROUP BY v.id
+            ");
         }
 
+    }
+    public static function maquinasall()
+    {
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='Maquina Virtual'   or p.tipoWeb ='Servidores Virtuales'");        
     }
 
     public static function otros()
     {
-        if($_SESSION['sivoz_auth']->permiso ==  9){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND p.tipoWeb='Otros'");
-        }else if($_SESSION['sivoz_auth']->permiso ==  6){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND p.tipoWeb='Otros'");
-        }else if($_SESSION['sivoz_auth']->permiso ==  3){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND p.tipoWeb='Otros'");
+        // if($_SESSION['sivoz_auth']->permiso ==  9){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND p.tipoWeb='Otros'");
+        // }else if($_SESSION['sivoz_auth']->permiso ==  6){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND p.tipoWeb='Otros'");
+        // }else if($_SESSION['sivoz_auth']->permiso ==  3){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND p.tipoWeb='Otros'");
+        // }else{
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='Otros'");
+        // }
+
+        if($_SESSION['sivoz_auth']->permiso == 11){
+            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='Otros' ");        
         }else{
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='Otros'");
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente 
+            FROM {general}.cat_asignacion as a 
+            INNER JOIN  {cartera}.{model} as v ON v.id = a.id_carrito
+            INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente
+            INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto
+            where p.tipoWeb='Otros'  AND a.id_usuario = ".$_SESSION['sivoz_auth']->id." GROUP BY v.id
+            ");
         }
+
+    }
+    public static function otrosall()
+    {
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.tipoWeb='Otros' ");        
 
     }
 
     public static function demos()
     {
-        if($_SESSION['sivoz_auth']->permiso ==  9){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND  p.demo=1");
-        }else if($_SESSION['sivoz_auth']->permiso ==  6){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND  p.demo=1");
-        }else if($_SESSION['sivoz_auth']->permiso ==  3){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND  p.demo=1");
+        // if($_SESSION['sivoz_auth']->permiso ==  9){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND  p.demo=1");
+        // }else if($_SESSION['sivoz_auth']->permiso ==  6){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND  p.demo=1");
+        // }else if($_SESSION['sivoz_auth']->permiso ==  3){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND  p.demo=1");
+        // }else{
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.demo=1");
+        // }
+
+        if($_SESSION['sivoz_auth']->permiso == 11){
+            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.demo=1 ");        
         }else{
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.demo=1");
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente 
+            FROM {general}.cat_asignacion as a 
+            INNER JOIN  {cartera}.{model} as v ON v.id = a.id_carrito
+            INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente
+            INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto
+            where p.demo=1  AND a.id_usuario = ".$_SESSION['sivoz_auth']->id." GROUP BY v.id
+            ");
         }
+
+    }
+
+    public static function demosall(){
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.demo=1 ");        
     }
 
     public static function proximamentes()
     {
-        if($_SESSION['sivoz_auth']->permiso ==  9){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND p.proximamente=1");
-        }else if($_SESSION['sivoz_auth']->permiso ==  6){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND p.proximamente=1");
-        }else if($_SESSION['sivoz_auth']->permiso ==  3){
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND p.proximamente=1");
+        // if($_SESSION['sivoz_auth']->permiso ==  9){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2 AND p.proximamente=1");
+        // }else if($_SESSION['sivoz_auth']->permiso ==  6){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1 AND p.proximamente=1");
+        // }else if($_SESSION['sivoz_auth']->permiso ==  3){
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8 AND p.proximamente=1");
+        // }else{
+        //     return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.proximamente=1");
+        // }
+
+        if($_SESSION['sivoz_auth']->permiso == 11){
+            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.proximamente=1 ");        
         }else{
-            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.proximamente=1");
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente 
+            FROM {general}.cat_asignacion as a 
+            INNER JOIN  {cartera}.{model} as v ON v.id = a.id_carrito
+            INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente
+            INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto
+            where p.proximamente=1  AND a.id_usuario = ".$_SESSION['sivoz_auth']->id." GROUP BY v.id
+            ");
         }
+
+    }
+    public static function proximamentesall(){
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto where p.proximamente=1 ");        
 
     }
 
@@ -486,8 +595,8 @@ class Carrito extends \Core\Model
             }
 
             Notificacion::send('operacion/carrito?id=' . $id,$estatus,'carrito',$carrito->id,'carrito');
-
-            Alert::create('cliente',$carrito->id_cliente,'Cambio de estatus de compra',$comment,'administracion/carrito?id=' . $id,$carrito->id,'carrito');
+            //Alertas de notificacion para clientes (Campanita)
+            Alert::create('cliente',$carrito->id_cliente,'Cambio de estatus de compra',$comment,'administracion/detalle?id=' . $id,$carrito->id,'carrito',$estatus);
         }else if($precio_aprovisionamiento == false){
             
             self::queryOneTime("UPDATE {cartera}.{model} SET estatus=$estatus,fecha_aprovisionamiento='$fecha_aprovisionamiento' WHERE id=$id");
@@ -500,8 +609,8 @@ class Carrito extends \Core\Model
 
 
             Notificacion::send('operacion/carrito?id=' . $id,$estatus,'carrito',$carrito->id,'carrito');
-
-            Alert::create('cliente',$carrito->id_cliente,'Cambio de estatus de compra',$comment,'administracion/carrito?id=' . $id,$carrito->id,'carrito');
+            //Alertas de notificacion para clientes (Campanita)
+            Alert::create('cliente',$carrito->id_cliente,'Cambio de estatus de compra',$comment,'administracion/detalle?id=' . $id,$carrito->id,'carrito',$estatus);
 
         }else{
             self::queryOneTime("UPDATE {cartera}.{model} SET estatus=$estatus,precio_aprovisionamiento=$precio_aprovisionamiento WHERE id=$id");
@@ -514,11 +623,18 @@ class Carrito extends \Core\Model
 
 
             Notificacion::send('operacion/carrito?id=' . $id,$estatus,'carrito',$carrito->id,'carrito');
-
-            Alert::create('cliente',$carrito->id_cliente,'Cambio de estatus de compra',$comment,'administracion/carrito?id=' . $id,$carrito->id,'carrito');
+            //Alertas de notificacion para clientes (Campanita)
+            Alert::create('cliente',$carrito->id_cliente,'Cambio de estatus de compra',$comment,'administracion/detalle?id=' . $id,$carrito->id,'carrito',$estatus);
            
         }
 
+        if($estatus == 11){
+            Asignado::delete($id);
+        }
+
+        if($usr_notif != 'NA'){
+            Asignado::create($id, $estatus,$usr_notif);
+        }
         $cb(true);
     }
 

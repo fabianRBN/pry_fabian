@@ -3,6 +3,7 @@
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
+                <?php echo "<script>console.log(".json_encode(\App\Models\Permiso::permisoAccion($producto->id)).")</script>"  ?>
 					<div class="row">
                         <?php if($producto->estatus == 15): ?>
                         <?php else: ?>
@@ -122,6 +123,21 @@
                                     <?php endforeach ?>
                                 </div>
                             </div>
+
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="panel-title">Historial de estatus</div>
+                                </div>
+                                <div class="panel-body">
+                                <?php  echo "<script>console.log(".json_encode($asignacion).") </script>" ?>
+                                <ul class="list-group">
+                                    <?php foreach($asignacion as $asignado): ?>
+                                        <li class="list-group-item"> <?php echo  $asignado->estado.":  <span class='label label-default' style='    font-size: 13px;'>".$asignado->usuario."</span>" ?></li>
+                                    <?php endforeach ?>
+                                </ul>
+                                </div>
+                            </div>
+
                         </div>
 					</div>
 				</div>
@@ -154,13 +170,7 @@
                             </div>
                             <div class="form-group">
                                     <select data-required="true" notificacion-name="usuario_notificado" name="usuario_notificado" id="usuario_notificado" class="form-control">
-										<option value="NA">Notificar a un usuario</option>
-                                        <?php foreach($usuarios as $usuario): ?>
-                                        <?php  if($usuario->notificacion == '1'):?>
-										    <option value="<?php echo $usuario->id ?>"><?php echo $usuario->nombre ?></option>
-                                       
-                                        <?php endif; ?>
-										<?php endforeach ?>
+										
 									</select>
                             </div>
                             <div class="form-group">
@@ -192,6 +202,7 @@
         </div>
         <div carrito-total data-total="<?php echo number_format($producto->total, 2) ?>">
         </div>
+        <div id="url" data-url='<?php echo \App\Config::Domain ?>'></div>
 <?php \Core\View::render('master.footer',['scripts' => [
 	'assets/scripts/carrito.js'
 ]]) ?>

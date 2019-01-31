@@ -8,12 +8,14 @@ use \Core\View;
 use \Core\Binnacle;
 use \Core\Session;
 use \Core\Router;
+use \Core\ValidarRUC;
 use \App\Models\User;
 use \App\Models\Pais;
 use \App\Models\Ciudad;
 use \App\Models\Cliente;
 use \App\Models\TipoCliente;
 use \App\Models\Sector;
+use \App\Models\Organizacion;
 
 /**
  * Home controller
@@ -280,6 +282,15 @@ class Auth extends \Core\Controller
         echo json_encode(Pais::nombres());
     }
 
+    public function organizacion(){
+
+        Organizacion::findById($_POST,function($data){
+            
+                echo json_encode($data);
+          
+        });
+
+    }
     
 
     public function registerPost()
@@ -294,41 +305,51 @@ class Auth extends \Core\Controller
       
              if(strcmp($token, $tokenlocal) === 0){
                 unset($_SESSION['tokenCSRF']);
-                $validation = Cliente::validate(['nombre','apellidos','pais','ciudad','correo','password','empresa','telefono','direccion','sector','tipo'], $_POST);
+                $validation = Cliente::validate(['nombre','apellidos','pais','ciudad','correo','ruc','password','empresa','telefono','direccion','sector','tipo'], $_POST);
 
-          
+                
              if($validation === true){
-                 $auth = Cliente::create($_POST);
-                 if($auth === true){
-                     Cliente::login($_POST);
-                     if(Session::has('add_producto')){
-                         $id = Session::get('add_producto');
-                         if(Session::get('sivoz_auth')->permiso == 7){
-                             Session::remove('add_producto');
-                             Router::redirect('/tienda/producto?id=' . $id->id);
-                         }else{
-                             Router::redirect('/administracion');
-                         }
-                     }else{
-                         Router::redirect('/administracion');
-                     }
-                     if(Session::has('add_servicio')){
-                         $id = Session::get('add_servicio');
-                         if(Session::get('sivoz_auth')->permiso == 7){
-                             Session::remove('add_servicio');
-                             Router::redirect('/tienda/servicio?id=' . $id->id);
-                         }else{
-                             Router::redirect('/administracion');
-                         }
-                     }else{
-                         Router::redirect('/administracion');
-                     }
-                 }else{
-                     foreach($auth as $a => $value){
-                         Session::set($a,$value);
-                         Router::redirect('/register');
-                     }
-                 }
+
+                $ruc = ValidarRuc::validarCedula($_POST['ruc']);
+
+                if($ruc === false){
+                    Session::set('ruc_error','Este campo es requerido');
+                    Router::redirect('/register');
+                }else{
+                    $auth = Cliente::create($_POST);
+                    if($auth === true){
+                        Cliente::login($_POST);
+                        if(Session::has('add_producto')){
+                            $id = Session::get('add_producto');
+                            if(Session::get('sivoz_auth')->permiso == 7){
+                                Session::remove('add_producto');
+                                Router::redirect('/tienda/producto?id=' . $id->id);
+                            }else{
+                                Router::redirect('/administracion');
+                            }
+                        }else{
+                            Router::redirect('/administracion');
+                        }
+                        if(Session::has('add_servicio')){
+                            $id = Session::get('add_servicio');
+                            if(Session::get('sivoz_auth')->permiso == 7){
+                                Session::remove('add_servicio');
+                                Router::redirect('/tienda/servicio?id=' . $id->id);
+                            }else{
+                                Router::redirect('/administracion');
+                            }
+                        }else{
+                            Router::redirect('/administracion');
+                        }
+                    }else{
+                        foreach($auth as $a => $value){
+                            Session::set($a,$value);
+                            Router::redirect('/register');
+                        }
+                    }
+                }
+
+                
              }else{
                  Router::redirect('/register');
              } 

@@ -109,14 +109,14 @@ class Cliente extends \Core\Model
     public static function create($data)
     {
 
-      
+        
         foreach ($data as $key => $value) {
             if($key != 'password'){
                 $data[$key] = htmlspecialchars($value, ENT_QUOTES,"UTF-8");
             }
         }
 
-        self::queryOneTime("INSERT INTO {cartera}.{model} (nombre,apellidos,correo,permiso,estatus,pais,ciudad,contrasena,empresa,telefono,direccion,tipo_cliente,sector) VALUES ('". $data['nombre'] ."','". $data['apellidos'] ."','". $data['correo'] ."',7,0,'". $data['pais'] ."','". $data['ciudad'] ."','". self::hash($data['password']) ."','".$data['empresa']."','".$data['telefono']."','".$data['direccion']."',".$data['tipo'].",".$data['sector'].")");
+        self::queryOneTime("INSERT INTO {cartera}.{model} (nombre,apellidos,correo,permiso,estatus,pais,ciudad,contrasena,empresa,telefono,direccion,tipo_cliente,sector,ruc) VALUES ('". $data['nombre'] ."','". $data['apellidos'] ."','". $data['correo'] ."',7,0,'". $data['pais'] ."','". $data['ciudad'] ."','". self::hash($data['password']) ."','".$data['empresa']."','".$data['telefono']."','".$data['direccion']."',".$data['tipo'].",".$data['sector'].",".$data['ruc'].")");
 
         return true;
     }

@@ -1,6 +1,7 @@
 <?php \Core\View::render('master.header', ['title' => 'Ventas']) ?>
 		<div class="main">
 			<!-- MAIN CONTENT -->
+			<?php     echo "<script>console.log( " . json_encode($_SESSION['sivoz_auth']) . " );</script>" ?>
 			<div class="main-content">
 				<div class="col-sm-12">
 					<div class="panel">
@@ -8,30 +9,78 @@
 							<h3 class="panel-title">Clientes</h3>
 						</div>
 						<div class="panel-body">
-							<table class="table">
-								<thead>
-									<tr>
-										<th>Empresa</th>
-										<th>Producto</th>
-										<th>Estatus</th>
-										<th>Suscripción</th>
-										<th>Acción</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php foreach($carritos as $carrito): ?>
-									<tr>
-										<td><?php echo $carrito->cliente ?></td>
-										<td><?php echo $carrito->producto ?></td>
-										<td>
-											<?php echo \App\Models\Estatus::calculate($carrito->estatus,'carrito') ?>
-										</td>
-										<td><?php  echo date('Y-m-d', strtotime( $carrito->fecha_compra)) ?></td>
-										<td><a href="<?php echo \Core\Router::url('operacion/carrito?id=' . $carrito->id) ?>"  onclick="return waitingDialog.show();" class="btn btn-primary">Ver</a></td>
-									</tr>
-									<?php endforeach ?>
-								</tbody>
-							</table>
+
+
+						
+						<div class="row">
+							<div class="col-md-12">
+						
+								<ul id="tabsJustified" class="nav nav-tabs">
+									<li class="nav-item active"><a href="" data-target="#home1" data-toggle="tab" class="nav-link small text-uppercase active">Asignados</a></li>
+									<li class="nav-item"><a href="" data-target="#profile1" data-toggle="tab" class="nav-link small text-uppercase ">Todos</a></li>
+								</ul>
+								<br>
+								<div id="tabsJustifiedContent" class="tab-content">
+									<div id="home1" class="tab-pane fade active  in">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Empresa</th>
+												<th>Producto</th>
+												<th>Estatus</th>
+												<th>Suscripción</th>
+												<th>Acción</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php foreach($carritos as $carrito): ?>
+											<tr>
+												<td><?php echo $carrito->cliente ?></td>
+												<td><?php echo $carrito->producto ?></td>
+												<td>
+													<?php echo \App\Models\Estatus::calculate($carrito->estatus,'carrito') ?>
+												</td>
+												<td><?php echo date('Y-m-d', strtotime( $carrito->fecha_compra)) ?></td>
+												<td><a href="<?php echo \Core\Router::url('operacion/carrito?id=' . $carrito->id) ?>"  onclick="return waitingDialog.show();" class="btn btn-primary">Ver</a></td>
+											</tr>
+											<?php endforeach ?>
+										</tbody>
+									</table>
+									</div>
+									<div id="profile1" class="tab-pane ">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Empresa</th>
+												<th>Producto</th>
+												<th>Estatus</th>
+												<th>Suscripción</th>
+												<th>Acción</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php foreach($carritosall as $carritoall): ?>
+											<tr>
+												<td><?php echo $carritoall->cliente ?></td>
+												<td><?php echo $carritoall->producto ?></td>
+												<td>
+													<?php echo \App\Models\Estatus::calculate($carritoall->estatus,'carrito') ?>
+												</td>
+												<td><?php echo date('Y-m-d', strtotime( $carritoall->fecha_compra)) ?></td>
+												<td><a href="<?php echo \Core\Router::url('operacion/carrito?id=' . $carritoall->id) ?>"  onclick="return waitingDialog.show();" class="btn btn-primary">Ver</a></td>
+											</tr>
+											<?php endforeach ?>
+										</tbody>
+									</table>
+
+
+									</div>
+							
+								</div>
+							</div>
+						</div>
+				
+							
 						</div>
 					</div>
 				</div>

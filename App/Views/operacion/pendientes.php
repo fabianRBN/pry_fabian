@@ -9,40 +9,96 @@
             <div class="col-sm-12">
 					<div class="panel">
 						<div class="panel-heading">
-							<h3 class="panel-title">Clientes </h3>
+							<h3 class="panel-title">Aprovisionamiento </h3>
 						</div>
 						<div class="panel-body">
-							<table class="table">
-								<thead>
-									<tr>
-										<th>Empresa</th>
-										<th>Producto</th>
-										<th>Estatus</th>
-										<th>Suscripción</th>
-										<th>Acción</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php foreach($carritos as $carrito): ?>
-                                    
-                                    <?php echo "<script>console.log( ".json_encode($carrito)." );</script>" ?>
 
-									<tr>
-										<td><?php echo $carrito->cliente ?></td>
-										<td><?php echo $carrito->producto ?></td>
-										<td>
-											<?php echo \App\Models\Estatus::calculate($carrito->estatus,'carrito') ?>
-										</td>
-										<td><?php echo date('Y-m-d', strtotime( $carrito->fecha_compra)) ?></td>
-										<td>
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" data-titulo='<?php echo   $carrito->generacion ?>' data-json = '<?php echo json_encode( $carrito ) ?>' >Aprovicionar</button>
-                                        </td>
 
-									</tr>
-                                 
-									<?php endforeach ?>
-								</tbody>
-							</table>
+                            <div class="row">
+							<div class="col-md-12">
+						
+								<ul id="tabsJustified" class="nav nav-tabs">
+									<li class="nav-item active"><a href="" data-target="#home1" data-toggle="tab" class="nav-link small text-uppercase active">Asignados</a></li>
+									<li class="nav-item"><a href="" data-target="#profile1" data-toggle="tab" class="nav-link small text-uppercase ">Todos</a></li>
+								</ul>
+								<br>
+								<div id="tabsJustifiedContent" class="tab-content">
+									<div id="home1" class="tab-pane fade active  in">
+									<table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Empresa</th>
+                                                <th>Producto</th>
+                                                <th>Estatus</th>
+                                                <th>Suscripción</th>
+                                                <th>Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach($carritos as $carrito): ?>
+                                            
+                                            <?php echo "<script>console.log( ".json_encode($carrito)." );</script>" ?>
+
+                                            <tr>
+                                                <td><?php echo $carrito->cliente ?></td>
+                                                <td><?php echo $carrito->producto ?></td>
+                                                <td>
+                                                    <?php echo \App\Models\Estatus::calculate($carrito->estatus,'carrito') ?>
+                                                </td>
+                                                <td><?php echo date('Y-m-d', strtotime( $carrito->fecha_compra)) ?></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" data-titulo='<?php echo   $carrito->generacion ?>' data-json = '<?php echo json_encode( $carrito ) ?>' >Aprovicionar</button>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <?php endforeach ?>
+                                        </tbody>
+                                    </table>
+									</div>
+									<div id="profile1" class="tab-pane ">
+									<table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Empresa</th>
+                                                <th>Producto</th>
+                                                <th>Estatus</th>
+                                                <th>Suscripción</th>
+                                                <th>Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach($carritoall as $carrito): ?>
+                                            
+                                            <?php echo "<script>console.log( ".json_encode($carrito)." );</script>" ?>
+
+                                            <tr>
+                                                <td><?php echo $carrito->cliente ?></td>
+                                                <td><?php echo $carrito->producto ?></td>
+                                                <td>
+                                                    <?php echo \App\Models\Estatus::calculate($carrito->estatus,'carrito') ?>
+                                                </td>
+                                                <td><?php echo date('Y-m-d', strtotime( $carrito->fecha_compra)) ?></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" data-titulo='<?php echo   $carrito->generacion ?>' data-json = '<?php echo json_encode( $carrito ) ?>' >Aprovicionar</button>
+                                                </td>
+
+                                            </tr>
+                                        
+                                            <?php endforeach ?>
+                                        </tbody>
+                                    </table>
+
+
+									</div>
+							
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+							
 						</div>
 					</div>
 				</div>

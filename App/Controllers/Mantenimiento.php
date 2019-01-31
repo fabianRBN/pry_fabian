@@ -72,6 +72,10 @@ class Mantenimiento extends \Core\Controller
         echo json_encode(Permiso::all());
     }
 
+    public function usuariosapi(){
+        echo json_encode(User::allapi());
+    }
+
     public function createUser()
     {
         User::create($_POST, function($pass){

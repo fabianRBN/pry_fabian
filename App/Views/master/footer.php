@@ -35,7 +35,7 @@
 
 	<?php if(isset($scripts)): ?>
 	<?php foreach($scripts as $script): ?>
-	<script src="<?php \Core\Router::assets($script) ?>"></script>
+	<script type="text/javascript" src="<?php \Core\Router::assets($script) ?>"></script>
 	<?php endforeach ?>
 	<?php endif ?>
 

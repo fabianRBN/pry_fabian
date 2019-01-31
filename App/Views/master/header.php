@@ -27,12 +27,6 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-	<link rel="stylesheet" href="<?php \Core\Router::assets('assets/vendor/bootstrap/css/bootstrap-select.css') ?>">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-
 
 
 	<!-- ICONS -->
@@ -98,13 +92,15 @@
 							</ul>
 						</li>
 						
-						<!--<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/favicon.png" class="img-circle" alt="Avatar"> <span>Administrador</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								
+								<span> <?php echo \Core\Session::get('sivoz_auth')->nombre ." ".\Core\Session::get('sivoz_auth')->apellidos  ?>  
+								</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Ajustes</span></a></li>
-								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Cerrar sesión</span></a></li>
+								<li><a href="<?php echo \Core\Router::url('logout') ?>" ><i class="lnr lnr-exit"></i> <span>Cerrar sesión</span></a></li>
 							</ul>
-						</li>-->
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -125,8 +121,9 @@
 								<ul class="nav">
 									<?php foreach($menus as $menu): ?>
 									<?php if($menu->grupo == $grupo->id): ?>
+
 									<?php if(\Core\Session::canSee(explode(',',$menu->permisos)) == true) : ?>
-									<?php if($menu->nombre != 'Demo' && $menu->nombre != 'Próximamente') : ?>
+									<?php if($menu->activo != 0) : ?>
 										<li><a href="<?php \Core\Router::url($menu->ruta) ?>" class=""><?php echo $menu->nombre ?></a></li>
 									<?php endif ?>
 									<?php endif ?>
