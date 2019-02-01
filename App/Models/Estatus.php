@@ -20,6 +20,11 @@ class Estatus extends \Core\Model
         return self::query("SELECT * FROM {general}.{model} ORDER BY tipo");
     }
 
+    public static function allcarrito()
+    {
+        return self::query("SELECT * FROM {general}.{model} WHERE tipo ='carrito' ORDER BY tipo");
+    }
+
     public static function findByID($estatus,$tipo)
     {
         return self::query("SELECT * FROM {general}.{model} WHERE tipo='$tipo' AND codigo=$estatus",[],self::FETCH_ONE)->id;
@@ -47,6 +52,11 @@ class Estatus extends \Core\Model
     public static function findByIDs($id)
     {
         return self::query("SELECT * FROM {general}.{model} WHERE id=$id",[],self::FETCH_ONE);
+    }
+
+    public static function findByIDsCodigo($id)
+    {
+        return self::query("SELECT * FROM {general}.{model} WHERE tipo='carrito'  AND codigo = $id",[],self::FETCH_ONE);
     }
 
     public static function flujo()

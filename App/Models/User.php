@@ -277,7 +277,16 @@ class User extends \Core\Model
 
     public static function create($data, $cb)
     {
-        self::queryOneTime("INSERT INTO {general}.{model} (nombre,apellidos,usuario,correo,area,permiso,estatus,contrasena,vigencia,notificacion) VALUES ('". $data['nombre'] ."','". $data['apellidos'] ."','". $data['usuario'] ."','". $data['correo'] ."',". $data['area'] .",". $data['permiso'] .",". $data['estatus'] .",'". self::hash($data['password']) ."','". $data['vigencia'] ."', ". (($data['notificacion'] == 'on' ) ? 1 : 0) .")");
+
+        if(isset($data['notificacion'])){
+            $notificacion = (($data['notificacion'] == 'on' ) ? 1 : 0);
+        }else{
+            $notificacion = 0;
+        }
+       
+
+
+        self::queryOneTime("INSERT INTO {general}.{model} (nombre,apellidos,usuario,correo,area,permiso,estatus,contrasena,vigencia,notificacion) VALUES ('". $data['nombre'] ."','". $data['apellidos'] ."','". $data['usuario'] ."','". $data['correo'] ."',". $data['area'] .",". $data['permiso'] .",". $data['estatus'] .",'". self::hash($data['password']) ."','". $data['vigencia'] ."', ". $notificacion .")");
 
         $cb(true);
     }

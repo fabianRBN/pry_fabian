@@ -46,7 +46,18 @@ class Notificacion extends \Core\Model
 
                     $to = $cliente->correo;
 
-                    $content = '         
+                    $mensajes = Variables::getMensaje($estat->id);
+
+                    if($mensajes){
+                        $comentario = $mensajes[0]->valor;
+                    }else{
+                        $comentario = '';
+                    }
+
+                    $comentario = str_replace("%nombrep%",$producto->nombre,$comentario );
+
+                    $content = '       
+                        <p> '. $comentario .'</p>
                         <p><strong>Producto: </strong>'. $producto->nombre.' </p>
                         <p><strong>Fecha de compra: </strong>'. $carrito->fecha_compra.' </p>
                         <p><strong>Cliente: </strong>'. $cliente->nombre.' </p>
@@ -62,7 +73,7 @@ class Notificacion extends \Core\Model
 
                     $message =  Correo::buildEmail();
                     $message = str_replace("%body%", $content, $message);
-                    //mail($to,$subject,$message, $headers);
+                    mail($to,$subject,$message, $headers);
                     
                     //static::query("INSERT INTO {cartera}.tb_correo (emisor,receptor,mensaje,cabezera) VALUES ('". $to ."','". $from ."','". $message ."','". $headers ."')");
 

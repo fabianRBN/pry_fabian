@@ -94,16 +94,23 @@
                                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Confirmación de solicitud</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
+                                                <div class="modal-header" style="display: flex;">
+                                                    <div style="flex: 1;">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Confirmación de solicitud</h5>
+                                                    </div>
+
+                                                    <div style="flex: 1;">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                   
+                                                    
                                                 </div>
                                                 <div class="modal-body">
                                                     
                                                     <div class="">
-                                                    <div class="panel-heading">
+                                                    <div class="panel-heading" style="    padding: 0px 25px 0px 25px !important;">
                                                         <div class="panel-title">Desea confirmar la solicitud de <?php echo $producto->nombre ?></div>
                                                     </div>
                                                     <div class="panel-body">

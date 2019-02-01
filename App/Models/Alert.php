@@ -7,6 +7,7 @@ namespace App\Models;
 use PDO;
 use \App\Models\Firma;
 use \App\Models\User;
+use \App\Models\Variables;
 use \App\Config;
 use \Core\Session;
 use \Core\Correo;
@@ -72,11 +73,23 @@ class Alert extends \Core\Model
 
             $carrito = Carrito::getById($identificador)[0];
 
-            $estatus = Estatus::findByIDs($id_estatus); 
+            $estatus = Estatus::findByIDsCodigo($id_estatus); 
 
             $producto = Producto::findById($carrito->id_producto);
 
-            $comentario = "El producto ".$producto->nombre." se encuentra en estatus ". $estatus->nombre ;
+            $mensajes = Variables::getMensaje($estatus->id);
+
+            if($mensajes){
+               
+                    $comentario = $mensajes[0]->valor;
+                
+            }else{
+                $comentario = "El producto ".$producto->nombre." se encuentra en estatus ". $estatus->nombre ;
+            }
+
+
+            $comentario = str_replace("%nombrep%",$producto->nombre,$comentario );
+           
            
             return static::queryOneTime("INSERT INTO {cartera}.{model} (id_cliente,titulo,comentario,url,asesor,identificador,tipo) VALUES (". $id .",'". $titulo ."','". $comentario ."','". $url ."',". Session::get('sivoz_auth')->id .",". $identificador .",'". $tipoID ."')");
         }else{

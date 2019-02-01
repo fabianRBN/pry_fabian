@@ -34,8 +34,57 @@
                             </div>
                         </div>
                         <?php endif ?>
+
+                      
+                       
+
                         <div class="col-sm-6">
                             
+
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <div class="panel-title">Cargar Archivos de estado </div>
+                                </div>
+                                <div class="panel-body">
+                                    <form id="uploadImage" action="https://smart.cntcloud2.com/operacion/fileupload" method="post">
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-9"> 
+                                                <input type="text" name="textfile"  class="custom-file-input form-control" accept="application/pdf" lang="es">
+
+                                                    <div class="custom-file">
+                                                        <input type="file" name="uploadFile" id="uploadFile"  class="custom-file-input form-control" accept="application/pdf" lang="es">
+                                                    </div>
+                                                </div>
+                                                <div id="targetLayer" style="display:none;"></div>
+                                                <div class="col-sm-2">
+                                                    <button type="submit" id="uploadSubmit"  class="btn btn-success">Cargar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <h5>Esatado Aprovicionado <a href=""> Ejemplo.pdf </a></h5>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <h5>Recibido <a href=""> Ejemplo.pdf </a></h5>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <h5>Aprobado <a href=""> Ejemplo.pdf </a></h5>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
                             <?php foreach($alerts as $alert): ?>
                             <div class="panel">
                                 <div class="panel-heading">
@@ -176,6 +225,9 @@
                             <div class="form-group">
                                 <textarea name="regresion" placeholder="Comentario" id="" cols="30" rows="10" class="form-control">Se ha aprovisionado tu petición</textarea>
                             </div>
+
+                           
+                            
                         </div>
                     </div>
                 </div>
@@ -204,6 +256,6 @@
         </div>
         <div id="url" data-url='<?php echo \App\Config::Domain ?>'></div>
 <?php \Core\View::render('master.footer',['scripts' => [
-	'assets/scripts/carrito.js'
+	'assets/scripts/carrito.js','assets/scripts/jquery.form.js'
 ]]) ?>
 		

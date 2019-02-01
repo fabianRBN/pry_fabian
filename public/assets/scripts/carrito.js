@@ -8,77 +8,77 @@ var precio = null;
 
 
 
-$('.open-modal').on('click', function(){
+$('.open-modal').on('click', function () {
     var json = $('[data-json]').data('json');
-    estatus  = $('#estatus').val();
-    for(var i = 0; i < json.length; i++){
-        if(json[i].codigo == estatus){
+    estatus = $('#estatus').val();
+    for (var i = 0; i < json.length; i++) {
+        if (json[i].codigo == estatus) {
 
             $('#usuario_notificado').html('<option>Cargando..</option>')
             var permisos = '';
 
-            
+
             var usuarios = json[i].usuarios;
-            
-            $.get($('#url').data('url') + '/api/usuarios', function(data){
+
+            $.get($('#url').data('url') + '/api/usuarios', function (data) {
                 var p = JSON.parse(data);
-               
-               
-                    
-                    usuarios.forEach(function(user){
-                        var str = user.permiso;
-                        str = str.replace(" ","&nbsp;");
-                        permisos += '<optgroup label='+  str+'>';
-                        p.forEach(function(e){
 
-                            if(e.permiso == user.id_permiso ){
-                                permisos += '<option value="'+ e.id +'">'+ e.nombre +'</option>'
-                            }
-                        })
-                        permisos += '</optgroup>';
 
-                    });
 
-                   
-              
+                usuarios.forEach(function (user) {
+                    var str = user.permiso;
+                    str = str.replace(" ", "&nbsp;");
+                    permisos += '<optgroup label=' + str + '>';
+                    p.forEach(function (e) {
+
+                        if (e.permiso == user.id_permiso) {
+                            permisos += '<option value="' + e.id + '">' + e.nombre + '</option>'
+                        }
+                    })
+                    permisos += '</optgroup>';
+
+                });
+
+
+
                 $('#usuario_notificado').html(permisos)
             });
-        
-           
-            if(json[i].email_smtp == 1){
+
+
+            if (json[i].email_smtp == 1) {
                 $('#usericon').show();
-            }else{
+            } else {
                 $('#usericon').hide();
             }
-           
-            if(json[i].email_smtp_cliente == 1){
+
+            if (json[i].email_smtp_cliente == 1) {
                 $('#clienticon').show();
-            }else{
+            } else {
                 $('#clienticon').hide();
             }
-            
+
 
             $('#myModalLabel').html(json[i].titulo)
             $('[name="regresion"]').val(json[i].mensaje)
 
-            if(json[i].id == 20){
+            if (json[i].id == 20) {
                 $('[name="fecha_aprovisionamiento"]').fadeIn();
                 $('[name="fecha_aprovisionamiento"]').attr('disabled', false);
                 fecha = true;
-            }else{
+            } else {
                 $('[name="fecha_aprovisionamiento"]').fadeOut();
                 $('[name="fecha_aprovisionamiento"]').attr('disabled', true);
                 fecha = null;
             }
-            if(json[i].id == 4){
+            if (json[i].id == 4) {
                 $('[name="precio_aprovisionamiento"]').fadeIn();
                 $('[name="precio_aprovisionamiento"]').val(total.toString().replace(",", ""));
                 $('[name="precio_aprovisionamiento"]').attr('disabled', false);
-                precio =  total;
-            }else{
+                precio = total;
+            } else {
                 $('[name="precio_aprovisionamiento"]').fadeOut();
                 $('[name="precio_aprovisionamiento"]').attr('disabled', true);
-                
+
                 document.getElementById("precio_aprovisionamiento_span").style.display = "none";
                 document.getElementById("divprecio").style.display = "none";
 
@@ -89,46 +89,83 @@ $('.open-modal').on('click', function(){
 
 })
 
-$('#enviar-regresion').on('click', function(){
+$('#enviar-regresion').on('click', function () {
     var comentario = $('[name="regresion"]').val()
     var usuario_notificado = $('[name="usuario_notificado"]').val()
     toastr.info('Cambiando estatus.. Porfavor espere..');
     waitingDialog.show();
     $('#cancel-regresion').trigger('click')
-    var data =  {id: id, comentario: comentario, estatus: estatus, usuario_notificado: usuario_notificado}
-    
-    if(fecha !== null){
-        if($('[name="fecha_aprovisionamiento"]').val() == ''){
+    var data = {
+        id: id,
+        comentario: comentario,
+        estatus: estatus,
+        usuario_notificado: usuario_notificado
+    }
+
+    if (fecha !== null) {
+        if ($('[name="fecha_aprovisionamiento"]').val() == '') {
             data.fecha_aprovisionamiento = moment().format('YYYY-MM-DD')
-        }else{
+        } else {
             data.fecha_aprovisionamiento = $('[name="fecha_aprovisionamiento"]').val()
         }
     }
-    if(precio !== null){
-        
+    if (precio !== null) {
+
         data.precio_aprovisionamiento = $('[name="precio_aprovisionamiento"]').val()
-        if(isNumber( data.precio_aprovisionamiento)){
-      
-        }else{
+        if (isNumber(data.precio_aprovisionamiento)) {
+
+        } else {
             toastr.error('Tuvimos un error al enviar la notificación por favor intenta de nuevo')
             waitingDialog.hide();
             return false;
         }
-        
+
     }
-    $.post(SivozConfig.domain + '/operacion/regresion', data).done(function(data){
-        
+    $.post(SivozConfig.domain + '/operacion/regresion', data).done(function (data) {
+
         data = JSON.parse(data);
-        if(data.error == false){
+        if (data.error == false) {
             toastr.success('Se ha enviado la alerta al cliente junto con tu comentario')
             window.location.reload()
             $('#cancel-regresion').trigger('click')
-        }else{
+        } else {
             toastr.error('Tuvimos un error al enviar la notificación por favor intenta de nuevo')
         }
     })
 
 })
+
+$(document).ready(function () {
+    $('#uploadImage').submit(function (event) {
+        if ($('#uploadFile').val()) {
+            event.preventDefault();
+            
+            $('#loader-icon').show();
+            $('#targetLayer').hide();
+            $(this).ajaxSubmit({
+                target: '#targetLayer',
+                beforeSubmit: function () {
+                    $('.progress-bar').width('50%');
+                },
+                uploadProgress: function (event, position, total, percentageComplete) {
+                    $('.progress-bar').animate({
+                        width: percentageComplete + '%'
+                    }, {
+                        duration: 1000
+                    });
+                },
+                success: function () {
+                    $('#loader-icon').hide();
+                    $('#targetLayer').show();
+                    
+                  
+                },
+                resetForm: true
+            });
+        }
+        return false;
+    });
+});
 
 function validateDecimal(valor) {
     var RE = /^\d*(\.\d{1})?\d{0,1}$/;
@@ -138,6 +175,11 @@ function validateDecimal(valor) {
         return false;
     }
 }
+
 function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
-  }
+}
+
+function uploadsuccess(mensaje){
+    alert(mensaje);
+}

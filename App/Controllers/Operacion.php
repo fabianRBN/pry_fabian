@@ -18,6 +18,8 @@ use \App\Models\Permiso;
 use \App\Models\Estatus;
 use \App\Models\Alert;
 use \App\Models\Producto;
+use \App\Models\Variables;
+use \App\Models\Uploadfiles;
 
 class Operacion extends \Core\Controller
 {
@@ -98,7 +100,7 @@ class Operacion extends \Core\Controller
     public function configuracion()
     {
         
-        View::render('operacion.configuracion', ['permisos' =>Permiso::all() ,'estatus'=> Estatus::all(), 'arearnotificadas'=> Permiso::notificadas() ]);
+        View::render('operacion.configuracion', ['permisos' =>Permiso::all() ,'estatus'=> Estatus::allcarrito(), 'arearnotificadas'=> Permiso::notificadas(), 'mensajes'=>Variables::mensajesall(),'estatusaprov'=>Variables::getestatus() ]);
     }
 
     public function areasnotificadas()
@@ -191,6 +193,43 @@ class Operacion extends \Core\Controller
     {
         View::render('operacion.notifications', ['alerts' => Alert::byUser(true)]);
     }
+
+    public function variablemensaje(){
+
+        Variables::createmensajes($_POST,function($data){
+            
+            echo json_encode($data);
+       
+        });
+    }
+
+    public function estadoaprov(){
+
+        Variables::setaprov($_POST,function($data){
+            
+            echo json_encode($data);
+       
+        });
+    }
+
+
+    public function deletemensaje(){
+
+        Variables::deletemensaje($_POST,function($data){
+            
+            echo json_encode($data);
+       
+        });
+
+    }
+
+    public function fileupload(){
+
+        Uploadfiles::upload($_FILES);
+
+
+    }
+
 
     #new
 }

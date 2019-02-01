@@ -100,7 +100,7 @@ class Config
      * Sender for smtp
      * @var string
      */
-    const SENDER = 'smartcloud@cntcloud.com';
+    const SENDER = 'fabian95toapanta@gmail.com';
 
     /**
      * Database password

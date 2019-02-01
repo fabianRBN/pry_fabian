@@ -58,7 +58,6 @@ class Usuario extends \Core\Controller
         }else{
             View::render('error.500');
 
-
         }
         
     }
