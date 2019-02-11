@@ -8,7 +8,6 @@ use \Core\View;
 use \Core\Router;
 use \Core\Session;
 use \Core\Binnacle;
-use \App\Models\Gestion;
 use \App\Models\Cliente;
 use \App\Models\Asignado;
 use \App\Models\Carrito;
@@ -20,6 +19,7 @@ use \App\Models\Alert;
 use \App\Models\Producto;
 use \App\Models\Variables;
 use \App\Models\Uploadfiles;
+use \App\Models\Extensiones;
 
 class Operacion extends \Core\Controller
 {
@@ -100,7 +100,14 @@ class Operacion extends \Core\Controller
     public function configuracion()
     {
         
-        View::render('operacion.configuracion', ['permisos' =>Permiso::all() ,'estatus'=> Estatus::allcarrito(), 'arearnotificadas'=> Permiso::notificadas(), 'mensajes'=>Variables::mensajesall(),'estatusaprov'=>Variables::getestatus() ]);
+        View::render('operacion.configuracion', 
+            [   'permisos' =>Permiso::all() ,
+                'estatus'=> Estatus::allcarrito(), 
+                'arearnotificadas'=> Permiso::notificadas(), 
+                'mensajes'=>Variables::mensajesall(),
+                'estatusaprov'=>Variables::getestatus(),
+                'extensiones'=>Extensiones::all()
+            ]);
     }
 
     public function areasnotificadas()
@@ -127,7 +134,7 @@ class Operacion extends \Core\Controller
     {
 		//echo 'Funcion Carrito';
 		//echo $_GET['id'];
-        View::render('operacion.carrito', ['producto' => Carrito::findByID($_GET['id']), 'alerts' => Alert::get($_GET['id'],'carrito'), 'usuarios' => User::all(),'asignacion'=> Asignado::alldata($_GET['id'])]);
+        View::render('operacion.carrito', ['producto' => Carrito::findByID($_GET['id']), 'alerts' => Alert::get($_GET['id'],'carrito'), 'usuarios' => User::all(),'asignacion'=> Asignado::alldata($_GET['id']),'archivos'=> Uploadfiles::archivosporcarrito($_GET['id'])]);
     }
 
     public function regresion()
@@ -225,8 +232,27 @@ class Operacion extends \Core\Controller
 
     public function fileupload(){
 
-        Uploadfiles::upload($_FILES);
+        Uploadfiles::upload($_FILES,$_POST);
 
+
+    }
+
+    public function extensiones(){
+
+        if($_POST['tipo'] == 'create'){
+            Extensiones::create($_POST,function($data){
+            
+                echo json_encode($data);
+           
+            });
+        }else if($_POST['tipo'] == 'delete'){
+            Extensiones::delete($_POST,function($data){
+            
+                echo json_encode($data);
+           
+            });
+        }
+        
 
     }
 

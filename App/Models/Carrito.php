@@ -9,6 +9,7 @@ use \App\Models\Firma;
 use \App\Models\Alert;
 use \App\Models\Estatus;
 use \App\Models\Asignado;
+use \App\Models\Variables;
 use \App\Config;
 use \Core\Session;
 use \Core\Binnacle;
@@ -377,14 +378,18 @@ class Carrito extends \Core\Model
 
         //$carritos = self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus, p.generacion, p.nombre as producto, p.tipoWeb , CONCAT(c.empresa,' ') as cliente , c.nombre as nombre , c.apellidos as apellido   FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 12");
       
+        $pendiente = self::query("SELECT * FROM {general}.cat_variables WHERE nombre = 'estado_aprov' ")[0]->valor;
+        $estatus = self::query("SELECT * FROM {general}.cat_estatus WHERE tipo='carrito' AND id = ".$pendiente)[0];
+        
         $carritos = self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.generacion, p.tipoWeb , p.nombre as producto,CONCAT(c.empresa,' ') as cliente , c.nombre as nombre , c.apellidos as apellido  
         FROM {general}.cat_asignacion as a 
         INNER JOIN  {cartera}.{model} as v ON v.id = a.id_carrito
         INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente
         INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto
-        where (p.tipoWeb='Maquina Virtual'  or p.tipoWeb ='Servidores Virtuales') AND a.id_usuario = ".$_SESSION['sivoz_auth']->id." AND v.estatus = 12 GROUP BY v.id 
+        where  a.id_usuario = ".$_SESSION['sivoz_auth']->id." AND v.estatus = ".$estatus->codigo." GROUP BY v.id 
         ");
         foreach($carritos as $carrito){
+            $carrito->valor = $pendiente;
             $carrito->opciones = self::query("SELECT o.id,p.nombre,p.tipo,o.value,o.precio FROM {cartera}.tb_carrito_opciones as o INNER JOIN {cartera}.cat_opciones as p ON p.id=o.id_opcion WHERE id_carrito=" . $carrito->id);
         }
 

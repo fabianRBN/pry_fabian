@@ -10,15 +10,15 @@ class ValidarRUC
     public static function validarCedula($numero = '')
     {
 
-         $NUM_PROVINCIAS = 24;
+        $NUM_PROVINCIAS = 24;
 
         // fuerzo parametro de entrada a string
-        // $numero = (string)$numero;
+        $numero = (string)$numero;
 
         
-        // if($numero == null || $numero.strlen() != 10) {
-		// 	return false;
-        // }
+        if($numero == null || strlen($numero) < 13) {
+		    return false;
+        }
         
         // $prov = intval(substr($numero, 0, 2));
 

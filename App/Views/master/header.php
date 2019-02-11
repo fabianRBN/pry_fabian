@@ -33,12 +33,7 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="<?php \Core\Router::assets('assets/img/favicon.png')?>">
 	<link rel="icon" type="image/png" sizes="96x96" href="<?php \Core\Router::assets('assets/img/favicon.png')?>">
 
-		<?php 
-		header( 'X-Content-Type-Options: nosniff' );
-		header( 'X-Frame-Options: SAMEORIGIN' );
-		header( 'X-XSS-Protection: 1;mode=block' );
 		
-	?>
 
 	<meta http-equiv="Expires" content="0" /> 
 	<meta http-equiv="Pragma" content="no-cache" />

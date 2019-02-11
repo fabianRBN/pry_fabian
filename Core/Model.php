@@ -186,6 +186,15 @@ abstract class Model
 
         return $pass;
     }
+    public static function clearSession($array)
+    {
+        $pass = true;
+        foreach($array as $ar){
+            Session::remove($ar . '_value_input');
+        }
+
+        return $pass;
+    }
 
     public static function random_string($length) {
         $key = '';

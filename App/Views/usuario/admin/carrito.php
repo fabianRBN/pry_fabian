@@ -5,7 +5,6 @@
 
 			<div class="main-content">
 
-
 			<nav aria-label="breadcrumb" >
                 <ol class="breadcrumb" style="margin-bottom: 1%;"> 
                 <li class="breadcrumb-item"><a href="<?php \Core\Router::url("/administracion") ?>"> Admin </a> </li>

@@ -11,11 +11,12 @@ class Organizacion extends \Core\Model
 
     const TABLE = 'tb_organizacion';
 
-    public static function create($user){
+    public static function create($data){
         
-        self::queryOneTime("INSERT INTO {cartera}.{model}  ( `tipo_cliente`, `sector`, `empresa`, `numero`, `direccion`, `pais`, `ciudad`, `extension`) VALUES ( '1', '1', 'TEST NAT', '05121231213', 'QUITO', 'ECUADOR', 'QUITO', 'ftp.com')");
+        self::queryOneTime("INSERT INTO {cartera}.{model}  ( `tipo_cliente`, `sector`, `empresa`, `numero`, `direccion`, `pais`, `ciudad`, `extension`) 
+            VALUES ( ".$data['tipo'].", ".$data['sector'].", '".$data['empresa']."', '".$data['telefono']."', '".$data['direccion']."', '".$data['pais']."', '".$data['ciudad']."', '". explode('@',$data['correo'])[1]."')");
 
-        return true;
+ 
     } 
 
     public static function all($cb){
@@ -27,7 +28,7 @@ class Organizacion extends \Core\Model
 
     public static function findById($data, $cb){
         
-        $organizaciones = self::query("SELECT * FROM {cartera}.{model} WHERE extension ='".$data['extension']."'");
+        $organizaciones = self::query("SELECT * FROM {cartera}.{model} WHERE extension = :extension ", array('extension'=>$data['extension']),self::FETCH_ONE);
 
         return $cb($organizaciones);
     }

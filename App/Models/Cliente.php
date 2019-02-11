@@ -59,6 +59,42 @@ class Cliente extends \Core\Model
     {
         return self::query("SELECT * FROM {cartera}.{model} WHERE correo=:email", array('email'=>$email), self::FETCH_ONE);
     }
+
+    public static function emailgroup($email)
+    { 
+        $email = explode('@',$email)[1];
+        $extension = array('icloud.com','gmail.com','hotmail.com');
+        if(in_array($email,$extension)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public static function byEmaillike($email)
+    {
+        $email = explode('@',$email)[1];
+        return self::query("SELECT * FROM {cartera}.{model} WHERE correo like '%".$email."'", [], self::FETCH_ONE);
+    }
+
+    public static function emailvalido($email){
+
+        $email = explode('@',$email)[1];
+
+        $emaildb = self::query("SELECT * FROM {cartera}.{model} WHERE correo like '%".$email."'", [], self::FETCH_ONE);
+
+        $emailgr = array('icloud.com','gmail.com','hotmail.com');
+
+        if(in_array($email,$emailgr)){
+            return true;
+        }else if($emaildb){
+            return false;
+        }else{
+            return true;
+        }
+
+    }
+
+ 
     public static function generateResetPassword($user)
     {
         $token = self::token(50);

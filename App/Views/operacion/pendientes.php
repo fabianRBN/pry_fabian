@@ -37,7 +37,6 @@
                                         <tbody>
                                             <?php foreach($carritos as $carrito): ?>
                                             
-                                            <?php echo "<script>console.log( ".json_encode($carrito)." );</script>" ?>
 
                                             <tr>
                                                 <td><?php echo $carrito->cliente ?></td>
@@ -70,7 +69,6 @@
                                         <tbody>
                                             <?php foreach($carritoall as $carrito): ?>
                                             
-                                            <?php echo "<script>console.log( ".json_encode($carrito)." );</script>" ?>
 
                                             <tr>
                                                 <td><?php echo $carrito->cliente ?></td>

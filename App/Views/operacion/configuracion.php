@@ -77,59 +77,50 @@
 
             </div>
             
+        </div>
+
+        <div class="panel" style="height: 450px;">
+            <div class="panel-heading">
+                <div class="panel-title">Comentarios por estado</div>
+            </div>
+        <div class="panel-body">
+            <div class="col-sm-12">  
+                <div class="form-group"> 
+                <label for="">Estatus</label>
+                    <select id="selectareascom" class="form-control">
+                        <?php foreach($estatus as $estatu): ?>
+                            <option  value="<?php echo $estatu->id ?>" > <?php echo $estatu->nombre ?> </option>
+                        <?php endforeach ?>
+                    </select>
+                </div>
             </div>
 
-           
+            <div class="col-sm-12">  
+                <div class="form-group"> 
+                    <label for="comment">Comment:</label>
+                     <textarea class="form-control" rows="5" id="textarea"></textarea>
+                     <small id="emailHelp" class="form-text text-muted">Variables: Nombre de producto = %nombrep% , Estatus = %estatus%</small>
 
-                <div class="panel" style="height: 450px;">
-                    <div class="panel-heading">
-                        <div class="panel-title">Comentarios por estado</div>
-                    </div>
-                <div class="panel-body">
-
-
-                    <div class="col-sm-12">  
-                        <div class="form-group"> 
-                        <label for="">Estatus</label>
-                            <select id="selectareascom" class="form-control">
-                                <?php foreach($estatus as $estatu): ?>
-                                    <option  value="<?php echo $estatu->id ?>" > <?php echo $estatu->nombre ?> </option>
-                                <?php endforeach ?>
-                            
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12">  
-                        <div class="form-group"> 
-                            <label for="comment">Comment:</label>
-                             <textarea class="form-control" rows="5" id="textarea"></textarea>
-                             <small id="emailHelp" class="form-text text-muted">Variables: Nombre de producto = %nombrep% , Estatus = %estatus%</small>
-
-                        </div>
-                    </div>
+                </div>
+            </div>
 
                <?php echo "<script>console.log(" .json_encode($mensajes).")</script>" ?>
 
-                    <div class="col-sm-12">
-                        <button id="button-send-commend" class="btn btn-primary btn-block">Guardar</button>
-                        <br>
-                    </div> 
+            <div class="col-sm-12">
+                <button id="button-send-commend" class="btn btn-primary btn-block">Guardar</button>
+                <br>
+            </div> 
 
-                </div>
-         
-
-
-
+        </div>
+        
             
         </div>
 
          <div class="panel" >
-                    <div class="panel-heading">
-						<div class="panel-title">Usuarios a notificar</div>
-					</div>
-                <div class="panel-body">
-
+            <div class="panel-heading">
+				<div class="panel-title">Comentarios  por estado</div>
+			</div>
+            <div class="panel-body">
                 <table class="table">
 				<thead>
 					<tr>
@@ -147,11 +138,11 @@
 					</tr>
 					<?php endforeach ?>
 				</tbody>
-				    </table>
+				</table>
 
             </div>
             
-            </div>
+        </div>
 
         
             <div class="panel" >
@@ -187,6 +178,48 @@
             </div>
 
 
+
+            <div class="panel" >
+                <div class="panel-heading">
+                    <div class="panel-title">Extensiones de correos</div>
+                </div>
+            <div class="panel-body">
+
+                
+                    <div class="col-sm-12">  
+                        <div class="form-group"> 
+                            <label for="comment"> Extensión:</label>
+                            <input class="form-control" id="extension" >
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <button id="button-send-extension" type="submit" class="btn btn-primary btn-block">Guardar</button>
+                        <br>
+                    </div> 
+               
+                 <div class="col-sm-12" style="height: 50px; "></div> 
+
+                <table class="table">
+				<thead>
+					<tr>
+						<th>Extension</th>
+					
+						<th>Accion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach($extensiones as $extension): ?>
+					<tr>
+						<td><?php echo $extension->extension ?></td>
+						
+                        <td><button class="btn btn-primary" onclick="deleteextension(<?php  echo $extension->id ?>)">Eliminar</button></td>
+					</tr>
+					<?php endforeach ?>
+				</tbody>
+				</table>
+
+            </div>
 
     </div>
 </div>

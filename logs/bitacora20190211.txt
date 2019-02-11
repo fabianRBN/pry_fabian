@@ -1,0 +1,78 @@
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 1
+-- NOMBRE-USUARIO -- DEP SISTEMAS
+-- PERMISO-USUARIO -- 1
+-- NUEVA CONSULTA -- 2019-02-11 03:43:10
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Operacion
+-- FUNCION -- configuracion
+-- RUTA -- App/Controllers/Operacion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 1
+-- NOMBRE-USUARIO -- DEP SISTEMAS
+-- PERMISO-USUARIO -- 1
+-- NUEVA CONSULTA -- 2019-02-11 03:43:10
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=1
+-- CONTROLADOR -- App\Controllers\Operacion
+-- FUNCION -- configuracion
+-- RUTA -- App/Controllers/Operacion.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 1
+-- NOMBRE-USUARIO -- DEP SISTEMAS
+-- PERMISO-USUARIO -- 1
+-- NUEVA CONSULTA -- 2019-02-11 03:43:10
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=1
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App/Controllers/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 1
+-- NOMBRE-USUARIO -- DEP SISTEMAS
+-- PERMISO-USUARIO -- 1
+-- NUEVA CONSULTA -- 2019-02-11 03:53:11
+-- SQL -- SELECT * FROM innovasys_general.cat_menu WHERE grupo != 7
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App/Controllers/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 1
+-- NOMBRE-USUARIO -- DEP SISTEMAS
+-- PERMISO-USUARIO -- 1
+-- NUEVA CONSULTA -- 2019-02-11 03:53:11
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=1
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App/Controllers/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------
+-- USER IP -- 192.168.10.65
+-- BROWSER -- Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+-- METHOD -- GET
+-- ID-USUARIO -- 1
+-- NOMBRE-USUARIO -- DEP SISTEMAS
+-- PERMISO-USUARIO -- 1
+-- NUEVA CONSULTA -- 2019-02-11 03:53:11
+-- SQL -- SELECT * FROM innovasys_general.tb_firmados WHERE cartera=100 AND usuario=1
+-- CONTROLADOR -- App\Controllers\Mantenimiento
+-- FUNCION -- auth
+-- RUTA -- App/Controllers/Mantenimiento.php
+-- PDO ERROR -- FALSE
+----------------------------------

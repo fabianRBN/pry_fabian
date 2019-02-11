@@ -68,8 +68,50 @@ $( "#button-send-aprovisionado" ).click(function() {
  
 });
 
+$( "#button-send-extension" ).click(function() {
+   
+   
+     var data = {'extension': $( "#extension" ).val() , 'tipo': 'create' };
+ 
+     $.post(SivozConfig.domain + "operacion/extensiones",data).done( function( data ) {
+ 
+     var result = JSON.parse(data);
+        if(result.error){
+             toastr.error(result.mensaje,'Error!');
+        }else{
+            toastr.success(result.mensaje,'Enhorabuena!');
+            setTimeout(function(){
+             window.location.href=SivozConfig.domain+'mantenimiento/configuracion';
+             },500);
+        }
+ 
+        console.log(result.mensaje)
+ 
+       });
+  
+ });
 
 
+function deleteextension(id){
+     var data = {'extension': id , 'tipo': 'delete' };
+ 
+     $.post(SivozConfig.domain + "operacion/extensiones",data).done( function( data ) {
+ 
+     var result = JSON.parse(data);
+        if(result.error){
+             toastr.error(result.mensaje,'Error!');
+        }else{
+            toastr.success(result.mensaje,'Enhorabuena!');
+            setTimeout(function(){
+             window.location.href=SivozConfig.domain+'mantenimiento/configuracion';
+             },500);
+        }
+ 
+        console.log(result.mensaje)
+ 
+       });
+  
+}
 
 
 function deleteAreaNotificada(id){

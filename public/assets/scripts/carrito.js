@@ -5,18 +5,31 @@ var json = $('[data-json]').data('json');
 var estatus = json[0].codigo;
 var fecha = null;
 var precio = null;
-
+var autorizacion = false;
 
 
 $('.open-modal').on('click', function () {
     var json = $('[data-json]').data('json');
     estatus = $('#estatus').val();
+
+    var asignaciones = $('#asignacion').val();
+    var idestatusactual = $('#idestatus').val();
+    asignaciones = JSON.parse(asignaciones);
+    console.log({'asignacion ':asignaciones})
+    asignaciones.forEach(element => {
+        console.log(element)
+        if(element.id_estatus == idestatusactual ){
+            if(element.id_usuario != $('#idUsuario').val()){toastr.info('No te encuentras asignado a este producto');}
+        }
+    });
+
+ 
+    
     for (var i = 0; i < json.length; i++) {
         if (json[i].codigo == estatus) {
 
             $('#usuario_notificado').html('<option>Cargando..</option>')
             var permisos = '';
-
 
             var usuarios = json[i].usuarios;
 
@@ -137,12 +150,15 @@ $('#enviar-regresion').on('click', function () {
 
 $(document).ready(function () {
     $('#uploadImage').submit(function (event) {
+       
+       
         if ($('#uploadFile').val()) {
             event.preventDefault();
             
             $('#loader-icon').show();
             $('#targetLayer').hide();
             $(this).ajaxSubmit({
+                
                 target: '#targetLayer',
                 beforeSubmit: function () {
                     $('.progress-bar').width('50%');
@@ -157,7 +173,12 @@ $(document).ready(function () {
                 success: function () {
                     $('#loader-icon').hide();
                     $('#targetLayer').show();
+
+                    setTimeout(function(){
+                        window.location.href=SivozConfig.domain+'operacion/carrito?id='+$('#id_carrito').val();
+                        },1500);
                     
+                   
                   
                 },
                 resetForm: true
@@ -181,5 +202,11 @@ function isNumber(n) {
 }
 
 function uploadsuccess(mensaje){
-    alert(mensaje);
+  
+ 
+    if(!mensaje.error){
+        toastr.success(mensaje.texto);
+    }else{
+        toastr.warning(mensaje.texto);
+    }
 }

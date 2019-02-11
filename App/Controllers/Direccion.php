@@ -28,6 +28,8 @@ class Direccion extends \Core\Controller
     {
         if(Session::canSee([1,2,11]) == true){
             View::render('direccion.supervicion.dashboard');
+        }elseif(Session::canSee([12]) == true){
+            View::render('operacion.pendientes',['carritos' => Carrito::pendientes(),'carritoall'=>carrito::pendientesall()]);
         }elseif(Session::canSee([10]) == true){
             $productos = Producto::withCategories();
 

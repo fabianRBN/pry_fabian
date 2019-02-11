@@ -113,10 +113,18 @@ class Reportes extends \Core\Controller
 
     public function reporte()
     {
-        header('Content-type: text/xml');
-        header('Content-Disposition: attachment; filename="'.  Input::get('download') .'"');
-
-        echo file_get_contents(Config::Folder . 'reportes/' . Input::get('download'));
+        if(Input::get('download')){
+            header('Content-type: text/xml');
+            header('Content-Disposition: attachment; filename="'.  Input::get('download') .'"');
+    
+            echo file_get_contents(Config::Folder . 'reportes/' . Input::get('download'));
+        }else{
+            header('Content-type: text/xml');
+            header('Content-Disposition: attachment; filename="'.  Input::get('archivo') .'"');
+    
+            echo file_get_contents(Config::Folder . 'Documents/' . Input::get('archivo'));
+        }
+        
         exit();
     }
 

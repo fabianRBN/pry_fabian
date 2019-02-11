@@ -1,9 +1,17 @@
 <?php \Core\View::render('master.header', ['title' => $producto->producto->nombre]) ?>
 		<div class="main">
 			<!-- MAIN CONTENT -->
+
+            
+
+ 
+            <input type="hidden" value = '<?php echo json_encode($asignacion)?>'  id= "asignacion">
+            <input type="hidden" value = '<?php echo $producto->estatus_data->codigo?>'  id= "idestatus">
+            <input type="hidden" value = '<?php echo \Core\Session::get('sivoz_auth')->id?>'  id= "idUsuario">
+
+            <?PHP echo "<script> console.log(".json_encode($producto).")</script>" ?>
 			<div class="main-content">
 				<div class="container-fluid">
-                <?php echo "<script>console.log(".json_encode(\App\Models\Permiso::permisoAccion($producto->id)).")</script>"  ?>
 					<div class="row">
                         <?php if($producto->estatus == 15): ?>
                         <?php else: ?>
@@ -46,19 +54,25 @@
                                     <div class="panel-title">Cargar Archivos de estado </div>
                                 </div>
                                 <div class="panel-body">
-                                    <form id="uploadImage" action="https://smart.cntcloud2.com/operacion/fileupload" method="post">
+                                    <form id="uploadImage" action='<?php echo \App\Config::Domain .'operacion/fileupload'  ?>'  method="post">
 
                                         <div class="form-group">
-                                            <div class="row">
+                                            
+                                                <input type="text" name="textalias" placeholder="Nombre del archivo" value="<?php echo  $producto->id."_". $producto->cliente->nombre."_". $producto->estatus_data->nombre."_".  $producto->producto->nombre?>" class="custom-file-input form-control" >
+                                                <input type="hidden" name="txtidcarrito" id="id_carrito" value="<?php echo $producto->id?>" >
+                                                <input type="hidden" name="txtidUsuario"  value='<?php echo  \Core\Session::get('sivoz_auth')->id ?>' >
+                                                <input type="hidden" name="txtestatus"  value="<?php echo $producto->estatus?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">     
                                                 <div class="col-sm-9"> 
-                                                <input type="text" name="textfile"  class="custom-file-input form-control" accept="application/pdf" lang="es">
 
                                                     <div class="custom-file">
-                                                        <input type="file" name="uploadFile" id="uploadFile"  class="custom-file-input form-control" accept="application/pdf" lang="es">
+                                                        <input type="file" name="uploadFile" id="uploadFile"  class="form-control" accept="application/pdf" lang="es">
                                                     </div>
                                                 </div>
                                                 <div id="targetLayer" style="display:none;"></div>
-                                                <div class="col-sm-2">
+                                                <div class="col-sm-3">
                                                     <button type="submit" id="uploadSubmit"  class="btn btn-success">Cargar</button>
                                                 </div>
                                             </div>
@@ -71,16 +85,15 @@
                                     </form>
                                 </div>
                                 <div class="panel-footer">
+                                    <h5>Archivos</h5>
+
                                     <div class="row">
-                                        <div class="col-sm-8">
-                                            <h5>Esatado Aprovicionado <a href=""> Ejemplo.pdf </a></h5>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <h5>Recibido <a href=""> Ejemplo.pdf </a></h5>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <h5>Aprobado <a href=""> Ejemplo.pdf </a></h5>
-                                        </div>
+                                        <?php foreach( $archivos as $archivo): ?>
+                                            <div class="col-sm-8">
+                                                <b><?php  echo $archivo->estatus ?></b>: <br> <a target="_blank" href=" <?php  echo \App\Config::Domain."reportes/reporte?archivo=". $archivo->nombre ?>"><?php echo $archivo->nombre ?></a><br><br>                                           
+                                            </div>
+                                            
+                                        <?php endforeach ?>
                                         
                                     </div>
                                 </div>
@@ -178,7 +191,6 @@
                                     <div class="panel-title">Historial de estatus</div>
                                 </div>
                                 <div class="panel-body">
-                                <?php  echo "<script>console.log(".json_encode($asignacion).") </script>" ?>
                                 <ul class="list-group">
                                     <?php foreach($asignacion as $asignado): ?>
                                         <li class="list-group-item"> <?php echo  $asignado->estado.":  <span class='label label-default' style='    font-size: 13px;'>".$asignado->usuario."</span>" ?></li>

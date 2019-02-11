@@ -295,77 +295,91 @@ class Auth extends \Core\Controller
 
     public function registerPost()
     {
-        
-
-
         if(isset($_SESSION['tokenCSRF'])){
 
-            $token = str_replace(' ', '',$_POST['tokenCSRF']);
-            $tokenlocal = str_replace(' ', '', $_SESSION['tokenCSRF']);
+        $token = str_replace(' ', '',$_POST['tokenCSRF']);
+        $tokenlocal = str_replace(' ', '', $_SESSION['tokenCSRF']);
       
-             if(strcmp($token, $tokenlocal) === 0){
-                unset($_SESSION['tokenCSRF']);
-                $validation = Cliente::validate(['nombre','apellidos','pais','ciudad','correo','ruc','password','empresa','telefono','direccion','sector','tipo'], $_POST);
-
-                
-             if($validation === true){
-
-                $ruc = ValidarRuc::validarCedula($_POST['ruc']);
-
-                if($ruc === false){
-                    Session::set('ruc_error','Este campo es requerido');
-                    Router::redirect('/register');
-                }else{
-                    $auth = Cliente::create($_POST);
-                    if($auth === true){
-                        Cliente::login($_POST);
-                        if(Session::has('add_producto')){
-                            $id = Session::get('add_producto');
-                            if(Session::get('sivoz_auth')->permiso == 7){
-                                Session::remove('add_producto');
-                                Router::redirect('/tienda/producto?id=' . $id->id);
-                            }else{
-                                Router::redirect('/administracion');
-                            }
-                        }else{
-                            Router::redirect('/administracion');
-                        }
-                        if(Session::has('add_servicio')){
-                            $id = Session::get('add_servicio');
-                            if(Session::get('sivoz_auth')->permiso == 7){
-                                Session::remove('add_servicio');
-                                Router::redirect('/tienda/servicio?id=' . $id->id);
-                            }else{
-                                Router::redirect('/administracion');
-                            }
-                        }else{
-                            Router::redirect('/administracion');
-                        }
-                    }else{
-                        foreach($auth as $a => $value){
-                            Session::set($a,$value);
-                            Router::redirect('/register');
-                        }
-                    }
-                }
-
-                
-             }else{
-                 Router::redirect('/register');
-             } 
-    
-        }else{
-            Router::redirect('/register');
-
-        } 
+         if(strcmp($token, $tokenlocal) === 0){
+            unset($_SESSION['tokenCSRF']);
+            $nameinput = ['nombre','apellidos','pais','ciudad','correo','ruc','password','empresa','telefono','direccion','sector','tipo'];
+            $validation = Cliente::validate($nameinput, $_POST);            
+         if($validation === true){
+            $correo = Cliente::emailgroup($_POST['correo']);
             
-        }else{
-            Router::redirect('/register');
-
-        }
+            if($correo){
+                self::registerfuntion($_POST, $nameinput);
+            }else if(Cliente::byEmaillike($_POST['correo'])){
+                self::registerfuntion($_POST, $nameinput);
+                //echo json_encode(Cliente::byEmaillike($_POST['correo']));
+            }else{
+                Organizacion::create($_POST);
+                //echo json_encode(Cliente::byEmaillike($_POST['correo']));
+                self::registerfuntion($_POST, $nameinput);
+                // Session::set('correo_error','El correo pertenece a una entidad privada');
+                // Router::redirect('/register');
+            }
+         }else{
+             Router::redirect('/register');
+         } 
+    
+        }else{Router::redirect('/register');} 
+        }else{ Router::redirect('/register');}
        
     
         
+    }
+
+    public function registerfuntion($data,$nameinput)
+    {
+        $ruc = ValidarRuc::validarCedula($data['ruc']);
+        $correo = Cliente::byEmail($data['correo']);
+        if($ruc === false){
+            Session::set('ruc_error','Este es incorrecto');
+            Router::redirect('/register');
+        }else if($correo){
+            Session::set('correo_error','El correo ya esta registrado');
+            Router::redirect('/register');
+        }else if(strlen($data['telefono']) < 10 ){
+            Session::set('telefono_error','El número de teléfono es valido');
+            Router::redirect('/register');
+        }else {
+            $auth = Cliente::create($data);
+            if($auth === true){
+                Cliente::login($data);
+                if(Session::has('add_producto')){
+                    $id = Session::get('add_producto');
+                    if(Session::get('sivoz_auth')->permiso == 7){
+                        Session::remove('add_producto');
+                        Router::redirect('/tienda/producto?id=' . $id->id);
+                    }else{
+                        Cliente::clearSession($nameinput);
+                        Router::redirect('/administracion');
+                    }
+                }else{
+                    Cliente::clearSession($nameinput);
+                    Router::redirect('/administracion');
+                }
+                if(Session::has('add_servicio')){
+                    $id = Session::get('add_servicio');
+                    if(Session::get('sivoz_auth')->permiso == 7){
+                        Session::remove('add_servicio');
+                        Router::redirect('/tienda/servicio?id=' . $id->id);
+                    }else{
+                        Cliente::clearSession($nameinput);
+                        Router::redirect('/administracion');
+                    }
+                }else{
+                    Cliente::clearSession($nameinput);
+                    Router::redirect('/administracion');
+                }
+            }else{
+                foreach($auth as $a => $value){
+                    Session::set($a,$value);
+                    Router::redirect('/register');
+                }
+            }
+        }
     }
 
     #new
