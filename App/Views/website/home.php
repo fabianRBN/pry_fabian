@@ -88,6 +88,14 @@
     		</div>
     	</div>
     </div>
+
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h3 style="font-family: 'proxima_nova_rgbold'; font-size: 30px; margin-bottom: 20px; text-transform: uppercase; text-align: center;"  class="lead">
+				Términos y Condiciones
+			</h3 style="font-family: "proxima_nova_rgbold"; font-size: 40px; margin-bottom: 20px; text-transform: uppercase; /* align-items: center; */ text-align: center;">
+		</div>
+	</div>
     <!-- ======= /1.05 Pricing Area ====== -->
 
 

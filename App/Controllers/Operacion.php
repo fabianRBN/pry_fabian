@@ -65,36 +65,36 @@ class Operacion extends \Core\Controller
     
     public function vdc()
     {
-        View::render('operacion.ventasvdc', ['carritos' => Carrito::vdc(), 'carritosall'=>Carrito::vdcall(),'permisos'=>Permiso::permisosUsers()]);
+        View::render('operacion.ventasvdc', ['carritos' => Carrito::vdc(),'asignaciones'=>Carrito::asignacion(), 'carritosall'=>Carrito::vdcall(),'permisos'=>Permiso::permisosUsers()]);
     }
     public function proximamentes()
     {
         echo 'funcion proximamentes';
-        View::render('operacion.ventasproximamentes', ['carritos' => Carrito::proximamentes(),'carritosall'=>Carrito::proximamentesall()]);
+        View::render('operacion.ventasproximamentes', ['carritos' => Carrito::proximamentes(),'asignaciones'=>Carrito::asignacion(),'carritosall'=>Carrito::proximamentesall()]);
     }
 
     public function otros()
     {
         echo 'funcion otros';
-        View::render('operacion.ventasotros', ['carritos' => Carrito::otros(),'carritosall'=>Carrito::otrosall()]);
+        View::render('operacion.ventasotros', ['carritos' => Carrito::otros(),'asignaciones'=>Carrito::asignacion(),'carritosall'=>Carrito::otrosall()]);
     }
 
     public function maquinas()
     {
         echo 'funcion maquinas';
-        View::render('operacion.ventasvirtual', ['carritos' => Carrito::maquinas(),'carritosall'=>Carrito::maquinasall()]);
+        View::render('operacion.ventasvirtual', ['carritos' => Carrito::maquinas(),'asignaciones'=>Carrito::asignacion(),'carritosall'=>Carrito::maquinasall()]);
     }
 
     public function demos()
     {
         echo 'funcion demos';
-        View::render('operacion.ventasdemos', ['carritos' => Carrito::demos(),'carritosall'=>Carrito::demosall()]);
+        View::render('operacion.ventasdemos', ['carritos' => Carrito::demos(),'asignaciones'=>Carrito::asignacion(),'carritosall'=>Carrito::demosall()]);
     }
 
     public function ventas()
     {
 		echo 'Funcion Carrito';
-        View::render('operacion.ventas', ['carritos' => Carrito::allAdmin()]);
+        View::render('operacion.ventas', ['carritos' => Carrito::allAdmin(), 'asignaciones'=>Carrito::asignacion(),'historial'=> Carrito::asignadoshistorial() ]);
     }
 
     public function configuracion()

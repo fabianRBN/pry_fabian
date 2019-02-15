@@ -19,7 +19,7 @@ $('.open-modal').on('click', function () {
     asignaciones.forEach(element => {
         console.log(element)
         if(element.id_estatus == idestatusactual ){
-            if(element.id_usuario != $('#idUsuario').val()){toastr.info('No te encuentras asignado a este producto');}
+            if(element.id_usuario != $('#idUsuario').val()){toastr.error('Este proceso no pertenece a tu usuario');}
         }
     });
 

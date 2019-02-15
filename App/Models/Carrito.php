@@ -359,10 +359,23 @@ class Carrito extends \Core\Model
 
     }
 
+    public static function asignacion(){
+
+        $asignaciones = self::query("SELECT * FROM {general}.cat_areas_notificadas");
+        $codigo = [];
+        foreach($asignaciones as $asignacion){
+            if($_SESSION['sivoz_auth']->permiso == $asignacion->id_permiso){
+                array_push($codigo, intval(Estatus::idcalculate($asignacion->id_estatus) ));
+            }
+        }
+        return $codigo ;        
+
+    }
+
 
     public static function allAdmin()
     {
-        if($_SESSION['sivoz_auth']->permiso ==  9){
+        /* if($_SESSION['sivoz_auth']->permiso ==  9){
             return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 0 OR v.estatus = 13 OR v.estatus = 2");
         }else if($_SESSION['sivoz_auth']->permiso ==  6){
             return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 1");
@@ -370,8 +383,30 @@ class Carrito extends \Core\Model
             return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto WHERE v.estatus = 8");
         }else{
         return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto");
+        } */
+
+     
+            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto ");        
+       
+    }
+
+    public static function asignadoshistorial(){
+        if($_SESSION['sivoz_auth']->permiso == 11){
+            return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente FROM {cartera}.{model} as v INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto ");        
+        }else{
+        return self::query("SELECT v.id,v.fecha_pago,v.total,v.fecha_compra,v.estatus,p.nombre as producto,CONCAT(c.empresa,' ') as cliente 
+            FROM {general}.cat_asignacion as a 
+            INNER JOIN  {cartera}.{model} as v ON v.id = a.id_carrito
+            INNER JOIN {cartera}.tb_clientes as c ON c.id=v.id_cliente
+            INNER JOIN {cartera}.cat_productos as p ON p.id=v.id_producto
+            where  a.id_usuario = ".$_SESSION['sivoz_auth']->id." GROUP BY v.id
+            ");
         }
     }
+
+    
+
+    
 
 
     public static function pendientes(){

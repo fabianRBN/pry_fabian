@@ -1,8 +1,10 @@
 <?php \Core\View::render('master.header', ['title' => $producto->producto->nombre]) ?>
 		<div class="main" style="    padding-top: 60px !important;">
 			<!-- MAIN CONTENT -->
-            <input id="idCarrito"  type="hidden" name="tokenCSRF" value="<?php echo $producto->id ?>" >
+            <input id="idCarrito"  type="hidden" name="idCarrito" value="<?php echo $producto->id ?>" >
+            <input id="idproducto"  type="hidden" name="idproducto" value="<?php echo $producto->producto->id ?>" >
 
+            <input id="idestatus"  type="hidden" name="idestatus" value="<?php echo $producto->estatus ?>" >
 			<div class="main-content">
 
 			<nav aria-label="breadcrumb" >
@@ -72,10 +74,12 @@
                                 <div class="panel-footer">
                                     <div style=" display: flex; justify-content: space-between;" >
                                         <h5><?php echo $producto->producto->nombre ?></h5>
-
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                Editar
-                                        </button>
+                                        <?php echo "<script>console.log(".json_encode($producto).")</script>" ?>
+                                        <?php if($producto->estatus == 0 || $producto->estatus == 13 || $producto->estatus == 1 ||$producto->estatus == 2  ):?>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                                    Editar
+                                            </button>
+                                        <?php endif ?>
                                     </div>
                                 </div>
                             </div>

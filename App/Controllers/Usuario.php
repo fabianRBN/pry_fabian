@@ -294,18 +294,33 @@ class Usuario extends \Core\Controller
 
     public function editToCart()
     {
-        if(Session::verificarToken($_POST['token'])){
 
-            Carrito::updatecarrito($_POST, function($pass){
-                if($pass == true){
-                    echo json_encode(['error' => false]);
+        if(Session::get('sivoz_auht')){
+            
+            if(Session::verificarToken($_POST['token'])){
+
+                if($_POST['estatus'] == 0 || $_POST['estatus'] == 13 || $_POST['estatus'] == 1 || $_POST['estatus'] == 2 ){
+                    Carrito::updatecarrito($_POST, function($pass){
+                        if($pass == true){
+                            echo json_encode(['error' => false, 'mensaje'=> 'La solicitud se actualizo correctamente']);
+                        }else{
+                            echo json_encode(['error' => true,'mensaje'=> 'No se pudo actualizar la solicitud']);
+                        }
+                    });
                 }else{
-                    echo json_encode(['error' => true]);
+                    echo json_encode(['error' => true ,'mensaje'=> 'La solicitud ya no puede ser editada']);
                 }
-            });
+               
+            }else{
+                echo json_encode(['error' => true ,'mensaje'=> 'No se pudo actualizar la solicitud']);
+            } 
+
         }else{
-            echo json_encode(['error' => true]);
-        } 
+
+            echo json_encode(['error' => true ,'mensaje'=> 'Tu sesión ha caducado']);
+        }
+
+        
 
         
     }

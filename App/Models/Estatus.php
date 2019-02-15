@@ -165,4 +165,8 @@ class Estatus extends \Core\Model
         return self::query("SELECT * FROM {general}.{model} WHERE tipo='$tipo' AND codigo=$estatus",[],self::FETCH_ONE)->nombre;
     }
     
+    public static function idcalculate($estatus)
+    {
+        return self::query("SELECT * FROM {general}.{model} WHERE  id=$estatus",[],self::FETCH_ONE)->codigo;
+    }
 }

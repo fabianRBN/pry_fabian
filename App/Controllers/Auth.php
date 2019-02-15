@@ -46,12 +46,15 @@ class Auth extends \Core\Controller
 
     public function logout()
     {
-        User::logout();
-        if(isset($_SESSION['CREATED'])){
-            unset($_SESSION['CREATED']);
+        if(Session::get('sivoz_auth')){
+            User::logout();
+            if(isset($_SESSION['CREATED'])){
+                unset($_SESSION['CREATED']);
+            }
         }
+
+        
         Router::redirect('/');
-        echo "<script>console.log( 'Actualizacion de ID:');</script>";
 
 
 
@@ -332,54 +335,56 @@ class Auth extends \Core\Controller
 
     public function registerfuntion($data,$nameinput)
     {
-        $ruc = ValidarRuc::validarCedula($data['ruc']);
+        $ruc = ValidarRuc::validarRuc($data['ruc'],$data['tipo']);
         $correo = Cliente::byEmail($data['correo']);
-        if($ruc === false){
-            Session::set('ruc_error','Este es incorrecto');
-            Router::redirect('/register');
-        }else if($correo){
-            Session::set('correo_error','El correo ya esta registrado');
-            Router::redirect('/register');
-        }else if(strlen($data['telefono']) < 10 ){
-            Session::set('telefono_error','El número de teléfono es valido');
-            Router::redirect('/register');
-        }else {
-            $auth = Cliente::create($data);
-            if($auth === true){
-                Cliente::login($data);
-                if(Session::has('add_producto')){
-                    $id = Session::get('add_producto');
-                    if(Session::get('sivoz_auth')->permiso == 7){
-                        Session::remove('add_producto');
-                        Router::redirect('/tienda/producto?id=' . $id->id);
-                    }else{
-                        Cliente::clearSession($nameinput);
-                        Router::redirect('/administracion');
-                    }
-                }else{
-                    Cliente::clearSession($nameinput);
-                    Router::redirect('/administracion');
-                }
-                if(Session::has('add_servicio')){
-                    $id = Session::get('add_servicio');
-                    if(Session::get('sivoz_auth')->permiso == 7){
-                        Session::remove('add_servicio');
-                        Router::redirect('/tienda/servicio?id=' . $id->id);
-                    }else{
-                        Cliente::clearSession($nameinput);
-                        Router::redirect('/administracion');
-                    }
-                }else{
-                    Cliente::clearSession($nameinput);
-                    Router::redirect('/administracion');
-                }
-            }else{
-                foreach($auth as $a => $value){
-                    Session::set($a,$value);
-                    Router::redirect('/register');
-                }
-            }
-        }
+        
+
+         if($ruc['error']){
+             Session::set('ruc_error',$ruc['mensaje']);
+             Router::redirect('/register');
+         }else if($correo){
+             Session::set('correo_error','El correo ya esta registrado');
+             Router::redirect('/register');
+         }else if(strlen($data['telefono']) < 10 ){
+             Session::set('telefono_error','El número de teléfono es valido');
+             Router::redirect('/register');
+         }else {
+             $auth = Cliente::create($data);
+             if($auth === true){
+                 Cliente::login($data);
+                 if(Session::has('add_producto')){
+                     $id = Session::get('add_producto');
+                     if(Session::get('sivoz_auth')->permiso == 7){
+                         Session::remove('add_producto');
+                         Router::redirect('/tienda/producto?id=' . $id->id);
+                     }else{
+                         Cliente::clearSession($nameinput);
+                         Router::redirect('/administracion');
+                     }
+                 }else{
+                     Cliente::clearSession($nameinput);
+                     Router::redirect('/administracion');
+                 }
+                 if(Session::has('add_servicio')){
+                     $id = Session::get('add_servicio');
+                     if(Session::get('sivoz_auth')->permiso == 7){
+                         Session::remove('add_servicio');
+                         Router::redirect('/tienda/servicio?id=' . $id->id);
+                     }else{
+                         Cliente::clearSession($nameinput);
+                         Router::redirect('/administracion');
+                     }
+                 }else{
+                     Cliente::clearSession($nameinput);
+                     Router::redirect('/administracion');
+                 }
+             }else{
+                 foreach($auth as $a => $value){
+                     Session::set($a,$value);
+                     Router::redirect('/register');
+                 }
+             }
+         }
     }
 
     #new

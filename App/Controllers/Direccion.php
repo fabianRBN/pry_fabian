@@ -52,7 +52,7 @@ class Direccion extends \Core\Controller
                 }
             }
         }else{
-            View::render('operacion.ventas', ['carritos' => Carrito::allAdmin()]);
+            View::render('operacion.ventas', ['carritos' => Carrito::allAdmin(), 'asignaciones'=>Carrito::asignacion(),'historial'=> Carrito::asignadoshistorial() ]);
         }
     }
 

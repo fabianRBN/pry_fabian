@@ -249,11 +249,11 @@ $('#edit-to-cart').on('click', function(e){
     var form = $('#options-form').serializeArray();
     var carrito = {
         id_carrito: $('#idCarrito').val(),
-        id_producto: $('[info]').data('producto'),
+        id_producto: $('#idproducto').val(),
         total: t,
         subtotal: t,
         fecha_pago: calculatePaymentDate(tipoPago),
-        estatus: 0,
+        estatus:  $('#idestatus').val(),
         opciones: []
     }
     $('[data-change]').each(function(i,e){
